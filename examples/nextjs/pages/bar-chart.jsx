@@ -5,7 +5,6 @@ export default () => (
   <VizzlyLib.BarChart
     displayTitle="Example bar chart"
     displaySubject="Whiskey data"
-    host="http://0.0.0.0:5000"
     barStyles={{}}
     componentId="cmp_35a32fc9d3cc4d749727bcef2c584056"
     defaultBarStyle={{
