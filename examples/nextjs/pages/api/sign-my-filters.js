@@ -1,6 +1,5 @@
 import * as VizzLib from "@vizzly/components";
 
-
 // DO NOT DO THIS IN YOUR APP!
 // This is for example purposes only.
 // Instead, you should store this securely.
@@ -18,13 +17,19 @@ export default async function handler(req, res) {
   // TODO authenticate the user, and ensure they're
   // allowed access to the Isly region data.
 
-  const vizzAuth = VizzLib.auth({privateKey: PRIVATE_KEY, ttlInMinutes: VIZZLY_QUERY_TTL})
+  const vizzAuth = VizzLib.auth({
+    privateKey: PRIVATE_KEY,
+    ttlInMinutes: VIZZLY_QUERY_TTL,
+  });
 
   const field = "Region";
   const operator = "=";
   const value = "Islay";
-  let regionSecuredFilter = await vizzAuth.signFilter({field, operator, value})
+  let regionSecuredFilter = await vizzAuth.signFilter({
+    field,
+    operator,
+    value,
+  });
 
-
-  res.status(200).json({ secureFilters: [regionSecuredFilter] })
+  res.status(200).json({ secureFilters: [regionSecuredFilter] });
 }
