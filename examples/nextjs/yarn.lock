@@ -400,10 +400,10 @@
     "@typescript-eslint/types" "5.22.0"
     eslint-visitor-keys "^3.0.0"
 
-"@vizzly/common@^0.0.32":
-  version "0.0.32"
-  resolved "https://registry.yarnpkg.com/@vizzly/common/-/common-0.0.32.tgz#12d15917ee83a7cd6592edd44e84415d1ea98986"
-  integrity sha512-rJo0VD0V1KYO22k+NUEMXsOHUMNu9ypWFD9LsVkBMQ06/uWvcI6IyjGno812L2r096OPHwr61kFbt17STkt/UQ==
+"@vizzly/common@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@vizzly/common/-/common-0.0.37.tgz#2a02c2881521f361cfddbd9d64ea307c6e91a905"
+  integrity sha512-tCBLpnbWZstmENH3T+DoXgn52ROSi9jRmznLABoPs/dJ//7lHuFgSNo5hQM7p026VzvcqUIP/ijz5rw/YXw5Hw==
   dependencies:
     "@headlessui/react" "1.4.2"
     "@heroicons/react" "^1.0.6"
@@ -413,13 +413,13 @@
     styled-components "^5.3.5"
     twin.macro "^2.8.2"
 
-"@vizzly/components@0.0.32":
-  version "0.0.32"
-  resolved "https://registry.yarnpkg.com/@vizzly/components/-/components-0.0.32.tgz#57a7ea42a254680291f4926418a49a5808e55fe9"
-  integrity sha512-4ljp9bn55cYEAfw21Uxnn+6hkBGnqF5sYm1pNNmkY9X7l6KPNfvxg5G00e+Pt1cy3qeRsUXQ0oX/AE5qWotqBA==
+"@vizzly/components@0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@vizzly/components/-/components-0.0.37.tgz#2d4eb09b7d2f9b9165bf504bea0f4149b1121f1e"
+  integrity sha512-ewf1bJ21op8m0KralbXlbnoeWQonfXkYqRkTZh4ucAs8JB3rzxYj86hkBikTfJMsdFoIH/GlXAzW+nsOKXVhPg==
   dependencies:
     "@headlessui/react" "1.4.2"
-    "@vizzly/common" "^0.0.32"
+    "@vizzly/common" "^0.0.37"
     lodash "^4.17.21"
     node-jose "^2.1.1"
     react-simple-maps "^2.3.0"
