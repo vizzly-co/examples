@@ -2,45 +2,36 @@ import * as VizzlyLib from "@vizzly/components";
 
 export default () => (
   <div style={{ width: "700px" }}>
-    <VizzlyLib.BarChart
-      displayTitle="Example bar chart"
-      displaySubject="Whiskey data"
-      host="http://0.0.0.0:5000"
-      barStyles={{}}
-      componentId="cmp_35a32fc9d3cc4d749727bcef2c584056"
-      defaultBarStyle={{
-        barColour: "#79D1D2",
-        decimalPlaces: 0,
-      }}
-      dimension={{
-        field: "Region",
-        interval: null,
-      }}
-      fieldNaming={{}}
-      filters={[
-        {
-          field: "Price",
-          operator: ">",
-          value: "3000",
-        },
-      ]}
-      groupBy={[
-        {
-          field: "Region",
-        },
-      ]}
-      metrics={[
-        {
-          aggregate: "mean",
-          field: "Price",
-        },
-      ]}
-      sortBy={[
-        {
-          direction: "asc",
-          field: "Region",
-        },
-      ]}
-    />
+<VizzlyLib.BarChart
+  axisAngleX={-26}
+  axisFontSize={11}
+  axisLineWidthX={1}
+  axisLineWidthY={1}
+  axisTickLengthX={32}
+  axisWidthX={36}
+  axisWidthY={90}
+  barStyles={{
+    money_raised_usd_mean: {
+      barColour: '#12fd16',
+      decimalPlaces: 0
+    }
+  }}
+  componentId="cmp_85887116395f48e4b07fe30ce3d71110"
+  dimension={[
+    'name'
+  ]}
+  displaySubject="Mean"
+  displayTitle="Funds raised"
+  filter={[]}
+  fontFamily="Arial Black"
+  host="https://api.vizzly.co"
+  measure={[
+    {
+      aggregate: 'mean',
+      field: 'money_raised_usd'
+    }
+  ]}
+  showGrid
+/>
   </div>
 );
