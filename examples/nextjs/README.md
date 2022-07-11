@@ -18,6 +18,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-We currently have a couple of examples in this project.
+We currently have a couple of examples in this project, which you can see once you've
+started running the local development server.
 - [Bar chart](http://localhost:3000)
 - [Line chart](http://localhost:3000/line-chart)
