@@ -25,14 +25,14 @@ export default function Home() {
           }
         }}
         identityCallback={async () => {
-          const identityConfig = {
-            userReference: "usr_6789",
-            organisationId: "org_7e58f56ceff84f80bc529b57f802d638",
-            initialDashboard: "dsh_3c7cf8bdb724482ca71dd65e3bffd6c3",
-            integritySignature: "todo: this."
+          const response = await fetch("/api/identity");
+          if(response.ok) {
+            const identityConfig = await response.json();
+
+            return identityConfig;
           };
 
-          return identityConfig;
+          return null;
         }}
         />
     </>
