@@ -7,14 +7,22 @@ export default function Home() {
       <Head><title>Static Vizzly Studio example</title></Head>
       <VizzlyGlobalStyles />
       <header style={{marginBottom: "10px", height: "45px", background: "rgba(0, 0, 0, .8)"}} />
-      <Components.Studio
+      <Components.LocalDataStudio
         vizzlyApiConfig={{
           host: 'http://0.0.0.0:7080'
         }}
-        runQueriesCallback={(queries) => {
-          console.log("run queries", queries);
+        loadDataCallback={async (dataSet) => {
+          const response = await fetch(`/api/data/${dataSet.id}`);
 
-          return [];
+          if(response.ok) {
+            const result = await response.json();
+
+            return result;
+          } else {
+            console.error(`Failed to load data for data set ${dataSet.id}.`);
+
+            return null;
+          }
         }}
         identityCallback={async () => {
           const identityConfig = {
