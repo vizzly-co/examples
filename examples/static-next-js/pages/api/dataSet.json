@@ -1,0 +1,150 @@
+{
+  "fields": [
+    {
+      "dataType": "number",
+      "name": "order_id"
+    },
+    {
+      "dataType": "date_time",
+      "name": "order_date"
+    },
+    {
+      "dataType": "string",
+      "name": "status"
+    },
+    {
+      "dataType": "number",
+      "name": "item_id"
+    },
+    {
+      "dataType": "string",
+      "name": "sku"
+    },
+    {
+      "dataType": "number",
+      "name": "qty_ordered"
+    },
+    {
+      "dataType": "number",
+      "name": "price"
+    },
+    {
+      "dataType": "number",
+      "name": "value"
+    },
+    {
+      "dataType": "number",
+      "name": "discount_amount"
+    },
+    {
+      "dataType": "number",
+      "name": "total"
+    },
+    {
+      "dataType": "string",
+      "name": "category"
+    },
+    {
+      "dataType": "string",
+      "name": "payment_method"
+    },
+    {
+      "dataType": "string",
+      "name": "bi_st"
+    },
+    {
+      "dataType": "number",
+      "name": "cust_id"
+    },
+    {
+      "dataType": "number",
+      "name": "year"
+    },
+    {
+      "dataType": "date_time",
+      "name": "month"
+    },
+    {
+      "dataType": "number",
+      "name": "ref_num"
+    },
+    {
+      "dataType": "string",
+      "name": "Name Prefix"
+    },
+    {
+      "dataType": "string",
+      "name": "First Name"
+    },
+    {
+      "dataType": "string",
+      "name": "Middle Initial"
+    },
+    {
+      "dataType": "string",
+      "name": "Last Name"
+    },
+    {
+      "dataType": "string",
+      "name": "Gender"
+    },
+    {
+      "dataType": "number",
+      "name": "age"
+    },
+    {
+      "dataType": "string",
+      "name": "full_name"
+    },
+    {
+      "dataType": "string",
+      "name": "E Mail"
+    },
+    {
+      "dataType": "date_time",
+      "name": "Customer Since"
+    },
+    {
+      "dataType": "string",
+      "name": "SSN"
+    },
+    {
+      "dataType": "string",
+      "name": "Phone No. "
+    },
+    {
+      "dataType": "string",
+      "name": "Place Name"
+    },
+    {
+      "dataType": "string",
+      "name": "County"
+    },
+    {
+      "dataType": "string",
+      "name": "City"
+    },
+    {
+      "dataType": "string",
+      "name": "State"
+    },
+    {
+      "dataType": "number",
+      "name": "Zip"
+    },
+    {
+      "dataType": "string",
+      "name": "Region"
+    },
+    {
+      "dataType": "string",
+      "name": "User Name"
+    },
+    {
+      "dataType": "number",
+      "name": "Discount_Percent"
+    }
+  ],
+  "id": "das_85b9da62cc3545b486d1a232a814e103",
+  "name": "m"
+}

@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     ttlInMinutes: IDENTITY_TTL,
   });
 
-  // TODO securely collect this information.
+  // TODO collect correct config values
 
   let identityConfig = {
     userReference: "usr_6789",
