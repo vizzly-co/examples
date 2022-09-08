@@ -11,6 +11,14 @@ AwEHoUQDQgAERbmqmGHbjlNMXjHZMJsoFsDnQDT7k4aV5wBdlXIKe0GH+FWSwawt
 c8XAMURwSA7iAY2QzmzJ4RQ6ZKp1UVkpLA==
 -----END EC PRIVATE KEY-----
 `;
+/*
+For reference, this is the public key that would be uploaded to Vizzly.
+
+-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERbmqmGHbjlNMXjHZMJsoFsDnQDT7
+k4aV5wBdlXIKe0GH+FWSwawtc8XAMURwSA7iAY2QzmzJ4RQ6ZKp1UVkpLA==
+-----END PUBLIC KEY-----
+*/
 
 const IDENTITY_TTL = 120;
 
@@ -27,9 +35,9 @@ export default async function handler(req, res) {
   // TODO collect correct config values
 
   let identityConfig = {
-    userReference: "usr_6789",
+    userReference: "usr_67890",
     organisationId: "org_7e58f56ceff84f80bc529b57f802d638",
-    initialDashboard: "dsh_3c7cf8bdb724482ca71dd65e3bffd6c3",
+    initialDashboard: "dsh_bed54e7cc565429fade8f9fe0d1139a1",
   };
 
   identityConfig.integritySignature = await vizzAuth.signIdentityConfig(identityConfig);
