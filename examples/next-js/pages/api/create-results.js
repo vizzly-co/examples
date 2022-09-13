@@ -20,6 +20,7 @@ export default async function handler(req, res) {
     if(query.dataSetId == dataSet.id) {
       return runQuery(dataSet, data, query)
     } else {
+      console.error(`Query required data set which does not exist. ${query.dataSetId}, ${dataSet.id}`)
       // The client is requesting to query a data set
       // that does not exist. Therefore return null to
       // show something has gone wrong, and there's no result.
