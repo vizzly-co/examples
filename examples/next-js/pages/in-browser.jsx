@@ -4,7 +4,7 @@ import { Components, VizzlyGlobalStyles } from '@vizzly/components';
 export default function InBrowser() {
   return (
     <>
-      <Head><title>Static Vizzly Studio example</title></Head>
+      <Head><title>Vizzly in-browser example</title></Head>
       <VizzlyGlobalStyles />
       <header style={{marginBottom: "10px", height: "45px", background: "rgba(0, 0, 0, .8)"}} />
       <Components.LocalDataStudio

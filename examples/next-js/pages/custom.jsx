@@ -4,7 +4,7 @@ import { Components, VizzlyGlobalStyles } from '@vizzly/components';
 export default function Custom() {
   return (
     <>
-      <Head><title>Static Vizzly Studio custom query example</title></Head>
+      <Head><title>Vizzly Studio custom query example</title></Head>
       <VizzlyGlobalStyles />
       <header style={{marginBottom: "10px", height: "45px", background: "rgba(0, 0, 0, .8)"}} />
       <Components.Studio
