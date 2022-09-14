@@ -8,9 +8,6 @@ export default function InBrowser() {
       <VizzlyGlobalStyles />
       <header style={{marginBottom: "10px", height: "45px", background: "rgba(0, 0, 0, .8)"}} />
       <Components.LocalDataStudio
-        vizzlyApiConfig={{
-          host: 'http://0.0.0.0:7080'
-        }}
         loadDataCallback={async (dataSet) => {
           const response = await fetch(`/api/data/${dataSet.id}`);
 

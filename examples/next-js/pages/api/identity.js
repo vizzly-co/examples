@@ -32,12 +32,18 @@ export default async function handler(req, res) {
     ttlInMinutes: IDENTITY_TTL,
   });
 
-  // TODO collect correct config values
+  // TODO
+  // Obtain a unique identifier for the current user,
+  // which is used by Vizzly to store this user's dashboard configuration.
+  let userReference = "usr-1"
 
+  // TODO
+  // Obtain your organisation ID and initial dashboard ID
+  // from the Vizzly studio.
   let identityConfig = {
-    userReference: "usr_67890",
-    organisationId: "org_7e58f56ceff84f80bc529b57f802d638",
-    initialDashboard: "dsh_bed54e7cc565429fade8f9fe0d1139a1",
+    userReference,
+    organisationId: "<< Your organisation ID >>",
+    initialDashboard: "<< Your initial dashboard ID >>",
   };
 
   identityConfig.integritySignature = await vizzAuth.signIdentityConfig(identityConfig);
