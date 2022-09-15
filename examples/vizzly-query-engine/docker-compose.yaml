@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   vizzly:
-    image: ghcr.io/vizzly-co/query-engine-private:95d7a754120cfb50d6fd348211e9e5efdc0454f9
+    image: ghcr.io/vizzly-co/query-engine-private:18d9d5e0d14a8bbf40d473eed1959877946eea9c
     ports:
       - 8000:8000
     volumes:
