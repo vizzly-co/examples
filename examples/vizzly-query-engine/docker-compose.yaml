@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  customer_postgres_14_2:
+    image: postgres:14.2
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: customer
+      POSTGRES_USER: customer
+    ports:
+      - 6400:5432
+    volumes:
+      - ./inits/postgres_14_2/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./datasets:/var/lib/postgresql/csvs
