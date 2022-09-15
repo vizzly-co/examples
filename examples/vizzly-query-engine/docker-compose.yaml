@@ -1,6 +1,14 @@
 version: '3.1'
 
 services:
+  vizzly:
+    image: ghcr.io/vizzly-co/query-engine-private:95d7a754120cfb50d6fd348211e9e5efdc0454f9
+    ports:
+      - 8000:8000
+    volumes:
+      - ./datadir:/etc
+
+
   customer_postgres_14_2:
     image: postgres:14.2
     restart: always

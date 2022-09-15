@@ -1,1 +1,3 @@
 .DS_Store
+**/datadir/*
+!**/datadir/config.vizzly.json

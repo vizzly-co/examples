@@ -1,0 +1,174 @@
+{
+  "connection": {
+    "client": "postgres",
+    "connection": {
+      "password": "customer",
+      "database": "my_database",
+      "user": "customer",
+      "host": "localhost",
+      "port": 6400
+    }
+  },
+  "dataSets": [
+    {
+      "id": "stock-data-set",
+      "name": "Stock data set",
+      "fields": [
+        {
+          "name": "order_id",
+          "dataType": "number",
+          "publicName": "Order ID",
+          "collection": "us_sales"
+        },
+        {
+          "name": "order_date",
+          "dataType": "date_time",
+          "publicName": "Order Date",
+          "collection": "us_sales"
+        },
+        {
+          "name": "status",
+          "dataType": "string",
+          "publicName": "Status",
+          "collection": "us_sales"
+        },
+        {
+          "name": "item_id",
+          "dataType": "number",
+          "publicName": "Item ID",
+          "collection": "us_sales"
+        },
+        {
+          "name": "sku",
+          "dataType": "string",
+          "publicName": "Sku",
+          "collection": "us_sales"
+        },
+        {
+          "name": "qty_ordered",
+          "dataType": "number",
+          "publicName": "Qty Ordered",
+          "collection": "us_sales"
+        },
+        {
+          "name": "price",
+          "dataType": "number",
+          "publicName": "Price",
+          "collection": "us_sales"
+        },
+        {
+          "name": "value",
+          "dataType": "number",
+          "publicName": "Value",
+          "collection": "us_sales"
+        },
+        {
+          "name": "discount_amount",
+          "dataType": "number",
+          "publicName": "Discount amount",
+          "collection": "us_sales"
+        },
+        {
+          "name": "total",
+          "dataType": "number",
+          "publicName": "Total",
+          "collection": "us_sales"
+        },
+        {
+          "name": "category",
+          "dataType": "string",
+          "publicName": "Category",
+          "collection": "us_sales"
+        },
+        {
+          "name": "payment_method",
+          "dataType": "string",
+          "publicName": "Payment Method",
+          "collection": "us_sales"
+        },
+        {
+          "name": "bi_st",
+          "dataType": "string",
+          "publicName": "Bi St",
+          "collection": "us_sales"
+        },
+        {
+          "name": "cust_id",
+          "dataType": "number",
+          "publicName": "Customer ID",
+          "collection": "us_sales"
+        },
+        {
+          "name": "year",
+          "dataType": "number",
+          "publicName": "Year",
+          "collection": "us_sales"
+        },
+        {
+          "name": "month",
+          "dataType": "string",
+          "publicName": "Month",
+          "collection": "us_sales"
+        },
+        {
+          "name": "ref_num",
+          "dataType": "number",
+          "publicName": "Ref Num",
+          "collection": "us_sales"
+        },
+        {
+          "name": "customer_since",
+          "dataType": "date_time",
+          "publicName": "Customer Since",
+          "collection": "us_sales"
+        },
+        {
+          "name": "place_name",
+          "dataType": "string",
+          "publicName": "Place Name",
+          "collection": "us_sales"
+        },
+        {
+          "name": "county",
+          "dataType": "string",
+          "publicName": "County",
+          "collection": "us_sales"
+        },
+        {
+          "name": "city",
+          "dataType": "string",
+          "publicName": "city",
+          "collection": "us_sales"
+        },
+        {
+          "name": "state",
+          "dataType": "string",
+          "publicName": "state",
+          "collection": "us_sales"
+        },
+        {
+          "name": "zip",
+          "dataType": "string",
+          "publicName": "zip",
+          "collection": "us_sales"
+        },
+        {
+          "name": "region",
+          "dataType": "string",
+          "publicName": "region",
+          "collection": "us_sales"
+        },
+        {
+          "name": "discount_percent",
+          "dataType": "number",
+          "publicName": "Discount %",
+          "collection": "us_sales"
+        }
+      ],
+      "joins": []
+    }
+  ],
+  "publicKeyCertificates": [
+    "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERbmqmGHbjlNMXjHZMJsoFsDnQDT7\nk4aV5wBdlXIKe0GH+FWSwawtc8XAMURwSA7iAY2QzmzJ4RQ6ZKp1UVkpLA==\n-----END PUBLIC KEY-----"
+  ]
+}
