@@ -17,152 +17,177 @@
         {
           "name": "order_id",
           "dataType": "number",
+          "id": "Order ID",
           "publicName": "Order ID",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "order_date",
           "dataType": "date_time",
+          "id": "Order Date",
           "publicName": "Order Date",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "status",
           "dataType": "string",
+          "id": "Status",
           "publicName": "Status",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "item_id",
           "dataType": "number",
+          "id": "Item ID",
           "publicName": "Item ID",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "sku",
           "dataType": "string",
+          "id": "Sku",
           "publicName": "Sku",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "qty_ordered",
           "dataType": "number",
+          "id": "Qty Ordered",
           "publicName": "Qty Ordered",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "price",
           "dataType": "number",
+          "id": "Price",
           "publicName": "Price",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "value",
           "dataType": "number",
+          "id": "Value",
           "publicName": "Value",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "discount_amount",
           "dataType": "number",
+          "id": "Discount amount",
           "publicName": "Discount amount",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "total",
           "dataType": "number",
+          "id": "Total",
           "publicName": "Total",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "category",
           "dataType": "string",
+          "id": "Category",
           "publicName": "Category",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "payment_method",
           "dataType": "string",
+          "id": "Payment Method",
           "publicName": "Payment Method",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "bi_st",
           "dataType": "string",
+          "id": "Bi St",
           "publicName": "Bi St",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "cust_id",
           "dataType": "number",
+          "id": "Customer ID",
           "publicName": "Customer ID",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "year",
           "dataType": "number",
+          "id": "Year",
           "publicName": "Year",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "month",
           "dataType": "string",
+          "id": "Month",
           "publicName": "Month",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "ref_num",
           "dataType": "number",
+          "id": "Ref Num",
           "publicName": "Ref Num",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "customer_since",
           "dataType": "date_time",
+          "id": "Customer Since",
           "publicName": "Customer Since",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "place_name",
           "dataType": "string",
+          "id": "Place Name",
           "publicName": "Place Name",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "county",
           "dataType": "string",
+          "id": "County",
           "publicName": "County",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "city",
           "dataType": "string",
+          "id": "City",
           "publicName": "City",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "state",
           "dataType": "string",
+          "id": "State",
           "publicName": "State",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "zip",
           "dataType": "string",
+          "id": "Zip",
           "publicName": "Zip",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "region",
           "dataType": "string",
+          "id": "Region",
           "publicName": "Region",
-          "collection": "us_sales"
+          "table": "us_sales"
         },
         {
           "name": "discount_percent",
           "dataType": "number",
+          "id": "Discount %",
           "publicName": "Discount %",
-          "collection": "us_sales"
+          "table": "us_sales"
         }
       ],
       "joins": []
