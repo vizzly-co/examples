@@ -2,11 +2,11 @@ version: '3.1'
 
 services:
   vizzly:
-    image: ghcr.io/vizzly-co/query-engine:v0.0.5
+    image: ghcr.io/vizzly-co/query-engine:v0.0.9-beta
     ports:
       - 8000:8000
     volumes:
-      - ./datadir:/etc
+      - ./datadir:/etc/vizzly
 
 
   customer_postgres_14_2:

@@ -18,7 +18,6 @@
           "name": "order_id",
           "dataType": "number",
           "id": "Order ID",
-          "publicName": "Order ID",
           "table": "us_sales"
         },
         {
@@ -39,7 +38,6 @@
           "name": "item_id",
           "dataType": "number",
           "id": "Item ID",
-          "publicName": "Item ID",
           "table": "us_sales"
         },
         {
@@ -109,7 +107,6 @@
           "name": "cust_id",
           "dataType": "number",
           "id": "Customer ID",
-          "publicName": "Customer ID",
           "table": "us_sales"
         },
         {
