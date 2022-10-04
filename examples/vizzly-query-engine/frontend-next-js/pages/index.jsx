@@ -8,7 +8,7 @@ export default function Home() {
       <VizzlyGlobalStyles />
       <header style={{marginBottom: "10px", height: "45px", background: "rgba(0, 0, 0, .8)"}} />
       <Components.Studio
-        {...vizzlySelfHosted("http://0.0.0.0:8000")}
+        {...vizzlySelfHosted("http://0.0.0.0:8000/api")}
         identityCallback={async () => {
           const response = await fetch("/api/identity");
           if(response.ok) {

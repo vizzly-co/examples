@@ -399,10 +399,10 @@
     "@typescript-eslint/types" "5.36.1"
     eslint-visitor-keys "^3.3.0"
 
-"@vizzly/components@0.0.170":
-  version "0.0.170"
-  resolved "https://registry.yarnpkg.com/@vizzly/components/-/components-0.0.170.tgz#037185e1f2d1181163f86bd6e931a94b4a56f2ef"
-  integrity sha512-p/g6Hl2fZY+5+L6hnjvan8MChKwCynpkQXsix9D3coe/ksE01XbnrwtPEFzO0HA6rKQnuMHIRpWzaCa3JQNh+w==
+"@vizzly/components@0.1.18":
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/@vizzly/components/-/components-0.1.18.tgz#639fb496441e2de7375944d8ea8adb1365674333"
+  integrity sha512-+j3CBdqnPmKYo5MX5Fhg/cEZbmQ3vhC9aGJ9XxKCGQTWgzXOvZndAVd1jiMtq4O5eFwvqWwEhyukVUjOAoHlYQ==
   dependencies:
     "@headlessui/react" "^1.6.6"
     "@heroicons/react" "^1.0.6"

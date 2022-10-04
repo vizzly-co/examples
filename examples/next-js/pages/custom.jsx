@@ -11,6 +11,17 @@ export default function Custom() {
         vizzlyApiConfig={{
           host: 'http://0.0.0.0:7080'
         }}
+        loadDataSetsCallback={async (identityConfig) => {
+          const response = await fetch(`/api/resolve-data-sets`, {
+            method: "post",
+            body: JSON.stringify({ dataSets: identityConfig.dataSets })
+          });
+
+          if(response.ok) {
+            const dataSets = await response.json();
+            return dataSets;
+          };
+        }}
         runQueriesCallback={async (queries) => {
           const response = await fetch(`/api/create-results`, {
             method: "post",
@@ -30,9 +41,9 @@ export default function Custom() {
         identityCallback={async () => {
           const response = await fetch("/api/identity");
           if(response.ok) {
-            const identityConfig = await response.json();
+            const resp = await response.json();
 
-            return identityConfig;
+            return resp.identityConfig;
           };
 
           return null;
