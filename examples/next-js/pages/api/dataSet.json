@@ -2,147 +2,183 @@
   "fields": [
     {
       "dataType": "number",
-      "name": "order_id"
+      "publicName": "Order Id",
+      "id": "order_id"
     },
     {
       "dataType": "date_time",
-      "name": "order_date"
+      "publicName": "Order Date",
+      "id": "order_date"
     },
     {
       "dataType": "string",
-      "name": "status"
+      "publicName": "Status",
+      "id": "status"
     },
     {
       "dataType": "number",
-      "name": "item_id"
+      "publicName": "Item ID",
+      "id": "item_id"
     },
     {
       "dataType": "string",
-      "name": "sku"
+      "publicName": "SKU",
+      "id": "sku"
     },
     {
       "dataType": "number",
-      "name": "qty_ordered"
+      "publicName": "Quantity Ordered",
+      "id": "qty_ordered"
     },
     {
       "dataType": "number",
-      "name": "price"
+      "publicName": "Price",
+      "id": "price"
     },
     {
       "dataType": "number",
-      "name": "value"
+      "publicName": "Value",
+      "id": "value"
     },
     {
       "dataType": "number",
-      "name": "discount_amount"
+      "publicName": "Discount percent",
+      "id": "discount_amount"
     },
     {
       "dataType": "number",
-      "name": "total"
+      "publicName": "Total",
+      "id": "total"
     },
     {
       "dataType": "string",
-      "name": "category"
+      "publicName": "Category",
+      "id": "category"
     },
     {
       "dataType": "string",
-      "name": "payment_method"
+      "publicName": "Payment Method",
+      "id": "payment_method"
     },
     {
       "dataType": "string",
-      "name": "bi_st"
+      "publicName": "Bi St",
+      "id": "bi_st"
     },
     {
       "dataType": "number",
-      "name": "cust_id"
+      "publicName": "Customer ID",
+      "id": "cust_id"
     },
     {
       "dataType": "number",
-      "name": "year"
+      "publicName": "Year",
+      "id": "year"
     },
     {
       "dataType": "date_time",
-      "name": "month"
+      "publicName": "Month",
+      "id": "month"
     },
     {
       "dataType": "number",
-      "name": "ref_num"
+      "publicName": "Reference number",
+      "id": "ref_num"
     },
     {
       "dataType": "string",
-      "name": "Name Prefix"
+      "publicName": "Name Prefix",
+      "id": "Name Prefix"
     },
     {
       "dataType": "string",
-      "name": "First Name"
+      "publicName": "First Name",
+      "id": "First Name"
     },
     {
       "dataType": "string",
-      "name": "Middle Initial"
+      "publicName": "Middle Initial",
+      "id": "Middle Initial"
     },
     {
       "dataType": "string",
-      "name": "Last Name"
+      "publicName": "Last Name",
+      "id": "Last Name"
     },
     {
       "dataType": "string",
-      "name": "Gender"
+      "publicName": "Gender",
+      "id": "Gender"
     },
     {
       "dataType": "number",
-      "name": "age"
+      "publicName": "Age",
+      "id": "age"
     },
     {
       "dataType": "string",
-      "name": "full_name"
+      "publicName": "Full name",
+      "id": "full_name"
     },
     {
       "dataType": "string",
-      "name": "E Mail"
+      "publicName": "E Mail",
+      "id": "Mail"
     },
     {
       "dataType": "date_time",
-      "name": "Customer Since"
+      "publicName": "Customer Since",
+      "id": "Customer Since"
     },
     {
       "dataType": "string",
-      "name": "SSN"
+      "publicName": "SSN",
+      "id": "SSN"
     },
     {
       "dataType": "string",
-      "name": "Phone No. "
+      "publicName": "Phone No. ",
+      "id": "Phone No. "
     },
     {
       "dataType": "string",
-      "name": "Place Name"
+      "publicName": "Place Name",
+      "id": "Place Name"
     },
     {
       "dataType": "string",
-      "name": "County"
+      "publicName": "County",
+      "id": "County"
     },
     {
       "dataType": "string",
-      "name": "City"
+      "publicName": "City",
+      "id": "City"
     },
     {
       "dataType": "string",
-      "name": "State"
+      "publicName": "State",
+      "id": "State"
     },
     {
       "dataType": "number",
-      "name": "Zip"
+      "publicName": "Zip",
+      "id": "Zip"
     },
     {
       "dataType": "string",
-      "name": "Region"
+      "publicName": "Region",
+      "id": "Region"
     },
     {
       "dataType": "string",
-      "name": "User Name"
+      "publicName": "User Name",
+      "id": "User Name"
     },
     {
       "dataType": "number",
-      "name": "Discount_Percent"
+      "publicName": "Discount_Percent",
+      "id": "Discount_Percent"
     }
   ],
   "id": "das_69948d88edaf4e55a864a0f25357139f",

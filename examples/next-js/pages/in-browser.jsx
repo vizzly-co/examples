@@ -8,6 +8,17 @@ export default function InBrowser() {
       <VizzlyGlobalStyles />
       <header style={{marginBottom: "10px", height: "45px", background: "rgba(0, 0, 0, .8)"}} />
       <Components.LocalDataStudio
+        loadDataSetsCallback={async (identityConfig) => {
+          const response = await fetch(`/api/resolve-data-sets`, {
+            method: "post",
+            body: JSON.stringify({ dataSets: identityConfig.dataSets })
+          });
+
+          if(response.ok) {
+            const dataSets = await response.json();
+            return dataSets;
+          };
+        }}
         loadDataCallback={async (dataSet) => {
           const response = await fetch(`/api/data/${dataSet.id}`);
 
@@ -22,11 +33,11 @@ export default function InBrowser() {
           }
         }}
         identityCallback={async () => {
-          const response = await fetch("/api/identity");
+          const response = await fetch("/api/identity?type=custom");
           if(response.ok) {
             const identityConfig = await response.json();
 
-            return identityConfig;
+            return identityConfig.identityConfig;
           };
 
           return null;

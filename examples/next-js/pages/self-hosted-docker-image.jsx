@@ -13,7 +13,7 @@ export default function SelfHostedDockerImage() {
           host: 'http://0.0.0.0:7080'
         }}
         identityCallback={async () => {
-          const response = await fetch("/api/identity-with-data-set-references");
+          const response = await fetch("/api/identity");
           if(response.ok) {
             const identityConfig = await response.json();
 

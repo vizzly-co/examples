@@ -32,15 +32,21 @@ export default async function handler(req, res) {
     ttlInMinutes: IDENTITY_TTL,
   });
 
-  let userReference = "usr 123";
+  let type = 'custom';
+  if(req.headers['referer'].endsWith('/custom')) type = 'custom';
+  if(req.headers['referer'].endsWith('/in-browser')) type = 'in-browser';
+  if(req.headers['referer'].endsWith('docker-image')) type = 'docker-image';
+
+  let userReference = `usr 123 - ${type}`;
 
   let partialIdentityConfig = {
     userReference,
-    userType: 'standard',
+    // 'editor' or 'standard'
+    userType: 'editor',
     dataSets: "*",
     secureFilters: {},
-    organisationId: "org_7e58f56ceff84f80bc529b57f802d638",
-    dashboardId: "dsh_3459495ccc584277aaa6accea3bcf989",
+    organisationId: "org_9817c013a80944cea5890df34ab792cd",
+    dashboardId: "dsh_c45df01b778a44bebd752a1e1b1f8942",
   };
 
   const {integritySignature, expires} = await vizzAuth.signIdentityConfig(partialIdentityConfig);
