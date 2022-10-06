@@ -18,11 +18,6 @@ export default function Home() {
             <a>Custom query</a>
           </Link>
         </li>
-        <li>
-          <Link href="/self-hosted-docker-image">
-            <a>Self-hosted docker image</a>
-          </Link>
-        </li>
       </ul>
     </>
   );
