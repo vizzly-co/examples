@@ -1,13 +1,14 @@
 import Head from 'next/head'
-import { Components, VizzlyGlobalStyles } from '@vizzly/components';
+import Vizzly from '@vizzly/dashboard';
 
 export default function Custom() {
   return (
     <>
       <Head><title>Vizzly Studio custom query example</title></Head>
-      <VizzlyGlobalStyles />
+      
       <header style={{marginBottom: "10px", height: "45px", background: "rgba(0, 0, 0, .8)"}} />
-      <Components.Studio
+      <Vizzly.Dashboard
+        type='custom'
         loadDataSetsCallback={async (identityConfig) => {
           const response = await fetch(`/api/resolve-data-sets`, {
             method: "post",

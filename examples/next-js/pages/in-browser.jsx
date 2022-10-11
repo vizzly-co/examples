@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import { Components, VizzlyGlobalStyles } from '@vizzly/components';
+import Vizzly from '@vizzly/dashboard';
 
 export default function InBrowser() {
   return (
     <>
       <Head><title>Vizzly in-browser example</title></Head>
-      <VizzlyGlobalStyles />
       <header style={{marginBottom: "10px", height: "45px", background: "rgba(0, 0, 0, .8)"}} />
-      <Components.LocalDataStudio
+      <Vizzly.Dashboard
+        type='in-browser'
         loadDataSetsCallback={async (identityConfig) => {
           const response = await fetch(`/api/resolve-data-sets`, {
             method: "post",

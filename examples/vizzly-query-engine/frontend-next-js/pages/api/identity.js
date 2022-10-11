@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { auth } from "@vizzly/components";
+import Vizzly from '@vizzly/dashboard';
 
 // DO NOT DO THIS IN YOUR APP!
 // This is for example purposes only.
@@ -27,7 +27,7 @@ const IDENTITY_TTL = 120;
   identity information.
 */
 export default async function handler(req, res) {
-  const vizzAuth = auth({
+  const vizzAuth = Vizzly.auth({
     privateKey: PRIVATE_KEY,
     ttlInMinutes: IDENTITY_TTL,
   });

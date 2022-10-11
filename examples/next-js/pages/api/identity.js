@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { auth } from "@vizzly/components";
+import Vizzly from '@vizzly/dashboard';
 
 // DO NOT DO THIS IN YOUR APP!
 // This is for example purposes only.
@@ -27,7 +27,7 @@ const IDENTITY_TTL = 120;
   identity information.
 */
 export default async function handler(req, res) {
-  const vizzAuth = auth({
+  const vizzAuth = Vizzly.auth({
     privateKey: PRIVATE_KEY,
     ttlInMinutes: IDENTITY_TTL,
   });
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
   if(req.headers['referer'].endsWith('/in-browser')) type = 'in-browser';
   if(req.headers['referer'].endsWith('docker-image')) type = 'docker-image';
 
-  let userReference = `usr 123 - ${type}`;
+  let userReference = `usr 1234 - ${type}`;
 
   let partialIdentityConfig = {
     userReference,

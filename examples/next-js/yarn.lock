@@ -399,10 +399,10 @@
     "@typescript-eslint/types" "5.36.1"
     eslint-visitor-keys "^3.3.0"
 
-"@vizzly/components@0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@vizzly/components/-/components-0.1.18.tgz#639fb496441e2de7375944d8ea8adb1365674333"
-  integrity sha512-+j3CBdqnPmKYo5MX5Fhg/cEZbmQ3vhC9aGJ9XxKCGQTWgzXOvZndAVd1jiMtq4O5eFwvqWwEhyukVUjOAoHlYQ==
+"@vizzly/components@^0.2.11":
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/@vizzly/components/-/components-0.2.11.tgz#6d75115d518f9ed72e00aaeaa7752554530eba1e"
+  integrity sha512-FLJESX2c5dEcyW04N170G/8IT1AC4N3s3HrpyRUqisGblixtaSVJk8eAP9nJOS3ci+XXrXKtuK2N6mV+Ikvymg==
   dependencies:
     "@headlessui/react" "^1.6.6"
     "@heroicons/react" "^1.0.6"
@@ -414,6 +414,13 @@
     react-chartjs-2 "^4.2.0"
     styled-components "^5.3.5"
     twin.macro "^3.0.0-rc.3"
+
+"@vizzly/dashboard@0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.0.6.tgz#aa3d25723246af75c1303acf1d2d4dd0e1f9be1a"
+  integrity sha512-ifz+0G/6cSa6HXUlXliKXgYwSakD2FLURuKoVzgwbYsq8iEAPeVcuufY3/vw5Cl/jiZdZZhX5qFa/FetnTuLdA==
+  dependencies:
+    "@vizzly/components" "^0.2.11"
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
