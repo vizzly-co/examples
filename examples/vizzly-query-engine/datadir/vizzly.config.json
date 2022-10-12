@@ -18,6 +18,7 @@
           "name": "order_id",
           "dataType": "number",
           "id": "Order ID",
+          "publicName": "Order ID",
           "table": "us_sales"
         },
         {
