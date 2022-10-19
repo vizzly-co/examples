@@ -37,7 +37,7 @@ export default async function handler(req, res) {
   if(req.headers['referer'].endsWith('/in-browser')) type = 'in-browser';
   if(req.headers['referer'].endsWith('docker-image')) type = 'docker-image';
 
-  let userReference = `usr 1234 - ${type}`;
+  let userReference = `usr 12345 - ${type}`;
 
   let partialIdentityConfig = {
     userReference,
@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     dataSets: "*",
     secureFilters: {},
     organisationId: "org_9817c013a80944cea5890df34ab792cd",
-    dashboardId: "dsh_c45df01b778a44bebd752a1e1b1f8942",
+    dashboardId: "dsh_42496c1c55e24bd985dc71bdc4a85f9d",
   };
 
   const {integritySignature, expires} = await vizzAuth.signIdentityConfig(partialIdentityConfig);
