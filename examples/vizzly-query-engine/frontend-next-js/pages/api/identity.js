@@ -40,17 +40,21 @@ export default async function handler(req, res) {
   // TODO
   // Obtain your organisation ID and initial dashboard ID
   // from the Vizzly studio.
-  let identityConfig = {
+  let partialIdentityConfig = {
     userReference,
-    dataSets: ["das_e400b5180d9f419db9418510383cfb0e"],
+    dataSets: "*",
+    // 'editor' or 'standard'
+    userType: 'editor',
     organisationId: "org_9817c013a80944cea5890df34ab792cd",
-    initialDashboard: "dsh_48536a3992674c24a600e55de81638c1",
-    secureFilters: {
-      "das_e400b5180d9f419db9418510383cfb0e": []
-    }
+    dashboardId: "dsh_48536a3992674c24a600e55de81638c1",
+    secureFilters: {}
   };
+  
+  const {integritySignature, expires} = await vizzAuth.signIdentityConfig(partialIdentityConfig);
 
-  identityConfig.integritySignature = await vizzAuth.signIdentityConfig(identityConfig);
-
-  res.status(200).json(identityConfig);
+  const identityConfig = {...partialIdentityConfig, integritySignature, expires};
+  
+  res
+  .status(200)
+  .json(identityConfig);
 }
