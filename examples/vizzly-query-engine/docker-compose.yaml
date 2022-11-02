@@ -2,7 +2,9 @@ version: '3.1'
 
 services:
   vizzly:
-    image: ghcr.io/vizzly-co/query-engine:latest
+    image: ghcr.io/vizzly-co/query-engine-unstable:94073ecb36f554805d313bb0371bbcf613fb24b9
+    environment:
+      - VIZZLY_POSTGRES_PASSWORD=customer
     ports:
       - 8000:8000
     volumes:

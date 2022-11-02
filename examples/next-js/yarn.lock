@@ -399,6 +399,13 @@
     "@typescript-eslint/types" "5.36.1"
     eslint-visitor-keys "^3.3.0"
 
+"@vizzly/auth@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@vizzly/auth/-/auth-0.0.2.tgz#54271fcef79bf4412ba6e54aa11c2d65de013ee5"
+  integrity sha512-qjm4Hpk32ccqkuO/uBYxUUesoNwRVj6NSWYViJ6VyXtUWsCh1S8qThDffApCxLUnaNYfTI5KGewrYBFHFQ0ebg==
+  dependencies:
+    node-jose "^2.1.1"
+
 "@vizzly/components@0.2.15":
   version "0.2.15"
   resolved "https://registry.yarnpkg.com/@vizzly/components/-/components-0.2.15.tgz#cc2de762b7689bb0923b43b875ff083ba524f236"

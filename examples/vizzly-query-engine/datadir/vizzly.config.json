@@ -2,7 +2,7 @@
   "connection": {
     "client": "postgres",
     "connection": {
-      "password": "customer",
+      "password": "{{VIZZLY_POSTGRES_PASSWORD}}",
       "database": "my_database",
       "user": "customer",
       "host": "host.docker.internal",

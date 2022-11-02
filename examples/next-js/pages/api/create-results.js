@@ -28,5 +28,5 @@ export default async function handler(req, res) {
     };
   });
 
-  res.status(200).json(results);
+  res.status(200).setHeader('Access-Control-Allow-Origin', '*').json(results);
 };

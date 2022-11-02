@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import Vizzly from '@vizzly/dashboard';
+import { createSigner } from "@vizzly/auth";
 
 // DO NOT DO THIS IN YOUR APP!
 // This is for example purposes only.
@@ -27,7 +27,7 @@ const IDENTITY_TTL = 120;
   identity information.
 */
 export default async function handler(req, res) {
-  const vizzAuth = Vizzly.auth({
+  const vizzAuth = createSigner({
     privateKey: PRIVATE_KEY,
     ttlInMinutes: IDENTITY_TTL,
   });
@@ -52,8 +52,9 @@ export default async function handler(req, res) {
   const {integritySignature, expires} = await vizzAuth.signIdentityConfig(partialIdentityConfig);
 
   const identityConfig = {...partialIdentityConfig, integritySignature, expires};
-  
+
   res
   .status(200)
+  .setHeader('Access-Control-Allow-Origin', '*')
   .json({ identityConfig });
 }
