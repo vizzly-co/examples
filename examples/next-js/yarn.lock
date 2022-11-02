@@ -169,10 +169,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@headlessui/react@^1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.7.3.tgz#853c598ff47b37cdd192c5cbee890d9b610c3ec0"
-  integrity sha512-LGp06SrGv7BMaIQlTs8s2G06moqkI0cb0b8stgq7KZ3xcHdH3qMP+cRyV7qe5x4XEW/IGY48BW4fLesD6NQLng==
+"@headlessui/react@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.4.0.tgz#c6d424d8ab10ac925e4423d7f3cbab02c30d736a"
+  integrity sha512-C+FmBVF6YGvqcEI5fa2dfVbEaXr2RGR6Kw1E5HXIISIZEfsrH/yuCgsjWw5nlRF9vbCxmQ/EKs64GAdKeb8gCw==
 
 "@heroicons/react@^1.0.6":
   version "1.0.6"
@@ -399,28 +399,46 @@
     "@typescript-eslint/types" "5.36.1"
     eslint-visitor-keys "^3.3.0"
 
-"@vizzly/components@0.2.15":
-  version "0.2.15"
-  resolved "https://registry.yarnpkg.com/@vizzly/components/-/components-0.2.15.tgz#cc2de762b7689bb0923b43b875ff083ba524f236"
-  integrity sha512-z8EaaAWAR0K8Co1zYmq5ZTAhGK9OvRWqnhUbQTiuyTkaeHJ+6eJfmZ3Mm1VRrQiUie7snTTq4/U4izB40PcN7A==
+"@vizzly/auth@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@vizzly/auth/-/auth-0.0.2.tgz#54271fcef79bf4412ba6e54aa11c2d65de013ee5"
+  integrity sha512-qjm4Hpk32ccqkuO/uBYxUUesoNwRVj6NSWYViJ6VyXtUWsCh1S8qThDffApCxLUnaNYfTI5KGewrYBFHFQ0ebg==
   dependencies:
-    "@headlessui/react" "^1.7.3"
+    node-jose "^2.1.1"
+
+"@vizzly/components@^0.2.32":
+  version "0.2.32"
+  resolved "https://registry.yarnpkg.com/@vizzly/components/-/components-0.2.32.tgz#c60ebe22c0d28dca1802208361bb9dd2fa08f6f0"
+  integrity sha512-4WKaR5RypEFzCF9z9wpfaNiM7v2gE8C/jsM9cXHBvPXh0RBpsuVykRL4WBYjB1rn7KXKi81lgJj4YiMSo0XGDA==
+  dependencies:
+    "@headlessui/react" "1.4.0"
     "@heroicons/react" "^1.0.6"
     chart.js "^3.8.0"
     chroma-js "^2.4.2"
     isomorphic-fetch "^3.0.0"
     lodash "^4.17.21"
+    lodash-es "^4.17.21"
     node-jose "^2.1.1"
     react-chartjs-2 "^4.2.0"
     styled-components "^5.3.6"
     twin.macro "^3.0.0-rc.3"
+    uuid "^9.0.0"
 
-"@vizzly/dashboard@0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.0.8.tgz#c35bd1635f44a213c5cb8755c64486c27620c88c"
-  integrity sha512-YxTLrKPQMrtjD4xItnCuoNbpVeNFzQg3AXS2skOGUm2OWo8isVJIxF8VVMFlF2AhNwSYcHytMeltdru1tBdGRQ==
+"@vizzly/dashboard@^0.0.30":
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.0.30.tgz#0b236b546dd31bf4fd2d1c2df942c28ab735001e"
+  integrity sha512-oDBRPpYiHn6gMz/LlQENfMeRjd6tQ1d/4RLT7EmG5a4LjVxspB4R5Ju5g3W56Dly0MgLVYX6Fk4jjiOqTQ9pCg==
   dependencies:
-    "@vizzly/components" "0.2.15"
+    "@heroicons/react" "^1.0.6"
+    chart.js "^3.8.0"
+    chroma-js "^2.4.2"
+    isomorphic-fetch "^3.0.0"
+    lodash "^4.17.21"
+    lodash-es "^4.17.21"
+    react-chartjs-2 "^4.2.0"
+    styled-components "^5.3.5"
+    twin.macro "^3.0.0-rc.3"
+    uuid "^9.0.0"
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -1629,6 +1647,11 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
+lodash-es@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
+
 lodash.flatmap@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.flatmap/-/lodash.flatmap-4.5.0.tgz#ef8cbf408f6e48268663345305c6acc0b778702e"
@@ -2244,7 +2267,7 @@ strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-styled-components@^5.3.6:
+styled-components@^5.3.5, styled-components@^5.3.6:
   version "5.3.6"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-5.3.6.tgz#27753c8c27c650bee9358e343fc927966bfd00d1"
   integrity sha512-hGTZquGAaTqhGWldX7hhfzjnIYBZ0IXQXkCYdvF1Sq3DsUaLx6+NTHC5Jj1ooM2F68sBiVz3lvhfwQs/S3l6qg==
@@ -2428,6 +2451,11 @@ uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
+uuid@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
+  integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
