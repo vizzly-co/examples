@@ -6,8 +6,7 @@ jobs:
     name: A job to validate Vizzly config examples
     steps:
       - uses: actions/checkout@v1
-      - name: Validate all vizzly configs
-        id: validate-vizzly-configs
+      - name: Validate Vizzly configs
         uses: vizzly-co/validate-config-action@main
         with:
           config-file-glob: './config-examples/*.config.json'
