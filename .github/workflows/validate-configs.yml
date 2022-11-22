@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  validate_vizzly_configs:
+    runs-on: ubuntu-latest
+    name: A job to validate Vizzly config examples
+    steps:
+      - name: Validate all vizzly configs
+        id: validate-vizzly-configs
+        uses: vizzly-co/validate-config-action
+        with:
+          config-file-glob: './config-examples/*.config.json'
