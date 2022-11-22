@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: Validate all vizzly configs
         id: validate-vizzly-configs
-        uses: vizzly-co/validate-config-action
+        uses: vizzly-co/validate-config-action@main
         with:
           config-file-glob: './config-examples/*.config.json'
