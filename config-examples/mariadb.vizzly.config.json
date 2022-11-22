@@ -20,7 +20,6 @@
           "table": "stocks",
           "publicName": "Date",
           "id": "Date"
-          
         },
         {
           "name": "open",

@@ -1,0 +1,45 @@
+{
+  "connection": {
+    "client": "bigquery",
+    "connection": {
+      "projectId": "{{VIZZLY_BIGQUERY_PROJECT_ID}}",
+      "location": "{{VIZZLY_BIGQUERY_REGION}}",
+      "keyFilename": "/etc/vizzly/bq/service-account.json"
+    }
+  },
+  "dataSets": [
+    {
+      "id": "das_e400b5180d9f419db9418510383cfb0e",
+      "name": "US Sales",
+      "googleProjectId": "vizzly",
+      "googleDataSetName": "us_sales",
+      "fields": [
+        {
+          "id": "field_id_1",
+          "name": "order_id",
+          "dataType": "number",
+          "publicName": "Order ID",
+          "table": "us_sales"
+        },
+        {
+          "id": "field_id_2",
+          "name": "order_date",
+          "dataType": "date_time",
+          "publicName": "Order Date",
+          "table": "us_sales"
+        },
+        {
+          "id": "field_id_3",
+          "name": "status",
+          "dataType": "string",
+          "publicName": "Status",
+          "table": "us_sales"
+        }
+      ],
+      "joins": []
+    }
+  ],
+  "publicKeyCertificates": [
+    "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERbmqmGHbjlNMXjHZMJsoFsDnQDT7\nk4aV5wBdlXIKe0GH+FWSwawtc8XAMURwSA7iAY2QzmzJ4RQ6ZKp1UVkpLA==\n-----END PUBLIC KEY-----"
+  ]
+}
