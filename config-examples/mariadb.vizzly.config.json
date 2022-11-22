@@ -1,0 +1,465 @@
+{
+  "connection": {
+    "client": "mariadb",
+    "connection": {
+      "password": "{{VIZZLY_MARIADB_PASSWORD}}",
+      "database": "{{VIZZLY_MARIADB_DATABASE}}",
+      "user": "{{VIZZLY_MARIADB_USER}}",
+      "host": "{{VIZZLY_MARIADB_HOST}}",
+      "port": "{{VIZZLY_MARIADB_PORT}}"
+    }
+  },
+  "dataSets": [
+    {
+      "id": "stock-data-set",
+      "name": "Stock data set",
+      "fields": [
+        {
+          "name": "date",
+          "dataType": "date_time",
+          "table": "stocks",
+          "publicName": "Date",
+          "id": "Date"
+          
+        },
+        {
+          "name": "open",
+          "dataType": "number",
+          "table": "stocks",
+          "publicName": "Open",
+          "id": "Open",
+          "canBeDimension": false
+        },
+        {
+          "name": "high",
+          "dataType": "number",
+          "table": "stocks",
+          "publicName": "High",
+          "id": "High",
+          "canBeDimension": false
+        },
+        {
+          "name": "low",
+          "dataType": "number",
+          "table": "stocks",
+          "publicName": "Low",
+          "id": "Low",
+          "canBeDimension": false
+        },
+        {
+          "name": "close",
+          "dataType": "number",
+          "table": "stocks",
+          "publicName": "Close",
+          "id": "Close",
+          "canBeDimension": false
+        },
+        {
+          "name": "volume",
+          "dataType": "number",
+          "table": "stocks",
+          "publicName": "Volume",
+          "id": "Volume",
+          "canBeDimension": false
+        },
+        {
+          "name": "name",
+          "dataType": "string",
+          "table": "stocks",
+          "publicName": "Name",
+          "id": "Name",
+          "canBeUsedInSharedResultCache": true
+        }
+      ],
+      "joins": []
+    },
+    {
+      "id": "people-and-cities",
+      "name": "People and cities",
+      "fields": [
+        {
+          "name": "name",
+          "dataType": "string",
+          "table": "cities_data_people",
+          "publicName": "Person name",
+          "id": "Person name"
+        },
+        {
+          "name": "name",
+          "dataType": "string",
+          "table": "cities_data_cities",
+          "publicName": "City",
+          "id": "City"
+        }
+      ],
+      "joins": [
+        {
+          "type": "leftJoin",
+          "left": {
+            "field": "id",
+            "table": "cities_data_cities"
+          },
+          "right": {
+            "field": "city_id",
+            "table": "cities_data_people"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cities-and-weather",
+      "name": "Cities and weather",
+      "fields": [
+        {
+          "name": "id",
+          "publicName": "City ID",
+          "id": "City ID",
+          "dataType": "number",
+          "table": "cities_data_cities"
+        },
+        {
+          "name": "name",
+          "publicName": "City Name",
+          "id": "City",
+          "dataType": "string",
+          "table": "cities_data_cities"
+        },
+        {
+          "publicName": "High Temp",
+          "id": "High temp",
+          "name": "high",
+          "dataType": "number",
+          "table": "cities_data_weather"
+        },
+        {
+          "publicName": "Low temp",
+          "id": "Low temp",
+          "name": "low",
+          "dataType": "number",
+          "table": "cities_data_weather"
+        },
+        {
+          "name": "hidden_field_id",
+          "id": "hidden_fie_2",
+          "dataType": "number",
+          "table": "cities_data_cities"
+        }
+      ],
+      "joins": [
+        {
+          "type": "leftJoin",
+          "left": {
+            "field": "id",
+            "table": "cities_data_cities"
+          },
+          "right": {
+            "field": "city_id",
+            "table": "cities_data_weather"
+          }
+        }
+      ]
+    },
+    {
+      "id": "secure-people-and-cities",
+      "name": "People and cities",
+      "fields": [
+        {
+          "name": "name",
+          "dataType": "string",
+          "table": "cities_data_people",
+          "publicName": "Person name",
+          "id": "Person name"
+        },
+        {
+          "name": "name",
+          "dataType": "string",
+          "table": "cities_data_cities",
+          "publicName": "City",
+          "id": "City"
+        },
+        {
+          "name": "id",
+          "dataType": "number",
+          "table": "cities_data_cities",
+          "publicName": "City ID",
+          "id": "City ID"
+        }
+      ],
+      "joins": [
+        {
+          "type": "leftJoin",
+          "left": {
+            "field": "id",
+            "table": "cities_data_cities"
+          },
+          "right": {
+            "field": "city_id",
+            "table": "cities_data_people"
+          }
+        }
+      ],
+      "secureFilterGuards": [
+        {
+          "fieldId": "City ID",
+          "op": "="
+        }
+      ]
+    },
+    {
+      "id": "bigquery-us-sales",
+      "name": "US Sales",
+      "googleProjectId": "vizzly",
+      "googleDataSetName": "us_sales",
+      "fields": [
+        {
+          "name": "order_id",
+          "dataType": "number",
+          "publicName": "Order ID",
+          "id": "Order ID",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "order_date",
+          "dataType": "date_time",
+          "publicName": "Order Date",
+          "id": "Order Date",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "status",
+          "dataType": "string",
+          "publicName": "Status",
+          "id": "Status",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "item_id",
+          "dataType": "number",
+          "publicName": "Item ID",
+          "id": "Item ID",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "sku",
+          "dataType": "string",
+          "publicName": "Sku",
+          "id": "Sku",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "qty_ordered",
+          "dataType": "number",
+          "publicName": "Qty Ordered",
+          "id": "Qty Ordered",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "price",
+          "dataType": "number",
+          "publicName": "Price",
+          "id": "Price",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "value",
+          "dataType": "number",
+          "publicName": "Value",
+          "id": "Value",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "discount_amount",
+          "dataType": "number",
+          "publicName": "Discount amount",
+          "id": "Discount amount",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "total",
+          "dataType": "number",
+          "publicName": "Total",
+          "id": "Total",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "category",
+          "dataType": "string",
+          "publicName": "Category",
+          "id": "Category",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "payment_method",
+          "dataType": "string",
+          "publicName": "Payment Method",
+          "id": "Payment Method",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "bi_st",
+          "dataType": "string",
+          "publicName": "Bi St",
+          "id": "Bi St",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "cust_id",
+          "dataType": "number",
+          "publicName": "Customer ID",
+          "id": "Customer ID",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "year",
+          "dataType": "number",
+          "publicName": "Year",
+          "id": "Year",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "month",
+          "dataType": "string",
+          "publicName": "Month",
+          "id": "Month",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "ref_num",
+          "dataType": "number",
+          "publicName": "Ref Num",
+          "id": "Ref Num",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "customer_since",
+          "dataType": "date_time",
+          "publicName": "Customer Since",
+          "id": "Customer Since",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "place_name",
+          "dataType": "string",
+          "publicName": "Place Name",
+          "id": "Place Name",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "county",
+          "dataType": "string",
+          "publicName": "County",
+          "id": "County",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "city",
+          "dataType": "string",
+          "publicName": "City",
+          "id": "City",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "state",
+          "dataType": "string",
+          "publicName": "State",
+          "id": "State",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "zip",
+          "dataType": "string",
+          "publicName": "Zip",
+          "id": "Zip",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "region",
+          "dataType": "string",
+          "publicName": "Region",
+          "id": "Region",
+          "table": "us_sales_smlr_no_pii"
+        },
+        {
+          "name": "discount_percent",
+          "dataType": "number",
+          "publicName": "Discount %",
+          "id": "Discount %",
+          "table": "us_sales_smlr_no_pii"
+        }
+      ],
+      "joins": []
+    },
+    {
+      "id": "cities-and-weather-id-fields-different-from-public",
+      "name": "Cities and weather",
+      "fields": [
+        {
+          "name": "id",
+          "publicName": "City ID",
+          "id": "fie_1",
+          "dataType": "number",
+          "table": "cities_data_cities"
+        },
+        {
+          "name": "name",
+          "publicName": "City",
+          "id": "fie_2",
+          "dataType": "string",
+          "table": "cities_data_cities"
+        },
+        {
+          "publicName": "High temp",
+          "id": "fie_3",
+          "name": "high",
+          "dataType": "number",
+          "table": "cities_data_weather"
+        },
+        {
+          "publicName": "Low temp",
+          "id": "fie_4",
+          "name": "low",
+          "dataType": "number",
+          "table": "cities_data_weather"
+        }
+      ],
+      "joins": [
+        {
+          "type": "leftJoin",
+          "left": {
+            "field": "id",
+            "table": "cities_data_cities"
+          },
+          "right": {
+            "field": "city_id",
+            "table": "cities_data_weather"
+          }
+        }
+      ]
+    },
+    {
+      "id": "number-only-data-set",
+      "name": "Number only data set",
+      "fields": [
+        {
+          "name": "price",
+          "dataType": "number",
+          "table": "items",
+          "publicName": "Price",
+          "id": "fie_1"
+        },
+        {
+          "name": "cost",
+          "dataType": "number",
+          "table": "items",
+          "publicName": "Cost",
+          "id": "fie_2"
+        }
+      ],
+      "joins": []
+    }
+  ],
+  "publicKeyCertificates": [
+    "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERbmqmGHbjlNMXjHZMJsoFsDnQDT7\nk4aV5wBdlXIKe0GH+FWSwawtc8XAMURwSA7iAY2QzmzJ4RQ6ZKp1UVkpLA==\n-----END PUBLIC KEY-----",
+    "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHnMR6Kl4zeI+NCNpK+vAyQM9HiTJ\nHegJ+ZcQAsaCf/cKHgT3cwSjfASAmUu/cNrS3bqDFK+Jao1a80d/fH3wpw==\n-----END PUBLIC KEY-----"
+  ]
+}
