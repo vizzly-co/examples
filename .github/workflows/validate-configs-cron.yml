@@ -1,0 +1,32 @@
+on:
+  schedule:
+    - cron:  '0 8-19/2 * * *'
+
+jobs:
+  validate_vizzly_configs:
+    runs-on: ubuntu-latest
+    name: Ensures configs are kept up-to-date with any validator changes in the CLI
+    steps:
+      - uses: actions/checkout@v1
+      - name: Validate Vizzly configs
+        uses: vizzly-co/validate-config-action@main
+        with:
+          config-file-glob: './config-examples/*.config.json'
+
+      - name: On success
+        if: ${{ success() }}
+        shell: bash
+        env:
+          slack_endpoint: ${{ secrets.SLACK_ENDPOINT }}
+        run: |
+          message=":white_check_mark: Example config validator test passed"
+          curl -X POST --data-urlencode "payload={\"channel\": \"#smoke-tests\", \"username\": \"Example config validator\", \"text\": \"${message}\", \"icon_emoji\": \":test_tube:\"}" $slack_endpoint
+
+      - name: On failure
+        if: ${{ failure() }}
+        shell: bash
+        env:
+          slack_endpoint: ${{ secrets.SLACK_ENDPOINT }}
+        run: |
+          message=":x: Example config validator test failed"
+          curl -X POST --data-urlencode "payload={\"channel\": \"#smoke-tests\", \"username\": \"Example config validator\", \"text\": \"${message}\", \"icon_emoji\": \":test_tube:\"}" $slack_endpoint
