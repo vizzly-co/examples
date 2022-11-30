@@ -1,5 +1,4 @@
 import Vizzly from '@vizzly/dashboard';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -10,9 +9,9 @@ function App() {
     identityCallback={async () => {
       const response = await fetch("http://0.0.0.0:3005/api/identity");
       if(response.ok) {
-        const identityConfig = await response.json();
+        const tokens = await response.json();
 
-        return identityConfig.identityConfig;
+        return tokens;
       };
 
       return null;

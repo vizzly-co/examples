@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
   const results = queries.map(query => {
     if(query.dataSetId == dataSet.id) {
-      return runQuery(dataSet, data, query)
+      return runQuery(dataSet, data, query, [])
     } else {
       console.error(`Query required data set which does not exist. ${query.dataSetId}, ${dataSet.id}`)
       // The client is requesting to query a data set

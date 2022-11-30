@@ -39,9 +39,9 @@ export default function Custom() {
         identityCallback={async () => {
           const response = await fetch("/api/identity");
           if(response.ok) {
-            const resp = await response.json();
+            const tokens = await response.json();
 
-            return resp.identityConfig;
+            return tokens;
           };
 
           return null;

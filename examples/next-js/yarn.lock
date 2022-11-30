@@ -169,6 +169,18 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@hapi/hoek@^9.0.0":
+  version "9.3.0"
+  resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.3.0.tgz#8368869dcb735be2e7f5cb7647de78e167a251fb"
+  integrity sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==
+
+"@hapi/topo@^5.0.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@hapi/topo/-/topo-5.1.0.tgz#dc448e332c6c6e37a4dc02fd84ba8d44b9afb012"
+  integrity sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==
+  dependencies:
+    "@hapi/hoek" "^9.0.0"
+
 "@headlessui/react@1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.4.0.tgz#c6d424d8ab10ac925e4423d7f3cbab02c30d736a"
@@ -338,6 +350,23 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.4.tgz#0c8b74c50f29ee44f423f7416829c0bf8bb5eb27"
   integrity sha512-LwzQKA4vzIct1zNZzBmRKI9QuNpLgTQMEjsQLf3BXuGYb3QPTP4Yjf6mkdX+X1mYttZ808QpOwAzZjv28kq7DA==
 
+"@sideway/address@^4.1.3":
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/@sideway/address/-/address-4.1.4.tgz#03dccebc6ea47fdc226f7d3d1ad512955d4783f0"
+  integrity sha512-7vwq+rOHVWjyXxVlR76Agnvhy8I9rpzjosTESvmhNeXOXdZZB15Fl+TI9x1SiHZH5Jv2wTGduSxFDIaq0m3DUw==
+  dependencies:
+    "@hapi/hoek" "^9.0.0"
+
+"@sideway/formula@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@sideway/formula/-/formula-3.0.0.tgz#fe158aee32e6bd5de85044be615bc08478a0a13c"
+  integrity sha512-vHe7wZ4NOXVfkoRb8T5otiENVlT7a3IAiw7H5M2+GO+9CDgcVUUsX1zalAztCmwyOr2RUTGJdgB+ZvSVqmdHmg==
+
+"@sideway/pinpoint@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
+  integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
+
 "@swc/helpers@0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.3.tgz#16593dfc248c53b699d4b5026040f88ddb497012"
@@ -399,11 +428,12 @@
     "@typescript-eslint/types" "5.36.1"
     eslint-visitor-keys "^3.3.0"
 
-"@vizzly/auth@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@vizzly/auth/-/auth-0.0.2.tgz#54271fcef79bf4412ba6e54aa11c2d65de013ee5"
-  integrity sha512-qjm4Hpk32ccqkuO/uBYxUUesoNwRVj6NSWYViJ6VyXtUWsCh1S8qThDffApCxLUnaNYfTI5KGewrYBFHFQ0ebg==
+"@vizzly/auth@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@vizzly/auth/-/auth-0.0.5.tgz#c14e02a579e3df07e27f37db32c3b26aede566f2"
+  integrity sha512-EtHkOX704ccG69PuAy8O+5qmhZOVHvFkcVT6eVBgdIry8GYGhRgsjKInNjVRUSX7WzGIJOSAjecMEvBFY3+hrw==
   dependencies:
+    joi "^17.7.0"
     node-jose "^2.1.1"
 
 "@vizzly/components@^0.2.32":
@@ -424,10 +454,10 @@
     twin.macro "^3.0.0-rc.3"
     uuid "^9.0.0"
 
-"@vizzly/dashboard@0.0.36":
-  version "0.0.36"
-  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.0.36.tgz#95bb3ac60def6840bdba092027ed60577fadfe0c"
-  integrity sha512-kLBUyle1cikugnmaqbUhuH8sM0NT0DZC/WwSx6ZDGTjPyHhGvbvcH0oA/VcbtsiaeuQvzfMb6KIEczTwg2qkdA==
+"@vizzly/dashboard@^0.0.42":
+  version "0.0.42"
+  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.0.42.tgz#8b987f8f9c3a1790ac4e2579de05f4e5ab3fa6b2"
+  integrity sha512-3p92H9pS63f83cANIPSwAXYBH5g2/VlDCNdGFMOeC+KHpgTVxIKkm8lqttU2213UEsXeWLP+p5EGmqwyeZxi+g==
   dependencies:
     "@heroicons/react" "^1.0.6"
     apexcharts "^3.36.3"
@@ -1575,6 +1605,17 @@ isomorphic-fetch@^3.0.0:
   dependencies:
     node-fetch "^2.6.1"
     whatwg-fetch "^3.4.1"
+
+joi@^17.7.0:
+  version "17.7.0"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-17.7.0.tgz#591a33b1fe1aca2bc27f290bcad9b9c1c570a6b3"
+  integrity sha512-1/ugc8djfn93rTE3WRKdCzGGt/EtiYKxITMO4Wiv6q5JL1gl9ePt4kBsl1S499nbosspfctIQTpYIhSmHA3WAg==
+  dependencies:
+    "@hapi/hoek" "^9.0.0"
+    "@hapi/topo" "^5.0.0"
+    "@sideway/address" "^4.1.3"
+    "@sideway/formula" "^3.0.0"
+    "@sideway/pinpoint" "^2.0.0"
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"

@@ -35,9 +35,9 @@ export default function InBrowser() {
         identityCallback={async () => {
           const response = await fetch("/api/identity?type=custom");
           if(response.ok) {
-            const identityConfig = await response.json();
+            const tokens = await response.json();
 
-            return identityConfig.identityConfig;
+            return tokens;
           };
 
           return null;
