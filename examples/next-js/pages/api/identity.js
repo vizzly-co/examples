@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import * as VizzlyAuth from '@vizzly/auth';
+import * as VizzlyAuth from "@vizzly/auth";
 
 // DO NOT DO THIS IN YOUR APP!
 // This is for example purposes only.
@@ -21,15 +21,15 @@ k4aV5wBdlXIKe0GH+FWSwawtc8XAMURwSA7iAY2QzmzJ4RQ6ZKp1UVkpLA==
 */
 
 const getUserReference = (req) => {
-  let type = 'custom';
-  if(req.headers['referer'].endsWith('/custom')) type = 'custom';
-  if(req.headers['referer'].endsWith('/in-browser')) type = 'in-browser';
-  if(req.headers['referer'].endsWith('docker-image')) type = 'docker-image';
+  let type = "custom";
+  if (req.headers["referer"].endsWith("/custom")) type = "custom";
+  if (req.headers["referer"].endsWith("/in-browser")) type = "in-browser";
+  if (req.headers["referer"].endsWith("docker-image")) type = "docker-image";
 
   return `usr 12345 - ${type}`;
 };
 
-const accessType = () => 'editor';
+const accessType = () => "editor";
 
 const IDENTITY_TTL = 120;
 

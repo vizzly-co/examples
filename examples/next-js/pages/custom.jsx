@@ -1,32 +1,40 @@
-import Head from 'next/head'
-import Vizzly from '@vizzly/dashboard';
+import Head from "next/head";
+import Vizzly from "@vizzly/dashboard";
 
 export default function Custom() {
   return (
     <>
-      <Head><title>Vizzly Studio custom query example</title></Head>
-      
-      <header style={{marginBottom: "10px", height: "45px", background: "rgba(0, 0, 0, .8)"}} />
+      <Head>
+        <title>Vizzly Studio custom query example</title>
+      </Head>
+
+      <header
+        style={{
+          marginBottom: "10px",
+          height: "45px",
+          background: "rgba(0, 0, 0, .8)",
+        }}
+      />
       <Vizzly.Dashboard
-        type='custom'
+        type="custom"
         loadDataSetsCallback={async (identityConfig) => {
           const response = await fetch(`/api/resolve-data-sets`, {
             method: "post",
-            body: JSON.stringify({ dataSets: identityConfig.dataSets })
+            body: JSON.stringify({ dataSets: identityConfig.dataSets }),
           });
 
-          if(response.ok) {
+          if (response.ok) {
             const dataSets = await response.json();
             return dataSets;
-          };
+          }
         }}
         runQueriesCallback={async (queries) => {
           const response = await fetch(`/api/create-results`, {
             method: "post",
-            body: JSON.stringify({ queries })
+            body: JSON.stringify({ queries }),
           });
 
-          if(response.ok) {
+          if (response.ok) {
             const results = await response.json();
 
             return results;
@@ -38,15 +46,15 @@ export default function Custom() {
         }}
         identityCallback={async () => {
           const response = await fetch("/api/identity");
-          if(response.ok) {
+          if (response.ok) {
             const tokens = await response.json();
 
             return tokens;
-          };
+          }
 
           return null;
         }}
-        />
+      />
     </>
-  )
-};
+  );
+}

@@ -1,28 +1,36 @@
-import Head from 'next/head'
-import Vizzly from '@vizzly/dashboard';
+import Head from "next/head";
+import Vizzly from "@vizzly/dashboard";
 
 export default function InBrowser() {
   return (
     <>
-      <Head><title>Vizzly in-browser example</title></Head>
-      <header style={{marginBottom: "10px", height: "45px", background: "rgba(0, 0, 0, .8)"}} />
+      <Head>
+        <title>Vizzly in-browser example</title>
+      </Head>
+      <header
+        style={{
+          marginBottom: "10px",
+          height: "45px",
+          background: "rgba(0, 0, 0, .8)",
+        }}
+      />
       <Vizzly.Dashboard
-        type='in-browser'
+        type="in-browser"
         loadDataSetsCallback={async (identityConfig) => {
           const response = await fetch(`/api/resolve-data-sets`, {
             method: "post",
-            body: JSON.stringify({ dataSets: identityConfig.dataSets })
+            body: JSON.stringify({ dataSets: identityConfig.dataSets }),
           });
 
-          if(response.ok) {
+          if (response.ok) {
             const dataSets = await response.json();
             return dataSets;
-          };
+          }
         }}
         loadDataCallback={async (dataSet) => {
           const response = await fetch(`/api/data/${dataSet.id}`);
 
-          if(response.ok) {
+          if (response.ok) {
             const result = await response.json();
 
             return result;
@@ -34,15 +42,15 @@ export default function InBrowser() {
         }}
         identityCallback={async () => {
           const response = await fetch("/api/identity?type=custom");
-          if(response.ok) {
+          if (response.ok) {
             const tokens = await response.json();
 
             return tokens;
-          };
+          }
 
           return null;
         }}
-        />
+      />
     </>
-  )
-};
+  );
+}

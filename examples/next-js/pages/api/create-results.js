@@ -16,17 +16,19 @@ export default async function handler(req, res) {
 
   const { queries } = JSON.parse(req.body);
 
-  const results = queries.map(query => {
-    if(query.dataSetId == dataSet.id) {
-      return runQuery(dataSet, data, query, [])
+  const results = queries.map((query) => {
+    if (query.dataSetId == dataSet.id) {
+      return runQuery(dataSet, data, query, []);
     } else {
-      console.error(`Query required data set which does not exist. ${query.dataSetId}, ${dataSet.id}`)
+      console.error(
+        `Query required data set which does not exist. ${query.dataSetId}, ${dataSet.id}`
+      );
       // The client is requesting to query a data set
       // that does not exist. Therefore return null to
       // show something has gone wrong, and there's no result.
       return null;
-    };
+    }
   });
 
   res.status(200).json(results);
-};
+}
