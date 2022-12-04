@@ -1,5 +1,6 @@
 import Vizzly from "@vizzly/dashboard";
 
+// The same identityCallback as required by the Vizzly.Dashboard component.
 const identityCallback = async () => {
   const response = await fetch("/api/identity?type=custom");
   if(response.ok) {
@@ -12,6 +13,8 @@ const identityCallback = async () => {
 };
 
 const ManageDashboards = () => {
+
+  // The Vizzly react hook to provide the end-user's dashboards, and functions to create and delete dashboards
   const { dashboards, deleteEndUserDashboard, createNewEndUserDashboard } = Vizzly.useDashboardManager(identityCallback);
 
   return (
@@ -20,7 +23,14 @@ const ManageDashboards = () => {
       {dashboards.map(dashboard => (
         <div className="bg-gray-100 p-3 rounded-md relative">
           {dashboard.id}
-          <button className="text-xs absolute top-4 right-3" onClick={() => deleteEndUserDashboard(dashboard.id)}>Delete</button>
+          <button className="text-xs absolute top-4 right-3" onClick={() => {
+            const deleted = deleteEndUserDashboard(dashboard.id)
+            if(deleted) {
+              console.log("Deleted dashboard", dashboard.id);
+            } else {
+              console.log("Failed to delete dashboard", dashboard.id);
+            }
+          }}>Delete</button>
         </div>
       ))}
     </div>

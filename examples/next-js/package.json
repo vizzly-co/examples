@@ -6,7 +6,8 @@
     "dev": "next dev -p 3005",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "yarn prettier --write ./pages/**"
   },
   "dependencies": {
     "@vizzly/auth": "^0.0.5",
@@ -21,6 +22,7 @@
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
     "postcss": "^8.4.19",
+    "prettier": "^2.8.0",
     "tailwindcss": "^3.2.4"
   }
 }
