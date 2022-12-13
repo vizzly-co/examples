@@ -12,9 +12,9 @@ export default function Home() {
         identityCallback={async () => {
           const response = await fetch("/api/identity");
           if(response.ok) {
-            const identityConfig = await response.json();
+            const tokens = await response.json();
 
-            return identityConfig;
+            return tokens;
           };
 
           return null;

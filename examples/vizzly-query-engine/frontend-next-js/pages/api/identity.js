@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { createSigner } from '@vizzly/auth';
+import { createSigner } from "@vizzly/auth";
 
 // DO NOT DO THIS IN YOUR APP!
 // This is for example purposes only.
@@ -40,21 +40,17 @@ export default async function handler(req, res) {
   // TODO
   // Obtain your organisation ID and initial dashboard ID
   // from the Vizzly studio.
-  let partialIdentityConfig = {
+  let identityConfig = {
     userReference,
-    dataSets: "*",
     // 'editor' or 'standard'
-    userType: 'editor',
+    accessType: 'editor',
+    dataSetIds: "*",
+    secureFilters: {},
     organisationId: "org_9817c013a80944cea5890df34ab792cd",
-    dashboardId: "dsh_48536a3992674c24a600e55de81638c1",
-    secureFilters: {}
+    dashboardId: "dsh_42496c1c55e24bd985dc71bdc4a85f9d",
   };
-  
-  const {integritySignature, expires} = await vizzAuth.signIdentityConfig(partialIdentityConfig);
 
-  const identityConfig = {...partialIdentityConfig, integritySignature, expires};
-  
-  res
-  .status(200)
-  .json(identityConfig);
+  const tokens = await vizzAuth.generateTokens(identityConfig);
+
+  res.status(200).json(tokens);
 }
