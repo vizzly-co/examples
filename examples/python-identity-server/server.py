@@ -20,18 +20,20 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_HEAD(self):
       self.send_response(200)
       self.send_header("Content-Type", "application/json")
+      self.send_header("Access-Control-Allow-Origin", "*")
       self.end_headers()
       self.wfile.write(b"{}")
 
     def do_GET(self):
         self.send_response(200)
         self.send_header("Content-Type", "application/json")
+        self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
 
         expiry_ttl_in_minutes=60
         access_type = 'editor'
-        organisation_id = 'org_123'
-        dashboard_id='dsh_123'
+        organisation_id = 'org_9817c013a80944cea5890df34ab792cd'
+        dashboard_id='dsh_c0ef7773f0d249e49365ae535d02860b'
         user_reference = 'usr-123'
         data_set_ids = '*'
         secure_filters = {}
