@@ -48,7 +48,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
 # DO NOT SERVE FROM HTTP!
 # The tokens generated should never be sent over HTTP protocol.
-# HTTPS must be used.
+# HTTPS must be used. This is just done for example purposes.
 httpd = HTTPServer(('localhost', port), SimpleHTTPRequestHandler)
 print(f'Listening on http://localhost:{port}!')
 httpd.serve_forever()
