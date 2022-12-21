@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Build the tar
         run: |
-          cd ./examples/react && tar -czvf vizzly-react-template.tar.gz ./
+          tar -czvf vizzly-react-template.tar.gz -C ./examples/react .
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
