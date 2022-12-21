@@ -1,0 +1,21 @@
+name: Node CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Build the tar
+        run: |
+          tar -czvf vizzly-react-template.tar.gz ./examples/react
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: vizzly-react-template-artifact
+          path: |
+            vizzly-react-template.tar.gz
