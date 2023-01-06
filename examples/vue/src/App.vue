@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <DashboardBasic
@@ -11,57 +10,61 @@
 </template>
 
 <script lang="ts">
-import {applyReactInVue, applyPureReactInVue} from 'veaury'
+import { applyReactInVue, applyPureReactInVue } from "veaury";
 // This is a React component
-import Vizzly from '@vizzly/dashboard'
-import {ref} from 'vue'
+import Vizzly from "@vizzly/dashboard";
+import { ref } from "vue";
 
 export default {
   components: {
     // Use HOC 'applyReactInVue' or 'applyPureReactInVue'
     DashboardBasic: applyReactInVue(Vizzly.Dashboard),
-    DashboardBasicPure: applyPureReactInVue(Vizzly.Dashboard)
+    DashboardBasicPure: applyPureReactInVue(Vizzly.Dashboard),
   },
   methods: {
     loadDataSetsCallback: async (identityConfig: any) => {
-        const response = await fetch(`http://0.0.0.0:3005/api/resolve-data-sets`, {
+      const response = await fetch(
+        `http://0.0.0.0:3005/api/resolve-data-sets`,
+        {
           method: "post",
           body: JSON.stringify({ dataSets: identityConfig.dataSets }),
-        });
-
-        if (response.ok) {
-          const dataSets = await response.json();
-          return dataSets;
         }
-      },
-      loadDataCallback: async (dataSet: any) => {
-          const response = await fetch(`http://0.0.0.0:3005/api/data/${dataSet.id}`);
+      );
 
-          if (response.ok) {
-            const result = await response.json();
+      if (response.ok) {
+        const dataSets = await response.json();
+        return dataSets;
+      }
+    },
+    loadDataCallback: async (dataSet: any) => {
+      const response = await fetch(
+        `http://0.0.0.0:3005/api/data/${dataSet.id}`
+      );
 
-            return result;
-          } else {
-            console.error(`Failed to load data for data set ${dataSet.id}.`);
+      if (response.ok) {
+        const result = await response.json();
 
-            return null;
-          }
-        },
-        identityCallback: async () => {
-          const response = await fetch("http://0.0.0.0:3005/api/identity?type=custom");
-          if (response.ok) {
-            const tokens = await response.json();
+        return result;
+      } else {
+        console.error(`Failed to load data for data set ${dataSet.id}.`);
 
-            return tokens;
-          }
+        return null;
+      }
+    },
+    identityCallback: async () => {
+      const response = await fetch(
+        "http://0.0.0.0:3005/api/identity?type=custom"
+      );
+      if (response.ok) {
+        const tokens = await response.json();
 
-          return null;
-        }
-  }
-  // setup() {
-  //   return {}
-  // }
-}
+        return tokens;
+      }
+
+      return null;
+    },
+  },
+};
 </script>
 
 <!-- <style scoped>
