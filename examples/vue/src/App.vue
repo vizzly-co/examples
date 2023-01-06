@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <DashboardBasic
+  <VizzlyDashboard
     type="in-browser"
     :identityCallback="identityCallback"
     :loadDataSetsCallback="loadDataSetsCallback"
@@ -11,15 +11,11 @@
 
 <script lang="ts">
 import { applyReactInVue, applyPureReactInVue } from "veaury";
-// This is a React component
 import Vizzly from "@vizzly/dashboard";
-import { ref } from "vue";
 
 export default {
   components: {
-    // Use HOC 'applyReactInVue' or 'applyPureReactInVue'
-    DashboardBasic: applyReactInVue(Vizzly.Dashboard),
-    DashboardBasicPure: applyPureReactInVue(Vizzly.Dashboard),
+    VizzlyDashboard: applyPureReactInVue(Vizzly.Dashboard),
   },
   methods: {
     loadDataSetsCallback: async (identityConfig: any) => {
