@@ -12,7 +12,7 @@
   "dependencies": {
     "@vizzly/auth": "^0.0.5",
     "@vizzly/components": "^0.2.32",
-    "@vizzly/dashboard": "^0.0.51",
+    "@vizzly/dashboard": "^0.0.64",
     "next": "^12.1.5",
     "react": "17.0.2",
     "react-dom": "17.0.2"
