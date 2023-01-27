@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from "next/head";
 import Vizzly from "@vizzly/dashboard";
 
@@ -16,10 +17,9 @@ export default function InBrowser() {
       />
       <Vizzly.Dashboard
         type="in-browser"
-        loadDataSetsCallback={async (identityConfig) => {
+        loadDataSetsCallback={async () => {
           const response = await fetch(`/api/resolve-data-sets`, {
             method: "post",
-            body: JSON.stringify({ dataSets: identityConfig.dataSets }),
           });
 
           if (response.ok) {
@@ -41,7 +41,7 @@ export default function InBrowser() {
           }
         }}
         identityCallback={async () => {
-          const response = await fetch("/api/identity?type=custom");
+          const response = await fetch("/api/identity");
           if (response.ok) {
             const tokens = await response.json();
 
