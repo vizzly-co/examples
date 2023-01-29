@@ -29,8 +29,6 @@ const getUserReference = (req) => {
   return `usr 12345 - ${type}`;
 };
 
-const accessType = () => "editor" as const;
-
 const IDENTITY_TTL = 120;
 
 /*
@@ -44,12 +42,21 @@ export default async function handler(req, res) {
   });
 
   const tokens = await vizzAuth.generateTokens({
+    // Provide Vizzly with a reference of the current user.
     userReference: getUserReference(req),
-    accessType: accessType(),
+    // Does the current user have 'editor' or 'standard' access.
+    accessType: "editor",
+    // Provide access to all data sets.
+    // Or provide a list of data set IDs if you want to limit access.
     dataSetIds: "*",
+    // Setup the secure filters. (None setup in this example)
     secureFilters: {},
+    // Your organisation ID. Found at https://app.vizzly.co/dashboards
     organisationId: "org_9817c013a80944cea5890df34ab792cd",
+    // Your dashboard template ID. Found at https://app.vizzly.co/dashboards
     dashboardId: "dsh_42496c1c55e24bd985dc71bdc4a85f9d",
+    // Allow the user to have read_write access to their dashboard.
+    // Allowed values are 'read_write' or 'read'.
     scope: 'read_write'
   });
 
