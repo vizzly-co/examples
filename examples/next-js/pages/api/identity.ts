@@ -29,7 +29,7 @@ const getUserReference = (req) => {
   return `usr 12345 - ${type}`;
 };
 
-const accessType = () => "editor";
+const accessType = () => "editor" as const;
 
 const IDENTITY_TTL = 120;
 
@@ -43,16 +43,15 @@ export default async function handler(req, res) {
     ttlInMinutes: IDENTITY_TTL,
   });
 
-  let identityConfig = {
+  const tokens = await vizzAuth.generateTokens({
     userReference: getUserReference(req),
     accessType: accessType(),
     dataSetIds: "*",
     secureFilters: {},
     organisationId: "org_9817c013a80944cea5890df34ab792cd",
     dashboardId: "dsh_42496c1c55e24bd985dc71bdc4a85f9d",
-  };
-
-  const tokens = await vizzAuth.generateTokens(identityConfig);
+    scope: 'read_write'
+  });
 
   res.status(200).json(tokens);
 }

@@ -452,10 +452,10 @@
     "@typescript-eslint/types" "5.36.1"
     eslint-visitor-keys "^3.3.0"
 
-"@vizzly/auth@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@vizzly/auth/-/auth-0.0.5.tgz#c14e02a579e3df07e27f37db32c3b26aede566f2"
-  integrity sha512-EtHkOX704ccG69PuAy8O+5qmhZOVHvFkcVT6eVBgdIry8GYGhRgsjKInNjVRUSX7WzGIJOSAjecMEvBFY3+hrw==
+"@vizzly/auth@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@vizzly/auth/-/auth-0.0.7.tgz#727ed17c18dfa94d2442b169db9f9bfb2a622192"
+  integrity sha512-qeyciNXvEg4VQfOaI9zXtlOReJSe4YJzmDq4aY589fovFLUUI8THSNaHaIMZZSY170pWAeAdhaMy/Ent67hGLg==
   dependencies:
     joi "^17.7.0"
     node-jose "^2.1.1"
