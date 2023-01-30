@@ -57,7 +57,7 @@ export default async function handler(req, res) {
     dashboardId: "dsh_42496c1c55e24bd985dc71bdc4a85f9d",
     // Allow the user to have read_write access to their dashboard.
     // Allowed values are 'read_write' or 'read'.
-    scope: 'read_write'
+    scope: "read_write",
   });
 
   res.status(200).json(tokens);
