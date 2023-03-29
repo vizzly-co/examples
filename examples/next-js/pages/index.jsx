@@ -19,8 +19,8 @@ export default function Home() {
           </Link>
         </li>
         <li>
-          <Link href="/custom">
-            <a>Custom query</a>
+          <Link href="/self-hosted">
+            <a>Self Hosted</a>
           </Link>
         </li>
       </ul>

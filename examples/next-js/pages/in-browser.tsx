@@ -16,8 +16,7 @@ export default function InBrowser() {
         }}
       />
       <Vizzly.Dashboard
-        type="in-browser"
-        loadDataSetsCallback={async () => {
+        dataSets={async () => {
           const response = await fetch(`/api/resolve-data-sets`, {
             method: "post",
           });
@@ -27,7 +26,7 @@ export default function InBrowser() {
             return dataSets;
           }
         }}
-        loadDataCallback={async (dataSet) => {
+        data={async (dataSet) => {
           const response = await fetch(`/api/data/${dataSet.id}`);
 
           if (response.ok) {
@@ -40,7 +39,7 @@ export default function InBrowser() {
             return null;
           }
         }}
-        identityCallback={async () => {
+        identity={async () => {
           const response = await fetch("/api/identity");
           if (response.ok) {
             const tokens = await response.json();

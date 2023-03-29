@@ -5,15 +5,13 @@ import Vizzly from '@vizzly/dashboard';
 function App() {
     return (
       <Vizzly.Dashboard
-        type='self-hosted'
-        vizzlyDockerImageEndpoint={'<< Your query engine endpoint >>'}
-        identityCallback={async () => {
+        queryEngineEndpoint={'<< Your query engine endpoint >>'}
+        identity={async () => {
           throw new Vizzly.NewVizzlyImplementation();
         }}
       />
     )
 }
-
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
