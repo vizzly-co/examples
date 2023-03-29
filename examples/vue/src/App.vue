@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     identity: async () => {
-      const response = await fetch("https://example.vizzly.co/api/identity?userId=generate-random");
+      const response = await fetch("https://app.vizzly.co/api/doc-examples-identity-callback");
       if(response.ok) {
         const tokens = await response.json();
 
