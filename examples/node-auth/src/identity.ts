@@ -15,8 +15,21 @@ export const getIdentityTokens = async () => {
     dataSetIds: ["hr-payroll-data", "hr-people-data"],
 
     // What secure filters need to be added, to ensure this user
-    // only sees their own data?
-    secureFilters: {},
+    // only sees their own data? For example here, we set a filter
+    // to only use data where the field `field_user_id` equals a
+    // specific user ID. 
+    secureFilters: {
+      "hr-payroll-data": [{
+        field: "field_user_id",
+        op: "=",
+        value: "<< the user's ID >>"
+      }],
+      "hr-people-data": [{
+        field: "field_user_id",
+        op: "=",
+        value: "<< the user's ID >>"
+      }],
+    },
 
     // Is the user a standard user, or should they have 'admin'
     // access allowing them to manage the dashboard for ALL your users.
