@@ -13,15 +13,8 @@ const fetchIdentity = async () => {
   return null;
 };
 
-// Return an empty query engine config.
-const queryEngineConfig = async () => ({
-  supportedOperators: {},
-  supportedAggregates: {},
-  supportedTimeTruncFunctions: {}
-})
-
 function App() {
-  const { dashboards, createTemplateCopy } = useDashboardManager(fetchIdentity, queryEngineConfig);
+  const { dashboards, createTemplateCopy } = useDashboardManager(fetchIdentity, "https://example.vizzly.co/query-engine");
 
   return (
     <>
