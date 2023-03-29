@@ -18,6 +18,11 @@ export default function Home() {
             <a>In browser (basic)</a>
           </Link>
         </li>
+        <li>
+          <Link href="/self-hosted">
+            <a>Self Hosted</a>
+          </Link>
+        </li>
       </ul>
     </>
   );
