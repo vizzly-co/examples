@@ -5,9 +5,16 @@ import Vizzly from '@vizzly/dashboard';
 function App() {
     return (
       <Vizzly.Dashboard
-        queryEngineEndpoint={'<< Your query engine endpoint >>'}
+        queryEngineEndpoint={'https://example.vizzly.co/query-engine'}
         identity={async () => {
-          throw new Vizzly.NewVizzlyImplementation();
+          const response = await fetch("https://app.vizzly.co/api/doc-examples-identity-callback");
+          if(response.ok) {
+            const tokens = await response.json();
+    
+            return tokens.accessTokens;
+          };
+    
+          return null;
         }}
       />
     )
