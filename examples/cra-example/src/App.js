@@ -4,10 +4,9 @@ import './App.css';
 function App() {
   return (
     <Vizzly.Dashboard
-    type='self-hosted'
-    vizzlyDockerImageEndpoint='http://0.0.0.0:8000'
-    identityCallback={async () => {
-      const response = await fetch("http://0.0.0.0:3005/api/identity");
+    queryEngineEndpoint='https://example.vizzly.co/query-engine'
+    identity={async () => {
+      const response = await fetch("https://example.vizzly.co/api/identity?userId=generate-random");
       if(response.ok) {
         const tokens = await response.json();
 

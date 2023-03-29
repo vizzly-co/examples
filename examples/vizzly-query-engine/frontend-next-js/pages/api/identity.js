@@ -43,7 +43,7 @@ export default async function handler(req, res) {
   let identityConfig = {
     userReference,
     // 'editor' or 'standard'
-    accessType: 'editor',
+    accessType: 'admin',
     dataSetIds: "*",
     secureFilters: {},
     organisationId: "org_9817c013a80944cea5890df34ab792cd",

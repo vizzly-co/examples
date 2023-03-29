@@ -18,11 +18,6 @@ export default function Home() {
             <a>In browser (basic)</a>
           </Link>
         </li>
-        <li>
-          <Link href="/custom">
-            <a>Custom query</a>
-          </Link>
-        </li>
       </ul>
     </>
   );

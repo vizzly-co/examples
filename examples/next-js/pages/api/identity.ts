@@ -44,8 +44,8 @@ export default async function handler(req, res) {
   const tokens = await vizzAuth.generateTokens({
     // Provide Vizzly with a reference of the current user.
     userReference: getUserReference(req),
-    // Does the current user have 'editor' or 'standard' access.
-    accessType: "editor",
+    // Does the current user have 'admin' or 'standard' access.
+    accessType: "admin",
     // Provide access to all data sets.
     // Or provide a list of data set IDs if you want to limit access.
     dataSetIds: "*",
