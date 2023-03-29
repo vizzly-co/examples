@@ -2,10 +2,8 @@
 
 <template>
   <VizzlyDashboard
-    type="in-browser"
-    :identityCallback="identityCallback"
-    :loadDataSetsCallback="loadDataSetsCallback"
-    :loadDataCallback="loadDataCallback"
+    :identity="identity"
+    queryEngineEndpoint="https://example.vizzly.co/query-engine"
   />
 </template>
 
@@ -18,47 +16,16 @@ export default {
     VizzlyDashboard: applyPureReactInVue(Vizzly.Dashboard),
   },
   methods: {
-    loadDataSetsCallback: async (identityConfig: any) => {
-      const response = await fetch(
-        `http://0.0.0.0:3005/api/resolve-data-sets`,
-        {
-          method: "post",
-          body: JSON.stringify({ dataSets: identityConfig.dataSets }),
-        }
-      );
-
-      if (response.ok) {
-        const dataSets = await response.json();
-        return dataSets;
-      }
-    },
-    loadDataCallback: async (dataSet: any) => {
-      const response = await fetch(
-        `http://0.0.0.0:3005/api/data/${dataSet.id}`
-      );
-
-      if (response.ok) {
-        const result = await response.json();
-
-        return result;
-      } else {
-        console.error(`Failed to load data for data set ${dataSet.id}.`);
-
-        return null;
-      }
-    },
-    identityCallback: async () => {
-      const response = await fetch(
-        "http://0.0.0.0:3005/api/identity?type=custom"
-      );
-      if (response.ok) {
+    identity: async () => {
+      const response = await fetch("https://example.vizzly.co/api/identity?userId=generate-random");
+      if(response.ok) {
         const tokens = await response.json();
 
         return tokens;
-      }
+      };
 
       return null;
-    },
+    }
   },
 };
 </script>
