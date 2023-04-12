@@ -1,0 +1,146 @@
+{
+  "connection": {
+    "client": "snowflake",
+    "debug": false,
+    "connection": {
+      "username": "{{VIZZLY_SNOWFLAKE_USERNAME}}",
+      "password": "{{VIZZLY_SNOWFLAKE_PASSWORD}}",
+      "account": "{{VIZZLY_SNOWFLAKE_ACCOUNT}}",
+      "schema": "{{VIZZLY_SNOWFLAKE_SCHEMA}}",
+      "database": "{{VIZZLY_SNOWFLAKE_DATABASE}}",
+      "warehouse": "{{VIZZLY_SNOWFLAKE_WAREHOUSE}}",
+      "role": "{{VIZZLY_SNOWFLAKE_ROLE}}",
+      "insecureConnect": true,
+      "ocspFailOpen": false
+    }
+  },
+  "dataSets": [
+    {
+      "id": "shop_customers",
+      "name": "Shop customers data set",
+      "fields": [
+        {
+          "name": "customerid",
+          "dataType": "number",
+          "table": "shop_customers",
+          "publicName": "Customer ID",
+          "id": "fie_1"
+        },
+        {
+          "name": "country",
+          "dataType": "string",
+          "table": "shop_customers",
+          "publicName": "Country",
+          "id": "fie_2"
+        }
+      ],
+      "joins": []
+    },
+    {
+      "id": "stock-data-set",
+      "name": "Stock data set",
+      "fields": [
+        {
+          "name": "date",
+          "dataType": "date_time",
+          "table": "vizzlytesting.integration_testing.stocks",
+          "publicName": "Date",
+          "id": "fie_1"
+          
+        },
+        {
+          "name": "open",
+          "dataType": "number",
+          "table": "vizzlytesting.integration_testing.stocks",
+          "publicName": "Open",
+          "id": "Open",
+          "canBeDimension": false
+        },
+        {
+          "name": "high",
+          "dataType": "number",
+          "table": "vizzlytesting.integration_testing.stocks",
+          "publicName": "High",
+          "id": "High",
+          "canBeDimension": false
+        },
+        {
+          "name": "low",
+          "dataType": "number",
+          "table": "vizzlytesting.integration_testing.stocks",
+          "publicName": "Low",
+          "id": "Low",
+          "canBeDimension": false
+        },
+        {
+          "name": "close",
+          "dataType": "number",
+          "table": "vizzlytesting.integration_testing.stocks",
+          "publicName": "Close",
+          "id": "Close",
+          "canBeDimension": false
+        },
+        {
+          "name": "volume",
+          "dataType": "number",
+          "table": "vizzlytesting.integration_testing.stocks",
+          "publicName": "Volume",
+          "id": "Volume",
+          "canBeDimension": false
+        },
+        {
+          "name": "name",
+          "dataType": "string",
+          "table": "vizzlytesting.integration_testing.stocks",
+          "publicName": "Name",
+          "id": "Name"
+        }
+      ],
+      "joins": []
+    },
+    {
+      "id": "shop_customers_x_orders",
+      "name": "Shop customer orders",
+      "fields": [
+        {
+          "name": "customerid",
+          "dataType": "number",
+          "table": "shop_customers",
+          "publicName": "Customer ID",
+          "id": "fie_1"
+        },
+        {
+          "name": "country",
+          "dataType": "string",
+          "table": "shop_customers",
+          "publicName": "Country",
+          "id": "fie_2"
+        },
+        {
+          "name": "orderdate",
+          "dataType": "date_time",
+          "table": "shop_orders",
+          "publicName": "Order Date",
+          "id": "fie_3"
+        }
+      ],
+      "joins": [
+        {
+          "type": "leftJoin",
+          "left": {
+            "field": "customerid",
+            "table": "shop_customers"
+          },
+          "right": {
+            "field": "customerid",
+            "table": "shop_orders"
+          }
+        }
+      ]
+    }
+  ],
+  "publicKeyCertificates": [
+    "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERbmqmGHbjlNMXjHZMJsoFsDnQDT7\nk4aV5wBdlXIKe0GH+FWSwawtc8XAMURwSA7iAY2QzmzJ4RQ6ZKp1UVkpLA==\n-----END PUBLIC KEY-----",
+    "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHnMR6Kl4zeI+NCNpK+vAyQM9HiTJ\nHegJ+ZcQAsaCf/cKHgT3cwSjfASAmUu/cNrS3bqDFK+Jao1a80d/fH3wpw==\n-----END PUBLIC KEY-----"
+  ]
+}
