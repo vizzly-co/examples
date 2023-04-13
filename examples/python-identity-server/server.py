@@ -31,7 +31,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         expiry_ttl_in_minutes=60
-        access_type = 'editor'
+        access_type = 'admin'
         organisation_id = 'org_9817c013a80944cea5890df34ab792cd'
         dashboard_id='dsh_c0ef7773f0d249e49365ae535d02860b'
         user_reference = 'usr-123'
