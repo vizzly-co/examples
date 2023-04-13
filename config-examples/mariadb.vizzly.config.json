@@ -66,8 +66,7 @@
           "dataType": "string",
           "table": "stocks",
           "publicName": "Name",
-          "id": "Name",
-          "canBeUsedInSharedResultCache": true
+          "id": "Name"
         }
       ],
       "joins": []
