@@ -1,7 +1,6 @@
 {
   "connection": {
     "client": "snowflake",
-    "debug": false,
     "connection": {
       "username": "{{VIZZLY_SNOWFLAKE_USERNAME}}",
       "password": "{{VIZZLY_SNOWFLAKE_PASSWORD}}",
