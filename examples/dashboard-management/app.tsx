@@ -1,6 +1,6 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
-import Vizzly, { useDashboardManager } from "@vizzly/dashboard";
+import { useDashboardManager } from "@vizzly/dashboard";
 
 const fetchIdentity = async () => {
   const response = await fetch("https://app.vizzly.co/api/doc-examples-identity-callback");
@@ -14,7 +14,7 @@ const fetchIdentity = async () => {
 };
 
 function App() {
-  const { dashboards, createTemplateCopy } = useDashboardManager(fetchIdentity, "https://example.vizzly.co/query-engine");
+  const { dashboards, createDashboard } = useDashboardManager(fetchIdentity, "https://example.vizzly.co/query-engine");
 
   return (
     <>
@@ -23,7 +23,7 @@ function App() {
           <li>{dashboard.id}</li>
         ))}
       </ul>
-      <button onClick={() => createTemplateCopy({})}>Create a new dashboard</button>
+      <button onClick={() => createDashboard({})}>Create a new dashboard</button>
     </>
   );
 }
