@@ -1,0 +1,100 @@
+employeeId,name,gender,dateOfBirth,dateOfHire,department,jobTitle,salary,employeeSatisfactionScore,tenure,nationality
+1,Adam Smith,Male,1985-02-15,2015-06-01,HR,HR Manager,80000,8,6,US
+2,Sara Johnson,Female,1988-05-10,2016-09-01,Marketing,Marketing Manager,75000,7,5,US
+3,John Doe,Male,1990-12-21,2017-01-15,Engineering,Software Engineer,85000,9,4,Canada
+4,Jane Smith,Female,1991-04-02,2018-02-01,Finance,Finance Analyst,65000,8,3,Canada
+5,David Lee,Male,1982-11-25,2019-05-01,HR,HR Specialist,60000,7,2,US
+6,Emily Chen,Female,1993-09-30,2016-01-01,Marketing,Marketing Executive,50000,6,6,Canada
+7,Mark Davis,Male,1992-07-12,2020-04-01,Engineering,Software Engineer,90000,10,1,US
+8,Ashley Johnson,Female,1989-01-05,2015-08-01,Finance,Finance Analyst,70000,9,5,Canada
+9,Brian Wilson,Male,1987-03-10,2016-01-01,HR,HR Specialist,65000,8,6,US
+10,Anna Nguyen,Female,1994-06-03,2017-03-01,Marketing,Marketing Manager,80000,9,4,US
+11,William Jackson,Male,1993-08-15,2018-07-01,Engineering,Software Engineer,95000,10,3,Canada
+12,Grace Kim,Female,1988-11-02,2019-09-01,Finance,Finance Analyst,75000,8,2,US
+13,Thomas Brown,Male,1986-06-20,2017-06-01,HR,HR Manager,90000,9,4,Canada
+14,Karen Smith,Female,1990-12-01,2020-01-01,Marketing,Marketing Executive,55000,7,1,US
+15,Andrew Lee,Male,1991-02-14,2015-01-01,Engineering,Software Engineer,85000,9,6,Canada
+16,Mary Wang,Female,1992-05-27,2016-03-01,Finance,Finance Analyst,65000,7,5,US
+17,Joseph Miller,Male,1988-09-10,2017-05-01,HR,HR Specialist,55000,6,4,US
+18,Kimberly Lee,Female,1993-01-20,2018-11-01,Marketing,Marketing Manager,80000,9,3,Canada
+19,Mary Johnson,Female,1990-01-04,2019-12-01,Marketing,Marketing Manager,75000,4,3.25,USA
+20,John Smith,Male,1985-02-14,2016-05-05,Engineering,Network Engineer,85000,3,5.5,USA
+21,Sara Lee,Female,1982-11-23,2014-09-03,HR,HR Manager,80000,4,7,Canada
+22,Michael Chen,Male,1987-06-30,2018-02-12,Engineering,Software Engineer,90000,5,4,China
+23,Amanda Rodriguez,Female,1992-05-17,2020-06-24,Marketing,Sales Manager,70000,3.5,1,Mexico
+24,Adam Lee,Male,1983-09-12,2012-11-05,Finance,Finance Analyst,75000,4.5,8,USA
+25,Samir Singh,Male,1991-08-08,2020-07-03,Engineering,Systems Analyst,80000,4,1.5,India
+26,Emily Chen,Female,1984-02-09,2017-06-15,Finance,Financial Manager,95000,4.5,4,Taiwan
+27,Carlos Garcia,Male,1980-04-22,2011-08-09,Marketing,Marketing Executive,50000,3,9,Mexico
+28,Samantha Williams,Female,1989-12-15,2018-03-02,HR,Recruiter,60000,4,3.5,USA
+29,Raj Patel,Male,1986-03-06,2015-09-01,Engineering,Database Administrator,80000,4,6.5,India
+30,Karen Davis,Female,1994-07-29,2020-08-20,Marketing,Marketing Analyst,60000,4,2.5,USA
+31,Jackie Chan,Male,1990-04-07,2019-02-15,Engineering,Software Engineer,100000,4.5,3,Hong Kong
+32,Emma Martinez,Female,1988-10-18,2016-09-01,HR,HR Coordinator,45000,2.5,5,Mexico
+33,David Kim,Male,1987-06-01,2018-08-02,Finance,Finance Analyst,75000,3.5,3,Korea
+34,Amy Patel,Female,1991-09-25,2020-06-02,Engineering,Software Engineer,95000,4,3,India
+35,Robert Lee,Male,1994-12-08,2020-08-12,Finance,Finance Analyst,70000,4,1.5,USA
+36,Emily Perez,Female,1987-09-15,2020-05-03,HR,HR Coordinator,62000,8.5,1,United States
+37,Kevin Chen,Male,1990-02-20,2018-06-21,Engineering,Software Engineer,90000,7.9,3,Canada
+38,Isabelle Martinez,Female,1994-11-05,2021-03-17,Marketing,Marketing Executive,52000,6.2,0,Mexico
+39,John Brown,Male,1980-08-10,2016-02-15,Finance,Finance Analyst,75000,8.1,5,United States
+40,Victoria Kim,Female,1988-04-22,2019-10-01,Engineering,Product Manager,120000,9.3,2,South Korea
+41,Michael Davis,Male,1981-11-29,2015-06-30,Finance,Finance Manager,100000,8.6,6,United States
+42,Samantha Lee,Female,1996-08-08,2021-01-04,Marketing,Marketing Executive,55000,7.8,0,United States
+43,David Nguyen,Male,1989-05-11,2017-01-10,Engineering,Software Engineer,80000,8.2,4,Vietnam
+44,Avery Kim,Female,1991-12-17,2019-08-01,HR,HR Manager,100000,9.1,2,South Korea
+45,Jason Patel,Male,1983-03-04,2018-09-15,Marketing,Marketing Manager,90000,8.8,3,United States
+46,Bianca Lopez,Female,1997-02-12,2021-02-01,Engineering,Data Analyst,70000,7.5,0,Mexico
+47,Christopher Smith,Male,1985-10-18,2017-09-02,Finance,Finance Analyst,85000,8.4,4,United States
+48,Grace Lee,Female,1993-06-20,2021-01-04,Engineering,Software Engineer,90000,8.6,0,South Korea
+49,William Thompson,Male,1982-09-01,2016-05-20,HR,HR Generalist,68000,7.7,5,United States
+50,Julia Kim,Female,1990-07-11,2018-11-15,Marketing,Marketing Executive,55000,7.9,3,South Korea
+51,Brianne Smith,Female,1990-05-03,2018-07-09,Marketing,Marketing Manager,100000,8,3,United States
+52,Oliver Garcia,Male,1993-02-18,2019-04-15,Finance,Finance Analyst,70000,6,2,Mexico
+53,Maria Martinez,Female,1996-01-25,2018-09-01,HR,HR Specialist,55000,7,3,Spain
+54,John Kim,Male,1991-08-12,2017-03-15,Engineering,Software Engineer,85000,9,5,United States
+55,Lisa Chen,Female,1994-11-21,2019-05-30,Finance,Accountant,60000,8,2,China
+56,James Lee,Male,1987-03-12,2016-06-01,Engineering,Senior Software Engineer,105000,9,5,United States
+57,Emma Brown,Female,1992-09-08,2018-08-01,Marketing,Marketing Executive,45000,7,2,United Kingdom
+58,Alex Rodriguez,Male,1995-12-04,2019-02-01,HR,HR Generalist,60000,7,2,United States
+59,Samantha Lee,Female,1991-07-04,2019-09-01,Finance,Finance Analyst,70000,8,2,USA
+60,Maxwell Chen,Male,1994-02-21,2020-01-01,Marketing,Marketing Executive,55000,7,1,Canada
+61,Maria Rodriguez,Female,1992-11-15,2020-03-01,Engineering,Software Engineer,90000,9,1,Mexico
+62,James Kim,Male,1985-05-02,2017-02-01,HR,Hiring Manager,85000,8,4,USA
+63,Alicia Smith,Female,1989-10-18,2018-05-01,Marketing,Marketing Manager,75000,9,3,USA
+64,Steven Johnson,Male,1993-04-12,2019-07-01,Engineering,Software Engineer,95000,10,2,USA
+65,Karen Davis,Female,1987-11-05,2017-06-01,Finance,Finance Analyst,65000,8,4,USA
+66,George Kim,Male,1990-03-21,2018-02-01,HR,HR Specialist,55000,7,3,Canada
+67,Sophia Chen,Female,1991-09-15,2019-05-01,Marketing,Marketing Executive,50000,6,2,USA
+68,Chris Lee,Male,1995-02-02,2020-07-01,Engineering,Software Engineer,90000,9,1,Canada
+69,Amy Johnson,Female,1989-07-20,2016-05-01,Finance,Finance Manager,80000,9,5,USA
+70,Nick Thompson,Male,1991-12-30,2018-09-01,Engineering,Software Engineer,85000,8,3,USA
+71,Lisa Kim,Female,1993-06-18,2019-02-01,HR,Hiring Manager,95000,10,2,Canada
+72,Andrew Smith,Male,1988-08-15,2017-09-01,Marketing,Marketing Manager,75000,8,4,USA
+73,Jennifer Davis,Female,1990-11-18,2018-06-01,Finance,Finance Analyst,65000,7,3,USA
+74,William Chen,Male,1994-05-10,2020-09-01,Engineering,Software Engineer,90000,9,1,Canada
+75,Melanie Lee,Female,1992-04-03,2019-01-01,HR,HR Specialist,65000,8,2,USA
+76,Matthew Thompson,Male,1987-03-11,2016-07-01,Marketing,Marketing Executive,50000,6,6,USA
+77,Ashley Rodriguez,Female,1989-08-29,2018-03-01,Engineering,Software Engineer,85000,8,3,Mexico
+78,Brandon Kim,Male,1991-01-23,2019-05-01,Finance,Finance Analyst,70000,9,2,USA
+79,Emily Johnson,Female,1993-09-12,2018-08-01,Marketing,Marketing Manager,80000,10,3,USA
+80,David Thompson,Male,1985-11-28,2016-12-01,Engineering,Software Engineer,95000,9,5,USA
+81,Alice Lee,Female,1992-07-19,2019-03-01,HR,HR Specialist,60000,7,2,Canada
+82,Michael Davis,Male,1994-04-08,2020-02-01,Marketing,Marketing Executive,55000,8,1,USA
+83,Olivia Chen,Female,1991-12-20,2019-07-01,Engineering,Software Engineer,90000,9,2,Canada
+84,Michael Lee,Male,1978-09-17,2012-05-01,Operations,Operations Manager,100000,8,9,USA
+85,Emily Kim,Female,1995-03-19,2020-02-01,Engineering,Product Manager,120000,9,2,South Korea
+86,David Wang,Male,1987-06-12,2014-11-01,Marketing,Marketing Analyst,50000,5,7,USA
+87,Michelle Nguyen,Female,1992-09-08,2020-08-01,HR,HR Specialist,60000,8,3,Vietnam
+88,Jason Patel,Male,1991-01-07,2018-10-01,Finance,Finance Manager,90000,7,4,India
+89,Olivia Brown,Female,1983-11-28,2016-03-15,Operations,Operations Analyst,70000,6,5,USA
+90,Mohammed Ahmed,Male,1989-04-02,2013-01-01,Engineering,Software Engineer,95000,8,10,Egypt
+91,Emma Davis,Female,1993-12-25,2019-05-01,Marketing,Marketing Executive,45000,6,2,USA
+92,Mark Wilson,Male,1982-08-10,2011-09-01,HR,HR Generalist,70000,7,12,USA
+93,Jessica Kim,Female,1994-02-03,2020-03-01,Engineering,Product Manager,110000,9,1,South Korea
+94,Carlos Rodriguez,Male,1985-06-20,2016-08-01,Finance,Finance Analyst,65000,7,5,Mexico
+95,Christine Nguyen,Female,1990-11-13,2018-06-01,Operations,Operations Manager,95000,8,3,Vietnam
+96,Steven Chen,Male,1986-09-03,2013-03-15,Engineering,Software Engineer,100000,9,9,China
+97,Monica Patel,Female,1987-05-11,2015-07-01,Marketing,Marketing Manager,80000,7,6,India
+98,Daniel Park,Male,1996-07-29,2021-03-01,Engineering,Software Engineer,80000,8,1,USA
+99,Ashley Kim,Female,1998-04-17,2020-06-01,Finance,Finance Analyst,55000,6,1,South Korea
