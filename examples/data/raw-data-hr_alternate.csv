@@ -1,4 +1,4 @@
-employeeId,name,gender,dateOfBirth,dateOfHire,department,jobTitle,salary,employeeSatisfactionScore,tenure,nationality
+employeeid,name,gender,dateOfBirth,dateOfHire,department,jobTitle,salary,employeeSatisfactionScore,tenure,nationality
 1,Adam Smith,Male,1985-02-15,2015-06-01,HR,HR Manager,80000,8,6,US
 2,Sara Johnson,Female,1988-05-10,2016-09-01,Marketing,Marketing Manager,75000,7,5,US
 3,John Doe,Male,1990-12-21,2017-01-15,Engineering,Software Engineer,85000,9,4,Canada
