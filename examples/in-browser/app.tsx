@@ -2,6 +2,8 @@ import * as React from "react";
 import { createRoot } from "react-dom/client";
 import Vizzly from "@vizzly/dashboard";
 
+const ALLOWED_OPERATORS = ['=', '!=', '>', '<', '>=', '<=', 'is_one_of', 'is_not_one_of'];
+
 function App() {
   return (
     <Vizzly.Dashboard
@@ -17,6 +19,7 @@ function App() {
                   id: "fie_1",
                   canBeDimension: false,
                   canBeMeasure: true,
+                  allowedOperators: ALLOWED_OPERATORS
                 },
                 {
                   dataType: "string" as const,
@@ -24,6 +27,7 @@ function App() {
                   id: "fie_2",
                   canBeDimension: true,
                   canBeMeasure: false,
+                  allowedOperators: ALLOWED_OPERATORS
                 },
                 {
                   dataType: "number" as const,
@@ -31,6 +35,7 @@ function App() {
                   id: "fie_3",
                   canBeDimension: false,
                   canBeMeasure: true,
+                  allowedOperators: ALLOWED_OPERATORS
                 },
                 {
                   dataType: "date_time" as const,
@@ -39,6 +44,7 @@ function App() {
                   canBeDimension: false,
                   canBeMeasure: true,
                   allowedGranularities: ["month", "year"],
+                  allowedOperators: ALLOWED_OPERATORS
                 },
               ],
             },
