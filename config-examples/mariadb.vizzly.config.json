@@ -16,14 +16,14 @@
       "fields": [
         {
           "name": "date",
-          "dataType": "date_time",
+          "dataType": "DATETIME",
           "table": "stocks",
           "publicName": "Date",
           "id": "Date"
         },
         {
           "name": "open",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "stocks",
           "publicName": "Open",
           "id": "Open",
@@ -31,7 +31,7 @@
         },
         {
           "name": "high",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "stocks",
           "publicName": "High",
           "id": "High",
@@ -39,7 +39,7 @@
         },
         {
           "name": "low",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "stocks",
           "publicName": "Low",
           "id": "Low",
@@ -47,7 +47,7 @@
         },
         {
           "name": "close",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "stocks",
           "publicName": "Close",
           "id": "Close",
@@ -55,7 +55,7 @@
         },
         {
           "name": "volume",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "stocks",
           "publicName": "Volume",
           "id": "Volume",
@@ -63,7 +63,7 @@
         },
         {
           "name": "name",
-          "dataType": "string",
+          "dataType": "VARCHAR",
           "table": "stocks",
           "publicName": "Name",
           "id": "Name"
@@ -77,14 +77,14 @@
       "fields": [
         {
           "name": "name",
-          "dataType": "string",
+          "dataType": "VARCHAR",
           "table": "cities_data_people",
           "publicName": "Person name",
           "id": "Person name"
         },
         {
           "name": "name",
-          "dataType": "string",
+          "dataType": "VARCHAR",
           "table": "cities_data_cities",
           "publicName": "City",
           "id": "City"
@@ -112,34 +112,34 @@
           "name": "id",
           "publicName": "City ID",
           "id": "City ID",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "cities_data_cities"
         },
         {
           "name": "name",
           "publicName": "City Name",
           "id": "City",
-          "dataType": "string",
+          "dataType": "VARCHAR",
           "table": "cities_data_cities"
         },
         {
           "publicName": "High Temp",
           "id": "High temp",
           "name": "high",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "cities_data_weather"
         },
         {
           "publicName": "Low temp",
           "id": "Low temp",
           "name": "low",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "cities_data_weather"
         },
         {
           "name": "hidden_field_id",
           "id": "hidden_fie_2",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "cities_data_cities"
         }
       ],
@@ -163,21 +163,21 @@
       "fields": [
         {
           "name": "name",
-          "dataType": "string",
+          "dataType": "VARCHAR",
           "table": "cities_data_people",
           "publicName": "Person name",
           "id": "Person name"
         },
         {
           "name": "name",
-          "dataType": "string",
+          "dataType": "VARCHAR",
           "table": "cities_data_cities",
           "publicName": "City",
           "id": "City"
         },
         {
           "name": "id",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "cities_data_cities",
           "publicName": "City ID",
           "id": "City ID"
@@ -211,28 +211,28 @@
           "name": "id",
           "publicName": "City ID",
           "id": "fie_1",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "cities_data_cities"
         },
         {
           "name": "name",
           "publicName": "City",
           "id": "fie_2",
-          "dataType": "string",
+          "dataType": "VARCHAR",
           "table": "cities_data_cities"
         },
         {
           "publicName": "High temp",
           "id": "fie_3",
           "name": "high",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "cities_data_weather"
         },
         {
           "publicName": "Low temp",
           "id": "fie_4",
           "name": "low",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "cities_data_weather"
         }
       ],
@@ -256,14 +256,14 @@
       "fields": [
         {
           "name": "price",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "items",
           "publicName": "Price",
           "id": "fie_1"
         },
         {
           "name": "cost",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "items",
           "publicName": "Cost",
           "id": "fie_2"
