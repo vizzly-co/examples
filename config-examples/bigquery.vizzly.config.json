@@ -17,21 +17,21 @@
         {
           "id": "field_id_1",
           "name": "order_id",
-          "dataType": "number",
+          "dataType": "INT64",
           "publicName": "Order ID",
           "table": "us_sales"
         },
         {
           "id": "field_id_2",
           "name": "order_date",
-          "dataType": "date_time",
+          "dataType": "TIMESTAMP",
           "publicName": "Order Date",
           "table": "us_sales"
         },
         {
           "id": "field_id_3",
           "name": "status",
-          "dataType": "string",
+          "dataType": "STRING",
           "publicName": "Status",
           "table": "us_sales"
         }
