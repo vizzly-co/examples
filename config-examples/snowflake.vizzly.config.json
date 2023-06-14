@@ -20,14 +20,14 @@
       "fields": [
         {
           "name": "customerid",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "shop_customers",
           "publicName": "Customer ID",
           "id": "fie_1"
         },
         {
           "name": "country",
-          "dataType": "string",
+          "dataType": "STRING",
           "table": "shop_customers",
           "publicName": "Country",
           "id": "fie_2"
@@ -41,7 +41,7 @@
       "fields": [
         {
           "name": "date",
-          "dataType": "date_time",
+          "dataType": "DATETIME",
           "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Date",
           "id": "fie_1"
@@ -49,7 +49,7 @@
         },
         {
           "name": "open",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Open",
           "id": "Open",
@@ -57,7 +57,7 @@
         },
         {
           "name": "high",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "High",
           "id": "High",
@@ -65,7 +65,7 @@
         },
         {
           "name": "low",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Low",
           "id": "Low",
@@ -73,7 +73,7 @@
         },
         {
           "name": "close",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Close",
           "id": "Close",
@@ -81,7 +81,7 @@
         },
         {
           "name": "volume",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Volume",
           "id": "Volume",
@@ -89,7 +89,7 @@
         },
         {
           "name": "name",
-          "dataType": "string",
+          "dataType": "STRING",
           "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Name",
           "id": "Name"
@@ -103,21 +103,21 @@
       "fields": [
         {
           "name": "customerid",
-          "dataType": "number",
+          "dataType": "FLOAT",
           "table": "shop_customers",
           "publicName": "Customer ID",
           "id": "fie_1"
         },
         {
           "name": "country",
-          "dataType": "string",
+          "dataType": "STRING",
           "table": "shop_customers",
           "publicName": "Country",
           "id": "fie_2"
         },
         {
           "name": "orderdate",
-          "dataType": "date_time",
+          "dataType": "DATETIME",
           "table": "shop_orders",
           "publicName": "Order Date",
           "id": "fie_3"
