@@ -1,0 +1,17 @@
+{/* AllowSimpleMathsCustomField.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as AllowSimpleMathsCustomFieldStories from './AllowSimpleMathsCustomField.stories';
+
+# Allow Percentages Custom Field
+
+## Feature Toggle
+
+By default <code>allowSimpleMathsCustomField</code> is set to <code>true</code>. It is represented in the UI under <strong>Custom Metrics</strong> section.
+
+<Meta of={AllowSimpleMathsCustomFieldStories} />
+
+<Container>
+  <Story of={AllowSimpleMathsCustomFieldStories.True} autoplay />
+</Container>

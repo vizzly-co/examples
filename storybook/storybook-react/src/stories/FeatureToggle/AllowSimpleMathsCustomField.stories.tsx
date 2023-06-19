@@ -12,7 +12,7 @@ import { getFieldsetFromLegend } from '../testing/form';
 import { highlightItem } from '../testing/highlighter';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/allowPercentagesCustomField',
+  title: 'Dashboard Props/Feature Toggle/allowSimpleMathsCustomField',
   component: Vizzly.Dashboard,
 };
 
@@ -26,7 +26,7 @@ export const True: StoryFn = () => {
         rowLimit: 2,
       }}
       featureToggles={{
-        allowPercentagesCustomField: true,
+        allowSimpleMathsCustomField: true,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={async () => {
@@ -64,7 +64,7 @@ export const False: StoryFn = () => {
         rowLimit: 2,
       }}
       featureToggles={{
-        allowPercentagesCustomField: false,
+        allowSimpleMathsCustomField: false,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={async () => {
