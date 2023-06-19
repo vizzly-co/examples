@@ -16,9 +16,6 @@ export const Dashboard: StoryFn = () => {
         rowLimit: 4,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
-      featureToggles={{
-        allowPercentagesCustomField: false,
-      }}
       identity={async () => {
         const response = await fetch(
           'https://app.vizzly.co/api/doc-examples-identity-callback'
