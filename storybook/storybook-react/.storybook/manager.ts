@@ -9,11 +9,11 @@ addons.setConfig({
   enableShortcuts: false,
   showToolbar: false,
   theme: vizzlyTheme,
-  selectedPanel: undefined,
   initialActive: "sidebar",
   sidebar: {
     showRoots: true,
   },
+  selectedPanel: "interactions",
   toolbar: {
     title: { hidden: false },
     zoom: { hidden: true },
