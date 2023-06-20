@@ -33,3 +33,18 @@ export function highlightAndFocus(element: HTMLElement) {
     }
   }, 100);
 }
+export function highlight(element: HTMLElement) {
+  const interval = setInterval(() => {
+    if (element) {
+      clearInterval(interval);
+
+      element.style.border = '2px solid blue';
+      element.style.borderRadius = '8px';
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest',
+      });
+    }
+  }, 100);
+}

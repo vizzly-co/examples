@@ -1,0 +1,17 @@
+{/* CanUseComponentLibrary.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as CanUseComponentLibraryStories from './CanUseComponentLibrary.stories';
+
+# canUseComponentLibrary
+
+## Feature Toggle
+
+By default <code>canUseComponentLibrary</code> is set to <code>true</code>. By setting it to false it won't show for your end user.
+
+<Meta of={CanUseComponentLibraryStories} />
+
+<Container>
+  <Story of={CanUseComponentLibraryStories.True} autoplay />
+</Container>
