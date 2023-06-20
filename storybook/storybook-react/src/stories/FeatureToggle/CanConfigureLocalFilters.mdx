@@ -1,0 +1,17 @@
+{/* CanConfigureLocalFilters.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as CanConfigureLocalFiltersStories from './CanConfigureLocalFilters.stories';
+
+# canConfigureLocalFilters
+
+## Feature Toggle
+
+By default <code>canConfigureLocalFilters</code> is set to <code>true</code>. It is represented in the UI under <strong>Custom Metrics</strong> section.
+
+<Meta of={CanConfigureLocalFiltersStories} />
+
+<Container>
+  <Story of={CanConfigureLocalFiltersStories.True} autoplay />
+</Container>
