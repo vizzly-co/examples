@@ -1,13 +1,6 @@
 {
   "connection": {
-    "client": "mariadb",
-    "connection": {
-      "password": "{{VIZZLY_MARIADB_PASSWORD}}",
-      "database": "{{VIZZLY_MARIADB_DATABASE}}",
-      "user": "{{VIZZLY_MARIADB_USER}}",
-      "host": "{{VIZZLY_MARIADB_HOST}}",
-      "port": "{{VIZZLY_MARIADB_PORT}}"
-    }
+    "client": "mariadb"
   },
   "dataSets": [
     {
