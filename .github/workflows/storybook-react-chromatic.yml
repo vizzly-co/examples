@@ -1,0 +1,34 @@
+name: "Storybook React Chromatic"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - storybook/storybook-react/**
+  pull_request:
+    branches:
+      - main
+    paths:
+      - storybook/storybook-react/**
+
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.14.2
+          cache: "yarn"
+      - name: Install dependencies
+        run: yarn install
+      - name: Build storybook
+        run: cd storybook/storybook-react && yarn install && yarn build-storybook
+        # 👇 Adds Chromatic as a step in the workflow
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          projectToken: ${{ secrets.STORYBOOK_REACT_CHROMATIC_PROJECT_TOKEN }}
+          workingDir: storybook/storybook-react

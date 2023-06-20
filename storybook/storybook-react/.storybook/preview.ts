@@ -5,6 +5,7 @@ const preview: Preview = {
   parameters: {
     controls: { disable: true },
     actions: { disable: true },
+    chromatic: { delay: 300 },
   },
 };
 
