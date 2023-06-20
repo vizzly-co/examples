@@ -3,11 +3,13 @@ import type { Meta, StoryFn } from '@storybook/react';
 
 import { waitForElement } from '../testing/helpers';
 import { highlight } from '../testing/highlighter';
-import { findButtonsByText } from '../testing/buttons';
+import { findButtonByText, findButtonsByText } from '../testing/buttons';
+import { userEvent } from '@storybook/testing-library';
+import { screenUpdate } from '../testing/utils';
 import { getIdentity } from '../factory/getIdentity';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/canUseComponentLibrary',
+  title: 'Dashboard Props/Feature Toggle/canEditComponentLibrary',
   component: Vizzly.Dashboard,
 };
 
@@ -21,7 +23,7 @@ export const True: StoryFn = () => {
         rowLimit: 2,
       }}
       featureToggles={{
-        canUseComponentLibrary: true,
+        canEditComponentLibrary: true,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
@@ -31,9 +33,14 @@ export const True: StoryFn = () => {
 
 True.play = async () => {
   waitForElement('.vizzly_dashboard', async () => {
-    const selectTemplateButton = findButtonsByText('Select Template');
-    if (selectTemplateButton) {
-      selectTemplateButton.map((button) => highlight(button));
+    await screenUpdate();
+    const selectTemplateButton = findButtonByText('Select Template') as Element;
+    await screenUpdate();
+    userEvent.click(selectTemplateButton);
+    await screenUpdate();
+    const createNewButton = findButtonByText('Create New');
+    if (createNewButton) {
+      highlight(createNewButton);
     }
   });
 };
@@ -46,7 +53,7 @@ export const False: StoryFn = () => {
         rowLimit: 2,
       }}
       featureToggles={{
-        canUseComponentLibrary: false,
+        canEditComponentLibrary: false,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
@@ -56,9 +63,10 @@ export const False: StoryFn = () => {
 
 False.play = async () => {
   waitForElement('.vizzly_dashboard', async () => {
-    const selectTemplateButton = findButtonsByText('Select Template');
-    if (selectTemplateButton) {
-      selectTemplateButton.map((button) => highlight(button));
-    }
+    await screenUpdate();
+    const selectTemplateButton = findButtonByText('Select Template') as Element;
+    await screenUpdate();
+    userEvent.click(selectTemplateButton);
+    await screenUpdate();
   });
 };
