@@ -1,0 +1,17 @@
+{/* CanEditComponentLibrary.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as CanEditComponentLibraryStories from './CanEditComponentLibrary.stories';
+
+# canEditComponentLibrary
+
+## Feature Toggle
+
+By default <code>canEditComponentLibrary</code> is set to <code>true</code>. By setting it to false the Create New action will not show for your user.
+
+<Meta of={CanEditComponentLibraryStories} />
+
+<Container>
+  <Story of={CanEditComponentLibraryStories.True} autoplay />
+</Container>

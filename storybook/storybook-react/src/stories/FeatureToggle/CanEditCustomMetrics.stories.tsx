@@ -10,6 +10,7 @@ import {
 import { screenUpdate } from '../testing/utils';
 import { getFieldsetFromLegend } from '../testing/form';
 import { getAndHighlightItem, highlightAndFocus } from '../testing/highlighter';
+import { getIdentity } from '../factory/getIdentity';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
   title: 'Dashboard Props/Feature Toggle/canEditCustomMetrics',
@@ -29,16 +30,7 @@ export const True: StoryFn = () => {
         canEditCustomMetrics: true,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
-      identity={async () => {
-        const response = await fetch(
-          'https://app.vizzly.co/api/doc-examples-identity-callback'
-        );
-        if (response.ok) {
-          const responseBody = await response.json();
-          return responseBody.accessTokens;
-        }
-        return null;
-      }}
+      identity={getIdentity()}
     />
   );
 };
@@ -68,16 +60,7 @@ export const False: StoryFn = () => {
         canEditCustomMetrics: false,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
-      identity={async () => {
-        const response = await fetch(
-          'https://app.vizzly.co/api/doc-examples-identity-callback'
-        );
-        if (response.ok) {
-          const responseBody = await response.json();
-          return responseBody.accessTokens;
-        }
-        return null;
-      }}
+      identity={getIdentity()}
     />
   );
 };

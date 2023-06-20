@@ -4,6 +4,7 @@ import { userEvent } from '@storybook/testing-library';
 
 import { waitForElement } from '../testing/helpers';
 import { getAndHighlightItem } from '../testing/highlighter';
+import { getIdentity } from '../factory/getIdentity';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
   title: 'Dashboard Props/Feature Toggle/canAddNewRows',
@@ -23,16 +24,7 @@ export const True: StoryFn = () => {
         canAddNewRows: true,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
-      identity={async () => {
-        const response = await fetch(
-          'https://app.vizzly.co/api/doc-examples-identity-callback'
-        );
-        if (response.ok) {
-          const responseBody = await response.json();
-          return responseBody.accessTokens;
-        }
-        return null;
-      }}
+      identity={getIdentity()}
     />
   );
 };
@@ -60,16 +52,7 @@ export const False: StoryFn = () => {
         canAddNewRows: false,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
-      identity={async () => {
-        const response = await fetch(
-          'https://app.vizzly.co/api/doc-examples-identity-callback'
-        );
-        if (response.ok) {
-          const responseBody = await response.json();
-          return responseBody.accessTokens;
-        }
-        return null;
-      }}
+      identity={getIdentity()}
     />
   );
 };
