@@ -74,6 +74,7 @@ False.play = async () => {
     const fieldset = getFieldsetFromLegend(baseCanvas, 'Custom metrics');
     await screenUpdate();
     getAndHighlightItem(fieldset, '[data-component="dropdown"]');
+    await screenUpdate();
   });
 };
 
