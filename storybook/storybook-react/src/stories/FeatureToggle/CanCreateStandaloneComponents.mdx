@@ -1,0 +1,17 @@
+{/* CanCreateStandaloneComponents.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as CanCreateStandaloneComponentsStories from './CanCreateStandaloneComponents.stories';
+
+# canCreateStandaloneComponents
+
+## Feature Toggle
+
+By default <code>canCreateStandaloneComponents</code> is set to <code>true</code>. By setting it to false the Add View action won't show for your end user.
+
+<Meta of={CanCreateStandaloneComponentsStories} />
+
+<Container>
+  <Story of={CanCreateStandaloneComponentsStories.True} autoplay />
+</Container>
