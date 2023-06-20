@@ -3,13 +3,13 @@ import type { Meta, StoryFn } from '@storybook/react';
 
 import { waitForElement } from '../testing/helpers';
 import { highlight } from '../testing/highlighter';
-import { findButtonByText } from '../testing/buttons';
+import { findLIButtonByText } from '../testing/buttons';
 import { userEvent } from '@storybook/testing-library';
 import { screenUpdate } from '../testing/utils';
 import { getIdentity } from '../factory/getIdentity';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/canEditComponentLibrary',
+  title: 'Dashboard Props/Feature Toggle/canEditComponentsOnDashboard',
   component: Vizzly.Dashboard,
 };
 
@@ -23,7 +23,7 @@ export const True: StoryFn = () => {
         rowLimit: 2,
       }}
       featureToggles={{
-        canEditComponentLibrary: true,
+        canEditComponentsOnDashboard: true,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
@@ -32,15 +32,17 @@ export const True: StoryFn = () => {
 };
 
 True.play = async () => {
-  waitForElement('.vizzly_dashboard', async () => {
+  waitForElement('.vizzly_dashboard', async (element) => {
     await screenUpdate();
-    const selectTemplateButton = findButtonByText('Select Template') as Element;
-    await screenUpdate();
-    userEvent.click(selectTemplateButton);
-    await screenUpdate();
-    const createNewButton = findButtonByText('Create New');
-    if (createNewButton) {
-      highlight(createNewButton);
+    const openMenu = element?.querySelector(
+      '[aria-label="Options: Row 1 Cell 1"]'
+    ) as Element;
+    userEvent.click(openMenu);
+
+    await screenUpdate(100);
+    const editButton = findLIButtonByText('Edit');
+    if (editButton) {
+      highlight(editButton);
     }
   });
 };
@@ -53,7 +55,7 @@ export const False: StoryFn = () => {
         rowLimit: 2,
       }}
       featureToggles={{
-        canEditComponentLibrary: false,
+        canEditComponentsOnDashboard: false,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
@@ -62,11 +64,11 @@ export const False: StoryFn = () => {
 };
 
 False.play = async () => {
-  waitForElement('.vizzly_dashboard', async () => {
+  waitForElement('.vizzly_dashboard', async (element) => {
     await screenUpdate();
-    const selectTemplateButton = findButtonByText('Select Template') as Element;
-    await screenUpdate();
-    userEvent.click(selectTemplateButton);
-    await screenUpdate();
+    const openMenu = element?.querySelector(
+      '[aria-label="Options: Row 1 Cell 1"]'
+    ) as Element;
+    userEvent.click(openMenu);
   });
 };

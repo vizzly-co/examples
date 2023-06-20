@@ -1,7 +1,7 @@
 export function findButtonByText(text: string): HTMLButtonElement | null {
-  var buttons = document.getElementsByTagName('button');
+  const buttons = document.getElementsByTagName('button');
   for (var i = 0; i < buttons.length; i++) {
-    var button = buttons[i];
+    const button = buttons[i];
     if (button && button.textContent && button.textContent.includes(text)) {
       return button;
     }
@@ -10,8 +10,8 @@ export function findButtonByText(text: string): HTMLButtonElement | null {
 }
 
 export function findButtonsByText(text: string): HTMLButtonElement[] {
-  var buttons = document.getElementsByTagName('button');
-  var matchingButtons: HTMLButtonElement[] = [];
+  const buttons = document.getElementsByTagName('button');
+  const matchingButtons: HTMLButtonElement[] = [];
   for (var i = 0; i < buttons.length; i++) {
     var button = buttons[i];
     if (button && button.textContent && button.textContent.includes(text)) {
@@ -19,4 +19,14 @@ export function findButtonsByText(text: string): HTMLButtonElement[] {
     }
   }
   return matchingButtons;
+}
+
+export function findLIButtonByText(text: string): HTMLLIElement | null {
+  const allLiElements = document.getElementsByTagName('li');
+  for (var i = 0; i < allLiElements.length; i++) {
+    if (allLiElements[i].innerText.includes('Edit')) {
+      return allLiElements[i];
+    }
+  }
+  return null;
 }
