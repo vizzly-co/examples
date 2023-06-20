@@ -3,7 +3,7 @@ import type { Meta, StoryFn } from '@storybook/react';
 import { userEvent } from '@storybook/testing-library';
 
 import { waitForElement } from '../testing/helpers';
-import { highlightItem } from '../testing/highlighter';
+import { getAndHighlightItem } from '../testing/highlighter';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
   title: 'Dashboard Props/Feature Toggle/canAddNewCells',
@@ -45,7 +45,7 @@ True.play = async () => {
     if (elements) {
       userEvent.hover(elements);
     }
-    highlightItem(element, '[data-component="add-cell"]');
+    getAndHighlightItem(element, '[data-component="add-cell"]');
   });
 };
 
@@ -82,6 +82,6 @@ False.play = async () => {
     if (elements) {
       userEvent.hover(elements);
     }
-    highlightItem(element, '[data-component="add-cell"]');
+    getAndHighlightItem(element, '[data-component="add-cell"]');
   });
 };

@@ -9,7 +9,7 @@ import {
 } from '../testing/helpers';
 import { screenUpdate } from '../testing/utils';
 import { getFieldsetFromLegend } from '../testing/form';
-import { highlightItem } from '../testing/highlighter';
+import { getAndHighlightItem } from '../testing/highlighter';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
   title: 'Dashboard Props/Feature Toggle/allowSimpleMathsCustomField',
@@ -52,7 +52,7 @@ True.play = async () => {
     const fieldset = getFieldsetFromLegend(baseCanvas, 'Custom metrics');
     await screenUpdate();
 
-    highlightItem(fieldset, '[data-component="dropdown"]');
+    getAndHighlightItem(fieldset, '[data-component="dropdown"]');
   });
 };
 
@@ -90,7 +90,7 @@ False.play = async () => {
 
     const fieldset = getFieldsetFromLegend(baseCanvas, 'Custom metrics');
     await screenUpdate();
-    highlightItem(fieldset, '[data-component="dropdown"]');
+    getAndHighlightItem(fieldset, '[data-component="dropdown"]');
   });
 };
 
