@@ -1,1 +1,1 @@
-vizzly @ git+https://github.com/vizzly-co/python.git@45ec38d4f9247c3df2eae782db89dd93c9f870c9
+vizzly @ git+https://github.com/vizzly-co/python.git@ca00d4f0a82419691981124563084efc637dfc23
