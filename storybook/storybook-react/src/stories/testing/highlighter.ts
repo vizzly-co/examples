@@ -40,11 +40,6 @@ export function highlight(element: HTMLElement) {
 
       element.style.border = '2px solid blue';
       element.style.borderRadius = '8px';
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-        inline: 'nearest',
-      });
     }
   }, 100);
 }
