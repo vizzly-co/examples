@@ -1,0 +1,17 @@
+{/* CanRemoveComponentsFromDashboard.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as CanRemoveComponentsFromDashboardStories from './CanRemoveComponentsFromDashboard.stories';
+
+# canRemoveComponentsFromDashboard
+
+## Feature Toggle
+
+By default <code>canRemoveComponentsFromDashboard</code> is set to <code>true</code>. By setting it to false the Remove action will not show for your user.
+
+<Meta of={CanRemoveComponentsFromDashboardStories} />
+
+<Container>
+  <Story of={CanRemoveComponentsFromDashboardStories.True} autoplay />
+</Container>

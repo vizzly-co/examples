@@ -24,7 +24,7 @@ export function findButtonsByText(text: string): HTMLButtonElement[] {
 export function findLIButtonByText(text: string): HTMLLIElement | null {
   const allLiElements = document.getElementsByTagName('li');
   for (var i = 0; i < allLiElements.length; i++) {
-    if (allLiElements[i].innerText.includes('Edit')) {
+    if (allLiElements[i].innerText.includes(text)) {
       return allLiElements[i];
     }
   }
