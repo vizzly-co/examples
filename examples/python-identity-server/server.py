@@ -34,16 +34,19 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         access_type = 'admin'
         organisation_id = 'org_9817c013a80944cea5890df34ab792cd'
         dashboard_id='dsh_c0ef7773f0d249e49365ae535d02860b'
+        scope='read_write'
         user_reference = 'usr-123'
         data_set_ids = '*'
         secure_filters = {}
 
-        dashboard_access_token = vizzly.sign_dashboard_access_token(expiry_ttl_in_minutes, access_type, organisation_id, dashboard_id, user_reference, PRIVATE_KEY)
+        dashboard_access_token = vizzly.sign_dashboard_access_token(expiry_ttl_in_minutes, access_type, organisation_id, dashboard_id, user_reference, scope, PRIVATE_KEY)
         data_access_token = vizzly.sign_data_access_token(expiry_ttl_in_minutes, data_set_ids, secure_filters, PRIVATE_KEY)
+        query_engine_access_token = vizzly.sign_query_engine_access_token(expiry_ttl_in_minutes, True, True, private_key=PRIVATE_KEY)
 
         response_body = json.dumps({
           "dashboardAccessToken": dashboard_access_token,
-          "dataAccessToken": data_access_token
+          "dataAccessToken": data_access_token,
+          "queryEngineAccessToken": query_engine_access_token
         }).encode('gbk')
 
         self.wfile.write(response_body)

@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@vizzly/auth": "^0.0.8"
+    "@vizzly/auth": "^0.1.2"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
