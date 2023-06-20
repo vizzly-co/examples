@@ -1,17 +1,6 @@
 {
   "connection": {
-    "client": "snowflake",
-    "connection": {
-      "username": "{{VIZZLY_SNOWFLAKE_USERNAME}}",
-      "password": "{{VIZZLY_SNOWFLAKE_PASSWORD}}",
-      "account": "{{VIZZLY_SNOWFLAKE_ACCOUNT}}",
-      "schema": "{{VIZZLY_SNOWFLAKE_SCHEMA}}",
-      "database": "{{VIZZLY_SNOWFLAKE_DATABASE}}",
-      "warehouse": "{{VIZZLY_SNOWFLAKE_WAREHOUSE}}",
-      "role": "{{VIZZLY_SNOWFLAKE_ROLE}}",
-      "insecureConnect": true,
-      "ocspFailOpen": false
-    }
+    "client": "snowflake"
   },
   "dataSets": [
     {

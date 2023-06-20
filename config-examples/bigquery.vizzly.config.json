@@ -1,11 +1,6 @@
 {
   "connection": {
-    "client": "bigquery",
-    "connection": {
-      "projectId": "{{VIZZLY_BIGQUERY_PROJECT_ID}}",
-      "location": "{{VIZZLY_BIGQUERY_REGION}}",
-      "keyFilename": "/etc/vizzly/bq/service-account.json"
-    }
+    "client": "bigquery"
   },
   "dataSets": [
     {

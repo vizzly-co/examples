@@ -1,13 +1,6 @@
 {
   "connection": {
-    "client": "postgres",
-    "connection": {
-      "database": "{{VIZZLY_POSTGRES_DATABASE}}",
-      "host": "{{VIZZLY_POSTGRES_HOST}}",
-      "password": "{{VIZZLY_POSTGRES_PASSWORD}}",
-      "port": 5432,
-      "user": "{{VIZZLY_POSTGRES_USER}}"
-    }
+    "client": "postgres"
   },
   "dataSets": [
     {
