@@ -35,13 +35,10 @@ export const getIdentityTokens = async () => {
     // access allowing them to manage the dashboard for ALL your users.
     accessType: 'standard',
 
-    // What is your organisation ID? Find yours on
-    // https://app.vizzly.co/dashboards
+    // What is your organisation ID? Find yours by running the CLI command
+    // `vizzly current-profile`
+    // or on the https://app.vizzly.co/dashboards page.
     organisationId: 'org_12345',
-
-    // Which dashboard template should be used? Find yours on
-    // https://app.vizzly.co/dashboards
-    dashboardId: 'dsh_12345',
 
     // A unique identifier for the current user, that you are
     // happy for Vizzly to store.
