@@ -1,0 +1,17 @@
+{/* CanAddNewCells.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as CanAddNewCellsStories from './CanAddNewCells.stories';
+
+# Allow Percentages Custom Field
+
+## Feature Toggle
+
+By default <code>canAddNewCells</code> is set to <code>true</code>. By setting it to false it stops your user from seeing and being able Add a new Cell.
+
+<Meta of={CanAddNewCellsStories} />
+
+<Container>
+  <Story of={CanAddNewCellsStories.True} autoplay />
+</Container>
