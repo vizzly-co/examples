@@ -1,0 +1,17 @@
+{/* CanDownloadComponentData.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as CanDownloadComponentDataStories from './CanDownloadComponentData.stories';
+
+# canDownloadComponentData
+
+## Feature Toggle
+
+By default <code>canDownloadComponentData</code> is set to <code>true</code>. By setting it to false the Download action will not show for your user.
+
+<Meta of={CanDownloadComponentDataStories} />
+
+<Container>
+  <Story of={CanDownloadComponentDataStories.True} autoplay />
+</Container>
