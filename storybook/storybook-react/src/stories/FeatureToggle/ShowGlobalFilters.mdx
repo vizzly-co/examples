@@ -1,0 +1,17 @@
+{/* ShowGlobalFilters.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as ShowGlobalFiltersStories from './ShowGlobalFilters.stories';
+
+# showGlobalFilters
+
+## Feature Toggle
+
+By default <code>showGlobalFilters</code> is set to <code>true</code>. By setting it to false it won't show for your end user.
+
+<Meta of={ShowGlobalFiltersStories} />
+
+<Container>
+  <Story of={ShowGlobalFiltersStories.True} autoplay />
+</Container>

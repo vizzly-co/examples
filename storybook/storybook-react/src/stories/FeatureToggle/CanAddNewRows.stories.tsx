@@ -85,8 +85,3 @@ False.play = async () => {
     highlightItem(element, '[data-component="add-cell-button"]');
   });
 };
-
-async function getCustomMetric(baseCanvas: any) {
-  const addCustomMetric = baseCanvas.getByText('+ Add custom metric');
-  userEvent.click(addCustomMetric);
-}
