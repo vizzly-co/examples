@@ -1,0 +1,17 @@
+{/* CanEditComponentsOnDashboard.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as CanEditComponentsOnDashboardStories from './CanEditComponentsOnDashboard.stories';
+
+# canEditComponentsOnDashboard
+
+## Feature Toggle
+
+By default <code>canEditComponentsOnDashboard</code> is set to <code>true</code>. By setting it to false the Create New action will not show for your user.
+
+<Meta of={CanEditComponentsOnDashboardStories} />
+
+<Container>
+  <Story of={CanEditComponentsOnDashboardStories.True} autoplay />
+</Container>
