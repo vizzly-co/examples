@@ -1,11 +1,18 @@
 import Vizzly from '@vizzly/dashboard';
 import type { Meta, StoryFn } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
 
-import { waitForElement } from '../testing/helpers';
-import { getAndHighlightItem } from '../testing/highlighter';
+import {
+  openEditor,
+  openAdvancedOptions,
+  waitForElement,
+} from '../testing/helpers';
+import { screenUpdate } from '../testing/utils';
+import { getFieldsetFromLegend } from '../testing/form';
+import { getAndHighlightItem, highlightAndFocus } from '../testing/highlighter';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/showGlobalFilters',
+  title: 'Dashboard Props/Feature Toggle/canEditCustomMetrics',
   component: Vizzly.Dashboard,
 };
 
@@ -19,7 +26,7 @@ export const True: StoryFn = () => {
         rowLimit: 2,
       }}
       featureToggles={{
-        showGlobalFilters: true,
+        canEditCustomMetrics: true,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={async () => {
@@ -37,8 +44,16 @@ export const True: StoryFn = () => {
 };
 
 True.play = async () => {
-  waitForElement('.vizzly_dashboard', async (element) => {
-    getAndHighlightItem(element, '[data-component="global-filters"]');
+  const baseCanvas = within(document.body);
+  waitForElement('.vizzly_dashboard', async () => {
+    await openEditor(baseCanvas);
+    await openAdvancedOptions(baseCanvas);
+    getCustomMetric(baseCanvas);
+    const fieldset = getFieldsetFromLegend(baseCanvas, 'Custom metrics');
+    await screenUpdate();
+
+    highlightAndFocus(fieldset);
+    getAndHighlightItem(fieldset, '[data-component="dropdown"]');
   });
 };
 
@@ -50,7 +65,7 @@ export const False: StoryFn = () => {
         rowLimit: 2,
       }}
       featureToggles={{
-        showGlobalFilters: false,
+        canEditCustomMetrics: false,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={async () => {
@@ -68,7 +83,15 @@ export const False: StoryFn = () => {
 };
 
 False.play = async () => {
-  waitForElement('.vizzly_dashboard', async (element) => {
-    getAndHighlightItem(element, '[data-component="global-filters"]');
+  const baseCanvas = within(document.body);
+  waitForElement('.vizzly_dashboard', async () => {
+    await openEditor(baseCanvas);
+    await openAdvancedOptions(baseCanvas);
+    await screenUpdate();
   });
 };
+
+async function getCustomMetric(baseCanvas: any) {
+  const addCustomMetric = baseCanvas.getByText('+ Add custom metric');
+  userEvent.click(addCustomMetric);
+}

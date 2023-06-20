@@ -1,0 +1,17 @@
+{/* CanEditCustomMetrics.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as CanEditCustomMetricsStories from './CanEditCustomMetrics.stories';
+
+# canEditCustomMetrics
+
+## Feature Toggle
+
+By default <code>canEditCustomMetrics</code> is set to <code>true</code>. It is represented in the UI under <strong>Custom Metrics</strong> section.
+
+<Meta of={CanEditCustomMetricsStories} />
+
+<Container>
+  <Story of={CanEditCustomMetricsStories.True} autoplay />
+</Container>
