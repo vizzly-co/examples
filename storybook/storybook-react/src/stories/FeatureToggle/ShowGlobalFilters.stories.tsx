@@ -6,7 +6,7 @@ import { waitForElement } from '../testing/helpers';
 import { highlightItem } from '../testing/highlighter';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/canAddNewCells',
+  title: 'Dashboard Props/Feature Toggle/showGlobalFilters',
   component: Vizzly.Dashboard,
 };
 
@@ -20,7 +20,7 @@ export const True: StoryFn = () => {
         rowLimit: 2,
       }}
       featureToggles={{
-        canAddNewCells: true,
+        showGlobalFilters: true,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={async () => {
@@ -39,13 +39,7 @@ export const True: StoryFn = () => {
 
 True.play = async () => {
   waitForElement('.vizzly_dashboard', async (element) => {
-    const elements = element?.querySelector(
-      '[data-component="add-cell"]'
-    ) as HTMLElement;
-    if (elements) {
-      userEvent.hover(elements);
-    }
-    highlightItem(element, '[data-component="add-cell"]');
+    highlightItem(element, '[data-component="global-filters"]');
   });
 };
 
@@ -57,7 +51,7 @@ export const False: StoryFn = () => {
         rowLimit: 2,
       }}
       featureToggles={{
-        canAddNewCells: false,
+        showGlobalFilters: false,
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={async () => {
@@ -76,12 +70,6 @@ export const False: StoryFn = () => {
 
 False.play = async () => {
   waitForElement('.vizzly_dashboard', async (element) => {
-    const elements = element?.querySelector(
-      '[data-component="add-cell"]'
-    ) as HTMLElement;
-    if (elements) {
-      userEvent.hover(elements);
-    }
-    highlightItem(element, '[data-component="add-cell"]');
+    highlightItem(element, '[data-component="global-filters"]');
   });
 };
