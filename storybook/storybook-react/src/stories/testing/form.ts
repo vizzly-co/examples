@@ -3,15 +3,16 @@ import { screenUpdate } from './utils';
 
 export function getFieldsetFromLegend(
   baseCanvas: any,
-  value: string
+  value: string,
+  index?: number
 ): HTMLFieldSetElement {
-  let component = baseCanvas.getByText(value);
+  let component = baseCanvas?.getAllByText(value)[index ?? 0];
 
   while (component && component !== document.body) {
-    if (component.tagName.toLowerCase() === 'fieldset') {
+    if (component?.tagName.toLowerCase() === 'fieldset') {
       return component as HTMLFieldSetElement;
     }
-    component = component.parentElement;
+    component = component?.parentElement;
   }
   throw new Error('No fieldset element found');
 }

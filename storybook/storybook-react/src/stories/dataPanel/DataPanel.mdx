@@ -1,0 +1,17 @@
+{/* DataPanel.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as DataPanelStories from './DataPanel.stories';
+
+# dataPanel
+
+The prop returns the default setting for the dataPanel. By manipulating array and returning the value it will change in the UI.
+
+<Meta of={DataPanelStories} />
+
+### Demo
+
+<Container>
+  <Story of={DataPanelStories.Reordered} autoplay />
+</Container>
