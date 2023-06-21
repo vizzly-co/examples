@@ -2,11 +2,7 @@ import Vizzly from '@vizzly/dashboard';
 import type { Meta, StoryFn } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 
-import {
-  openEditor,
-  openAdvancedOptions,
-  waitForElement,
-} from '../testing/helpers';
+import { openEditor, waitForElement } from '../testing/helpers';
 import { screenUpdate } from '../testing/utils';
 import { getFieldsetFromLegend } from '../testing/form';
 import { getAndHighlightItem, highlightAndFocus } from '../testing/highlighter';
@@ -41,6 +37,7 @@ True.play = async () => {
   waitForElement('.vizzly_dashboard', async () => {
     await openEditor(baseCanvas);
 
+    await screenUpdate(150);
     userEvent.click(findButtonByText('Add-ons') as Element);
     await screenUpdate();
     userEvent.click(baseCanvas.getByText('+ Add chart filter'));
@@ -49,6 +46,7 @@ True.play = async () => {
     await screenUpdate();
     highlightAndFocus(fieldset);
     getAndHighlightItem(fieldset, '[data-component="dropdown"]');
+    await screenUpdate(150);
   });
 };
 

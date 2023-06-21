@@ -1,0 +1,32 @@
+{/* NumberFormatOptions.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as NumberFormatOptionsStories from './NumberFormatOptions.stories';
+
+# numberFormatOptions
+
+## Feature Toggle
+
+Number Format Options are currently used in
+
+- [Axis Labels Format](./?path=/story/dashboard-props-numberformatoptions--format-panel)
+- [Table Label Format](./?path=/story/dashboard-props-numberformatoptions--table)
+
+<Meta of={NumberFormatOptionsStories} />
+
+### Demo
+
+<Container>
+  <Story of={NumberFormatOptionsStories.FormatPanel} autoplay />
+</Container>
+
+### Example code
+
+```{
+custom: {
+    description: 'Custom Option',
+    formatter: (v: number) => v,
+  },
+}
+```
