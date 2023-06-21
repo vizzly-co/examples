@@ -1,14 +1,32 @@
 import * as fs from 'fs';
-import { createSigner } from '@vizzly/auth';
+import * as VizzlyAuth from '@vizzly/auth';
 
 const TTL_IN_MINUTES = 120;
 
-export const getIdentityTokens = async () => {
-  const privateKey = fs.readFileSync("../../example-key-pairs/vizzly-private.pem").toString();
-  
-  const signer = createSigner({ ttlInMinutes: TTL_IN_MINUTES, privateKey })
+const generateVizzlyAccessTokens = async (privateKey: string, ttlInMinutes: number) => {
+  const vizzlySigner = VizzlyAuth.createSigner({ ttlInMinutes, privateKey })
 
-  return await signer.generateTokens({
+  // Create a token that is used for dashboard access.
+  const dashboardAccessToken = await vizzlySigner.signDashboardAccessToken({
+    // Is the user a standard user, or should they have 'admin'
+    // access allowing them to manage the dashboard for ALL your users.
+    accessType: 'standard',
+
+    // What is your organisation ID? Find yours by running the CLI command
+    // `vizzly current-profile`
+    // or on the https://app.vizzly.co/dashboards page.
+    organisationId: '<< Your organisation ID >>',
+
+    // A unique identifier for the current user, that you are
+    // happy for Vizzly to store.
+    userReference: '<< A reference to the current user >>',
+
+    // Either `read` or `read_write`
+    scope: 'read_write'
+  });
+
+  // Create a token that is used for data access in a multi-tenant environment.
+  const dataAccessToken = await vizzlySigner.signDataAccessToken({
     // What data sets does this user have access too?
     // If can either be a list of data set IDs, or a "*" to allow
     // access to all data sets.
@@ -30,21 +48,29 @@ export const getIdentityTokens = async () => {
         value: "<< the user's ID >>"
       }],
     },
-
-    // Is the user a standard user, or should they have 'admin'
-    // access allowing them to manage the dashboard for ALL your users.
-    accessType: 'standard',
-
-    // What is your organisation ID? Find yours by running the CLI command
-    // `vizzly current-profile`
-    // or on the https://app.vizzly.co/dashboards page.
-    organisationId: 'org_12345',
-
-    // A unique identifier for the current user, that you are
-    // happy for Vizzly to store.
-    userReference: '<< a reference to the current user >>',
-
-    // Allow the user to view and make changes to the dashboard.
-    scope: 'read_write'
   });
+
+  // Generate an access token for the Vizzly Config Manager UI
+  // https://docs.vizzly.co/query-engines/self-hosted/config-manager-ui
+  const queryEngineAccessToken = await vizzlySigner.signQueryEngineAccessToken({
+    // Allow the user access to the database schema. This is required if you want the
+    // user to access the Vizzly Config Manager UI.
+    allowDatabaseSchemaAccess: true,
+
+    // Allow the user to fetch 'preview' data from the database when
+    // configuring the datasets for the Vizzly Query Engine.
+    allowDataPreviewAccess: true,
+  });
+
+  return {
+    dataAccessToken,
+    dashboardAccessToken,
+    queryEngineAccessToken
+  }
+};
+
+export const getIdentityTokens = () => {
+  const privateKey = fs.readFileSync("../../example-key-pairs/vizzly-private.pem").toString();
+
+  return generateVizzlyAccessTokens(privateKey, TTL_IN_MINUTES);
 };

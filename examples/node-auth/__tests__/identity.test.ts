@@ -6,5 +6,6 @@ describe("getIdentityTokens", () => {
 
     expect(actual).toHaveProperty("dataAccessToken");
     expect(actual).toHaveProperty("dashboardAccessToken");
+    expect(actual).toHaveProperty("queryEngineAccessToken");
   });
 });
