@@ -1,0 +1,17 @@
+{/* FormatPanel.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as FormatPanelStories from './FormatPanel.stories';
+
+# formatPanel
+
+The prop returns the default setting for the FormatPanel. By manipulating array and returning the value it will change in the UI.
+
+<Meta of={FormatPanelStories} />
+
+### Demo
+
+<Container>
+  <Story of={FormatPanelStories.Reordered} autoplay />
+</Container>
