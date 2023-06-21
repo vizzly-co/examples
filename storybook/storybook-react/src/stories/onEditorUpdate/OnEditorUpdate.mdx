@@ -1,0 +1,17 @@
+{/* OnEditorUpdate.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as OnEditorUpdateStories from './OnEditorUpdate.stories';
+
+# onEditorUpdate
+
+The prop returns the attributes of the view selected the onEditorUpdate. This will allow you to make use of it outside of the Vizzly component.
+
+<Meta of={OnEditorUpdateStories} />
+
+### Demo
+
+<Container>
+  <Story of={OnEditorUpdateStories.ChangeView} autoplay />
+</Container>
