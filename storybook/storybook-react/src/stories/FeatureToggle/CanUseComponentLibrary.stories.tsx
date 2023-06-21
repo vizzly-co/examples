@@ -7,7 +7,7 @@ import { findButtonsByText } from '../testing/buttons';
 import { getIdentity } from '../factory/getIdentity';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/canUseComponentLibrary',
+  title: 'Dashboard Props/featureToggle/canUseComponentLibrary',
   component: Vizzly.Dashboard,
 };
 

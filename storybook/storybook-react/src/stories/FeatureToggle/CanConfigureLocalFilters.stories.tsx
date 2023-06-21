@@ -10,7 +10,7 @@ import { getIdentity } from '../factory/getIdentity';
 import { findButtonByText } from '../testing/buttons';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/canConfigureLocalFilters',
+  title: 'Dashboard Props/featureToggle/canConfigureLocalFilters',
   component: Vizzly.Dashboard,
 };
 

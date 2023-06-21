@@ -6,7 +6,7 @@ import { getAndHighlightItem } from '../testing/highlighter';
 import { getIdentity } from '../factory/getIdentity';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/showGlobalFilters',
+  title: 'Dashboard Props/featureToggle/showGlobalFilters',
   component: Vizzly.Dashboard,
 };
 

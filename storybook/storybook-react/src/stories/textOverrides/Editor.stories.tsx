@@ -1,28 +1,28 @@
 import Vizzly from '@vizzly/dashboard';
 import type { Meta, StoryFn } from '@storybook/react';
 
-import { waitForElement } from '../testing/helpers';
+import { openEditor, waitForElement } from '../testing/helpers';
 import { highlight } from '../testing/highlighter';
-import { findButtonsByText } from '../testing/buttons';
-import { screenUpdate } from '../testing/utils';
 import { getIdentity } from '../factory/getIdentity';
+import { within } from '@storybook/testing-library';
+import { findButtonByText } from '../testing/buttons';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/featureToggle/canCreateStandaloneComponents',
+  title: 'Dashboard Props/textOverrides/editor.tabs.heading',
   component: Vizzly.Dashboard,
 };
 
 export default meta;
 
-export const True: StoryFn = () => {
+export const Data: StoryFn = () => {
   return (
     <Vizzly.Dashboard
       theme={{
         detail: 'minimal',
         rowLimit: 2,
       }}
-      featureToggles={{
-        canCreateStandaloneComponents: true,
+      textOverrides={{
+        'editor.tab.heading.data': 'Here!',
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
@@ -30,25 +30,23 @@ export const True: StoryFn = () => {
   );
 };
 
-True.play = async () => {
+Data.play = async () => {
+  const baseCanvas = within(document.body);
   waitForElement('.vizzly_dashboard', async (element) => {
-    await screenUpdate();
-    const selectTemplateButton = findButtonsByText('Add View');
-    if (selectTemplateButton) {
-      selectTemplateButton.map((button) => highlight(button));
-    }
+    await openEditor(baseCanvas);
+    const button = findButtonByText('Here!') as HTMLElement;
+    highlight(button);
   });
 };
-
-export const False: StoryFn = () => {
+export const Format: StoryFn = () => {
   return (
     <Vizzly.Dashboard
       theme={{
         detail: 'minimal',
         rowLimit: 2,
       }}
-      featureToggles={{
-        canCreateStandaloneComponents: false,
+      textOverrides={{
+        'editor.tab.heading.format': 'Here!',
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
@@ -56,8 +54,11 @@ export const False: StoryFn = () => {
   );
 };
 
-False.play = async () => {
+Format.play = async () => {
+  const baseCanvas = within(document.body);
   waitForElement('.vizzly_dashboard', async (element) => {
-    await screenUpdate();
+    await openEditor(baseCanvas);
+    const button = findButtonByText('Here!') as HTMLElement;
+    highlight(button);
   });
 };

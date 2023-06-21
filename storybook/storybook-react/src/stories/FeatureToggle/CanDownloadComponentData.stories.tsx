@@ -9,7 +9,7 @@ import { screenUpdate } from '../testing/utils';
 import { getIdentity } from '../factory/getIdentity';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/canDownloadComponentData',
+  title: 'Dashboard Props/featureToggle/canDownloadComponentData',
   component: Vizzly.Dashboard,
 };
 

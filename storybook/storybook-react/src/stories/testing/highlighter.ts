@@ -1,3 +1,5 @@
+const BORDER_STYLES = '4px solid #1DB954';
+
 export function getAndHighlightItem(
   element: HTMLElement,
   querySelector: string
@@ -7,7 +9,7 @@ export function getAndHighlightItem(
     if (elements) {
       clearInterval(interval);
 
-      elements.style.border = '2px solid #1DB954';
+      elements.style.border = BORDER_STYLES;
       elements.style.borderRadius = '8px';
       elements.scrollIntoView({
         behavior: 'smooth',
@@ -23,7 +25,7 @@ export function highlightAndFocus(element: HTMLElement) {
     if (element) {
       clearInterval(interval);
 
-      element.style.border = '2px solid #1DB954';
+      element.style.border = BORDER_STYLES;
       element.style.borderRadius = '8px';
       element.scrollIntoView({
         behavior: 'smooth',
@@ -34,8 +36,6 @@ export function highlightAndFocus(element: HTMLElement) {
   }, 100);
 }
 export function highlight(element: HTMLElement) {
-  if (element) {
-    element.style.border = '2px solid #1DB954';
-    element.style.borderRadius = '8px';
-  }
+  element.style.border = BORDER_STYLES;
+  element.style.borderRadius = '8px';
 }

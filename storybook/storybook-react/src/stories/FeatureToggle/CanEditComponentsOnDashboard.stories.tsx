@@ -9,7 +9,7 @@ import { screenUpdate } from '../testing/utils';
 import { getIdentity } from '../factory/getIdentity';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/canEditComponentsOnDashboard',
+  title: 'Dashboard Props/featureToggle/canEditComponentsOnDashboard',
   component: Vizzly.Dashboard,
 };
 
