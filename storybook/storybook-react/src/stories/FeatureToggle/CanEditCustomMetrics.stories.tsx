@@ -13,7 +13,7 @@ import { getAndHighlightItem, highlightAndFocus } from '../testing/highlighter';
 import { getIdentity } from '../factory/getIdentity';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/canEditCustomMetrics',
+  title: 'Dashboard Props/featureToggle/canEditCustomMetrics',
   component: Vizzly.Dashboard,
 };
 

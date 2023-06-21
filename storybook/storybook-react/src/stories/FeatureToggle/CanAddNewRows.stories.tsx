@@ -7,7 +7,7 @@ import { getAndHighlightItem } from '../testing/highlighter';
 import { getIdentity } from '../factory/getIdentity';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/canAddNewRows',
+  title: 'Dashboard Props/featureToggle/canAddNewRows',
   component: Vizzly.Dashboard,
 };
 

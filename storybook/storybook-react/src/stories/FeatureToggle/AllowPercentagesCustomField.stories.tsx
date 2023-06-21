@@ -13,7 +13,7 @@ import { getAndHighlightItem } from '../testing/highlighter';
 import { getIdentity } from '../factory/getIdentity';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/Feature Toggle/allowPercentagesCustomField',
+  title: 'Dashboard Props/featureToggle/allowPercentagesCustomField',
   component: Vizzly.Dashboard,
 };
 
