@@ -79,13 +79,13 @@ Table.play = async () => {
   waitForElement('.vizzly_dashboard', async (element) => {
     await openEditor(baseCanvas);
     userEvent.click(baseCanvas.getByLabelText('View'));
-    await screenUpdate();
+    await screenUpdate(100);
     userEvent.click(baseCanvas.getByText('Pivot table'));
     await screenUpdate(150);
     userEvent.click(findButtonByText('Salary') as Element);
-    await screenUpdate();
+    await screenUpdate(100);
     userEvent.click(baseCanvas.getByText('Select...'));
-    await screenUpdate();
+    await screenUpdate(100);
     const dropdown = document?.querySelector(
       '[data-component="dropdown-options"]'
     ) as HTMLElement;

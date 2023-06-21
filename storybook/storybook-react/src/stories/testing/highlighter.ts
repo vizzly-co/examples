@@ -36,6 +36,8 @@ export function highlightAndFocus(element: HTMLElement) {
   }, 100);
 }
 export function highlight(element: HTMLElement) {
-  element.style.border = BORDER_STYLES;
-  element.style.borderRadius = '8px';
+  if (element) {
+    element.style.border = BORDER_STYLES;
+    element.style.borderRadius = '8px';
+  }
 }
