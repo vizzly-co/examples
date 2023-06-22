@@ -9,8 +9,7 @@ export function getAndHighlightItem(
     if (elements) {
       clearInterval(interval);
 
-      elements.style.border = BORDER_STYLES;
-      elements.style.borderRadius = '8px';
+      elements.style.outline = BORDER_STYLES;
       elements.scrollIntoView({
         behavior: 'smooth',
         block: 'center',
@@ -25,8 +24,7 @@ export function highlightAndFocus(element: HTMLElement) {
     if (element) {
       clearInterval(interval);
 
-      element.style.border = BORDER_STYLES;
-      element.style.borderRadius = '8px';
+      element.style.outline = BORDER_STYLES;
       element.scrollIntoView({
         behavior: 'smooth',
         block: 'center',
@@ -37,7 +35,6 @@ export function highlightAndFocus(element: HTMLElement) {
 }
 export function highlight(element: HTMLElement) {
   if (element) {
-    element.style.border = BORDER_STYLES;
-    element.style.borderRadius = '8px';
+    element.style.outline = BORDER_STYLES;
   }
 }

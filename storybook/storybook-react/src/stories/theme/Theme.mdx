@@ -1,0 +1,33 @@
+{/* Theme.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as ThemeStories from './Theme.stories';
+
+# Theme API
+
+The prop Theme allows you to adjust the Vizzly Dashboard to match your design system, whether that be a Light or Dark theme.
+
+<Meta of={ThemeStories} />
+
+### Highlighter
+
+<Container>
+  <Story of={ThemeStories.Highlighter} />
+</Container>
+
+### Theme Example
+
+This show how you can style our buttons to match your own.
+
+<Container>
+  <Story of={ThemeStories.ThemeExample} />
+</Container>
+
+### Dark Theme
+
+We've styled Vizzly to look like Github dark theme.
+
+<Container>
+  <Story of={ThemeStories.ExampleDarkTheme} />
+</Container>
