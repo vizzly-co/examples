@@ -1,12 +1,12 @@
 export function findButtonByText(text: string): HTMLElement {
   const buttons = document.getElementsByTagName('button');
-  for (var i = 0; i < buttons.length; i++) {
+  for (let i = 0; i < buttons.length; i++) {
     const button = buttons[i];
     if (button && button.textContent && button.textContent.includes(text)) {
       return button;
     }
   }
-  throw 'Element not found';
+  throw new Error('Element not found');
 }
 
 export function findButtonsByText(text: string): HTMLButtonElement[] {

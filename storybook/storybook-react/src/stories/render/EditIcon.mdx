@@ -1,0 +1,17 @@
+{/* EditIcon`.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as EditIconStories from './EditIcon.stories';
+
+# renderEditIcon
+
+The prop renderEditIcon allows you to swap out Vizzly components for your design system. It is likely you'll need to map the props between the two components.
+
+<Meta of={EditIconStories} />
+
+### Demo
+
+<Container>
+  <Story of={EditIconStories.Example} autoplay />
+</Container>
