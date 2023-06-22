@@ -4366,10 +4366,10 @@
     "@visx/event" "2.17.0"
     prop-types "^15.6.2"
 
-"@vizzly/dashboard@^0.3.24":
-  version "0.3.24"
-  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.3.24.tgz#a4665e3a171ffa381391df5f3cfc7ba600ed9cbc"
-  integrity sha512-HNe8l7+aR+6iOm0+v9iWErH57Qsd1ngN/MLOD5Fp5PJqTnlue7WPJsv/9oye+w5QiHa1j/FDRjLQuvVGGDzf7Q==
+"@vizzly/dashboard@0.3.24-015fa5cf035f9ea635688dc21f8f4a9c1cb57e94":
+  version "0.3.24-015fa5cf035f9ea635688dc21f8f4a9c1cb57e94"
+  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.3.24-015fa5cf035f9ea635688dc21f8f4a9c1cb57e94.tgz#7ed94d7c09b5dd903a78c30f273ddbddfee7e898"
+  integrity sha512-JS/GaFqPvaDkMe73EOWBiJH3vGkjpzjqesouygixffyaZOctZn5UfD8n0el5B/7sGS2wQSl7wi+o7xQdoNdkww==
   dependencies:
     "@emotion/cache" "^11.10.5"
     "@emotion/css" "^11.10.6"

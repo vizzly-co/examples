@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import { openEditor, waitForElement } from '../testing/helpers';
 import { screenUpdate } from '../testing/utils';
 import { getIdentity } from '../factory/getIdentity';
-import { useCallback } from 'react';
 import { Component } from '@vizzly/dashboard/dist/shared-logic/src/Component/types';
 import { highlight } from '../testing/highlighter';
 
