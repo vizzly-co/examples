@@ -1,0 +1,17 @@
+{/* SelectComponent.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as SelectComponentStories from './SelectComponent.stories';
+
+# renderSelectComponent
+
+The prop renderSelectComponent allows you to swap out Vizzly components for your design system. It is likely you'll need to map the props between the two components.
+
+<Meta of={SelectComponentStories} />
+
+### Demo
+
+<Container>
+  <Story of={SelectComponentStories.Example} autoplay />
+</Container>

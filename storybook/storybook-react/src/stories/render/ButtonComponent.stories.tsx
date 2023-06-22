@@ -1,12 +1,11 @@
 import Vizzly from '@vizzly/dashboard';
 import type { Meta, StoryFn } from '@storybook/react';
-import { within } from '@storybook/testing-library';
 
 import { waitForElement } from '../testing/helpers';
 import { getIdentity } from '../factory/getIdentity';
 import { FunctionComponent, ReactNode } from 'react';
 import { VizzlyComponents } from '@vizzly/dashboard/dist/shared-ui/src/types';
-import { getAndHighlightItem, highlight } from '../testing/highlighter';
+import { highlight } from '../testing/highlighter';
 import { findButtonByText } from '../testing/buttons';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
