@@ -1,4 +1,4 @@
-export function findButtonByText(text: string): HTMLButtonElement | null {
+export function findButtonByText(text: string): HTMLElement {
   const buttons = document.getElementsByTagName('button');
   for (var i = 0; i < buttons.length; i++) {
     const button = buttons[i];
@@ -6,7 +6,7 @@ export function findButtonByText(text: string): HTMLButtonElement | null {
       return button;
     }
   }
-  return null;
+  throw 'Element not found';
 }
 
 export function findButtonsByText(text: string): HTMLButtonElement[] {
