@@ -1,0 +1,17 @@
+{/* DeleteIcon`.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as DeleteIconStories from './DeleteIcon.stories';
+
+# renderDeleteIcon
+
+The prop renderDeleteIcon allows you to swap out Vizzly components for your design system. It is likely you'll need to map the props between the two components.
+
+<Meta of={DeleteIconStories} />
+
+### Demo
+
+<Container>
+  <Story of={DeleteIconStories.Example} autoplay />
+</Container>
