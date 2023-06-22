@@ -1,0 +1,17 @@
+{/* ButtonComponent.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as ButtonComponentStories from './ButtonComponent.stories';
+
+# renderButtonComponent
+
+The prop renderButtonComponent allows you to swap out Vizzly components for your design system. It is likely you'll need to map the props between the two components.
+
+<Meta of={ButtonComponentStories} />
+
+### Demo
+
+<Container>
+  <Story of={ButtonComponentStories.Example} autoplay />
+</Container>
