@@ -7,7 +7,7 @@ import { highlight } from '../testing/highlighter';
 import { findButtonByText } from '../testing/buttons';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/theme',
+  title: 'Dashboard Props/developerTools/theme',
   component: Vizzly.Dashboard,
 };
 

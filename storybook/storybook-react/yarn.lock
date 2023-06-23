@@ -4366,10 +4366,10 @@
     "@visx/event" "2.17.0"
     prop-types "^15.6.2"
 
-"@vizzly/dashboard@0.3.24-015fa5cf035f9ea635688dc21f8f4a9c1cb57e94":
-  version "0.3.24-015fa5cf035f9ea635688dc21f8f4a9c1cb57e94"
-  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.3.24-015fa5cf035f9ea635688dc21f8f4a9c1cb57e94.tgz#7ed94d7c09b5dd903a78c30f273ddbddfee7e898"
-  integrity sha512-JS/GaFqPvaDkMe73EOWBiJH3vGkjpzjqesouygixffyaZOctZn5UfD8n0el5B/7sGS2wQSl7wi+o7xQdoNdkww==
+"@vizzly/dashboard@0.3.24-46473fe73c8aec0e3bf52ca6ff790ab290cc417f":
+  version "0.3.24-46473fe73c8aec0e3bf52ca6ff790ab290cc417f"
+  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.3.24-46473fe73c8aec0e3bf52ca6ff790ab290cc417f.tgz#3ce816954a702a9a3dcb320edba2be80f50fad37"
+  integrity sha512-qF2YJLOjrXJcSuMJrenLWkzZGBnxKZYKwSn8vKyXtw3XV+HlL9hWETbSneXrttWhmHu4bj/aFhsHRQaA/3qCMA==
   dependencies:
     "@emotion/cache" "^11.10.5"
     "@emotion/css" "^11.10.6"

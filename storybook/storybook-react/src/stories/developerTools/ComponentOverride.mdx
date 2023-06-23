@@ -1,0 +1,19 @@
+{/* ComponentOverride.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as ComponentOverrideStories from './ComponentOverride.stories';
+
+# ComponentOverride API
+
+The prop ComponentOverride allows you to adjust the Vizzly Dashboard to match your design system.
+
+If you have an existing component library, you can swap in components. This tool allows you to see where it's being replaced.
+
+<Meta of={ComponentOverrideStories} />
+
+### Highlighter
+
+<Container>
+  <Story of={ComponentOverrideStories.Highlighter} />
+</Container>

@@ -2,9 +2,9 @@ import Vizzly from '@vizzly/dashboard';
 import type { Meta, StoryFn } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 
-import { openEditor, waitForElement } from '../testing/helpers';
+import { waitForElement } from '../testing/helpers';
 import { screenUpdate } from '../testing/utils';
-import { highlight, highlightAndFocus } from '../testing/highlighter';
+import { highlight } from '../testing/highlighter';
 import { getIdentity } from '../factory/getIdentity';
 import { findButtonByText } from '../testing/buttons';
 
