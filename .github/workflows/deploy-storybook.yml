@@ -1,0 +1,28 @@
+name: "Deploy Storybook React Chromatic"
+
+on:
+  push:
+    branches:
+      - main
+      - deploy-storybook
+    paths:
+      - storybook/storybook-react/**
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.14.2
+          cache: "yarn"
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: Install dependencies
+        run: yarn install
+      - name: Build and deploy
+        run: cd storybook/storybook-react && yarn install && yarn build-storybook && yarn deploy-storybook
