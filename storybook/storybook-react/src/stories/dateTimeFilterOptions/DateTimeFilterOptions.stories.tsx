@@ -22,6 +22,7 @@ export const Filter: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       dateTimeFilterOptions={{
         year_of_2020: {
           description: 'Year - 2020',
@@ -52,9 +53,7 @@ Filter.play = async () => {
     );
 
     userEvent.click(
-      document.body.querySelector(
-        '[placeholder="Which data sets will this filter impact?"]'
-      ) as HTMLElement
+      document.body.querySelectorAll('[aria-label="Open"]')[0] as HTMLElement
     );
     await screenUpdate();
     userEvent.click(baseCanvas.getByText('Employment - sample'));
@@ -66,9 +65,7 @@ Filter.play = async () => {
 
     await screenUpdate();
     userEvent.click(
-      document.body.querySelector(
-        '[placeholder="Which fields are affected?"]'
-      ) as HTMLElement
+      document.body.querySelectorAll('[aria-label="Open"]')[2] as HTMLElement
     );
     await screenUpdate();
     userEvent.click(baseCanvas.getByText('Employment - sample · Date of Hire'));
@@ -80,7 +77,7 @@ Filter.play = async () => {
     await screenUpdate(150);
 
     userEvent.click(
-      document.body.querySelector('[aria-label="Open"]') as HTMLElement
+      document.body.querySelectorAll('[aria-label="Open"]')[0] as HTMLElement
     );
 
     await screenUpdate(150);

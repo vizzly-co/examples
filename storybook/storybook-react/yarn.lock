@@ -4377,10 +4377,10 @@
     "@visx/event" "2.17.0"
     prop-types "^15.6.2"
 
-"@vizzly/dashboard@0.3.24-46473fe73c8aec0e3bf52ca6ff790ab290cc417f":
-  version "0.3.24-46473fe73c8aec0e3bf52ca6ff790ab290cc417f"
-  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.3.24-46473fe73c8aec0e3bf52ca6ff790ab290cc417f.tgz#3ce816954a702a9a3dcb320edba2be80f50fad37"
-  integrity sha512-qF2YJLOjrXJcSuMJrenLWkzZGBnxKZYKwSn8vKyXtw3XV+HlL9hWETbSneXrttWhmHu4bj/aFhsHRQaA/3qCMA==
+"@vizzly/dashboard@0.3.28":
+  version "0.3.28"
+  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.3.28.tgz#bfeb0954e73314f145e6f8b4845ed2316a0dd131"
+  integrity sha512-zOObwyPBFMQ0VFxloIQiIVPV0moHYEHzgEMlrs/Wkh0El4nHunDwhPMKtU/BV9f1XQKQ7N0ab1CMR5Rr5qyB9g==
   dependencies:
     "@emotion/cache" "^11.10.5"
     "@emotion/css" "^11.10.6"
@@ -4390,6 +4390,7 @@
     "@react-spring/web" "9.6.1"
     "@visx/visx" "^2.18.0"
     chroma-js "^2.4.2"
+    file-saver "^2.0.5"
     fuse.js "^6.6.2"
     isomorphic-fetch "^3.0.0"
     joi "^17.7.0"
@@ -7518,6 +7519,11 @@ file-loader@^6.2.0:
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
+
+file-saver@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
+  integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
 
 file-system-cache@^2.0.0:
   version "2.3.0"

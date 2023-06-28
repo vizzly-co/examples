@@ -37,6 +37,7 @@ export const SingleSelectFilter: StoryFn = () => {
         ];
         return filters;
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
     />
@@ -59,6 +60,7 @@ export const DateTimeFilter: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       dashboardFilters={(dataSet: DataSet[]) => {
         const filters = [
           {
@@ -100,6 +102,7 @@ export const CustomRangeDateTimeFilter: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       dashboardFilters={(dataSet: DataSet[]) => {
         const filters = [
           {
@@ -142,6 +145,7 @@ export const CombinedFilters: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       dashboardFilters={(dataSet: DataSet[]) => {
         const filters = [
           {

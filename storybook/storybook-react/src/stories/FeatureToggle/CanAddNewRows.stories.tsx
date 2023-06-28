@@ -23,6 +23,7 @@ export const True: StoryFn = () => {
       featureToggles={{
         canAddNewRows: true,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
     />
@@ -48,6 +49,7 @@ export const False: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 4,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       featureToggles={{
         canAddNewRows: false,
       }}

@@ -20,6 +20,7 @@ export const CallToAction: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       textOverrides={{
         'dashboard-filters.call-to-action': 'where are you',
       }}

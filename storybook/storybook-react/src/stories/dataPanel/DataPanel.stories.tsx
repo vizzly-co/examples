@@ -23,6 +23,7 @@ export const Unchanged: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
     />
@@ -48,6 +49,7 @@ export const Reordered: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       dataPanel={(panelInfo: DataPanelConfig) => {
         let viewsIndex = panelInfo.findIndex((item) => item.type === 'views');
 
@@ -79,6 +81,7 @@ export const Reworded: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       dataPanel={(panelInfo: DataPanelConfig) => {
         let dataSetIndex = panelInfo.findIndex(
           (item) => item.type === 'dataSet'
