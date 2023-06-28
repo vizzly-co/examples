@@ -21,6 +21,7 @@ export const Example: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       renderDeleteIcon={() => (
         <div data-component="renderDeleteIcon">delete</div>
       )}
@@ -54,6 +55,7 @@ export const Original: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
     />

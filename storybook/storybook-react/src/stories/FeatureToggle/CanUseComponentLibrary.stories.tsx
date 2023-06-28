@@ -20,6 +20,7 @@ export const True: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       featureToggles={{
         canUseComponentLibrary: true,
       }}
@@ -45,6 +46,7 @@ export const False: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       featureToggles={{
         canUseComponentLibrary: false,
       }}

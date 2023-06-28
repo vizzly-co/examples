@@ -22,6 +22,7 @@ export const FormatPanel: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       numberFormatOptions={{
         custom: {
           description: 'Custom Option',
@@ -62,6 +63,7 @@ export const Table: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
+      parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
       numberFormatOptions={{
         custom: {
           description: 'Custom Option',

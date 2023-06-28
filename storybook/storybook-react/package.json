@@ -7,7 +7,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "@vizzly/dashboard": "0.3.24-46473fe73c8aec0e3bf52ca6ff790ab290cc417f",
+    "@vizzly/dashboard": "0.3.28",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
