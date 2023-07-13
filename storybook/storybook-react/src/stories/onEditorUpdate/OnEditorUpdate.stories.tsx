@@ -46,7 +46,10 @@ export const ChangeView: StoryFn = () => {
         rowLimit: 2,
       }}
       parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
-      onEditorUpdate={handleChange}
+      onEditorUpdate={(attributes: Component.Attributes) => {
+        handleChange(attributes);
+        return attributes;
+      }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
     />

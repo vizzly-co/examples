@@ -5,6 +5,7 @@ import { waitForElement } from '../testing/helpers';
 import { screenUpdate } from '../testing/utils';
 import { highlight } from '../testing/highlighter';
 import { getIdentity } from '../factory/getIdentity';
+import { DashboardFilters } from '@vizzly/dashboard/dist/shared-ui/src/contexts/DashboardBehaviour/types';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
   title: 'Dashboard Props/dashboardFilters',
@@ -20,9 +21,8 @@ export const SingleSelectFilter: StoryFn = () => {
         detail: 'minimal',
         rowLimit: 2,
       }}
-      dashboardFilters={(dataSet: DataSet[]) => {
-        console.log(dataSet);
-        const filters = [
+      dashboardFilters={() => {
+        const filters: DashboardFilters = [
           {
             type: 'singleSelectFilter',
             requiresValue: true,
@@ -61,8 +61,8 @@ export const DateTimeFilter: StoryFn = () => {
         rowLimit: 2,
       }}
       parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
-      dashboardFilters={(dataSet: DataSet[]) => {
-        const filters = [
+      dashboardFilters={() => {
+        const filters: DashboardFilters = [
           {
             type: 'dateTimeFilter',
             requiresValue: true,
@@ -103,8 +103,8 @@ export const CustomRangeDateTimeFilter: StoryFn = () => {
         rowLimit: 2,
       }}
       parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
-      dashboardFilters={(dataSet: DataSet[]) => {
-        const filters = [
+      dashboardFilters={() => {
+        const filters: DashboardFilters = [
           {
             type: 'dateTimeFilter',
             requiresValue: false,
@@ -146,8 +146,8 @@ export const CombinedFilters: StoryFn = () => {
         rowLimit: 2,
       }}
       parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
-      dashboardFilters={(dataSet: DataSet[]) => {
-        const filters = [
+      dashboardFilters={() => {
+        const filters: DashboardFilters = [
           {
             type: 'singleSelectFilter',
             requiresValue: false,
