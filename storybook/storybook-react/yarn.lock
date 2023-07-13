@@ -4377,10 +4377,10 @@
     "@visx/event" "2.17.0"
     prop-types "^15.6.2"
 
-"@vizzly/dashboard@0.3.28":
-  version "0.3.28"
-  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.3.28.tgz#bfeb0954e73314f145e6f8b4845ed2316a0dd131"
-  integrity sha512-zOObwyPBFMQ0VFxloIQiIVPV0moHYEHzgEMlrs/Wkh0El4nHunDwhPMKtU/BV9f1XQKQ7N0ab1CMR5Rr5qyB9g==
+"@vizzly/dashboard@0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.4.2.tgz#d2bb5911797665111b27e19b2f0a43389b25108a"
+  integrity sha512-NJQtWVp0rtNyOH1A/abnidPiXNtqOAFhKUgBFabSSmmYh3m0uxHiZXhQCAzgjuB7zvzIsWgQiW+3IwzztPepKQ==
   dependencies:
     "@emotion/cache" "^11.10.5"
     "@emotion/css" "^11.10.6"
@@ -4403,6 +4403,7 @@
     react-popper "^2.3.0"
     react-visibility-sensor "^5.1.1"
     styled-components "5.3.6"
+    topojson-client "^3.1.0"
     twin.macro "^3.0.0-rc.3"
     uuid "^9.0.0"
 
@@ -5793,7 +5794,7 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.19.0, commander@^2.20.0:
+commander@2, commander@^2.19.0, commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -13364,6 +13365,13 @@ toidentifier@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.1.tgz#3be34321a88a820ed1bd80dfaa33e479fbb8dd35"
   integrity sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==
+
+topojson-client@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/topojson-client/-/topojson-client-3.1.0.tgz#22e8b1ed08a2b922feeb4af6f53b6ef09a467b99"
+  integrity sha512-605uxS6bcYxGXw9qi62XyrV6Q3xwbndjachmNxu8HWTtVPxZfEJN9fd/SZS1Q54Sn2y0TMyMxFj/cJINqGHrKw==
+  dependencies:
+    commander "2"
 
 tough-cookie@^4.0.0:
   version "4.1.3"
