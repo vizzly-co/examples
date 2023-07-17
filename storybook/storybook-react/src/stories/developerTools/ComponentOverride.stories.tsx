@@ -1,10 +1,7 @@
 import Vizzly from '@vizzly/dashboard';
 import type { Meta, StoryFn } from '@storybook/react';
 
-import { waitForElement } from '../testing/helpers';
 import { getIdentity } from '../factory/getIdentity';
-import { highlight } from '../testing/highlighter';
-import { findButtonByText } from '../testing/buttons';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
   title: 'Dashboard Props/developerTools/componentOverride',
