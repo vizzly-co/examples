@@ -1,0 +1,19 @@
+{/* OnEditorUpdate.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as Stories from './organizationName.stories';
+
+# organizationName
+
+The prop organizationName allows you to use your organization name inside the Vizzly Dashboard.
+
+Example of this would be when you have a Library populated and you add a View for your Customers to use, it will show "Verified by 'Your organization'".
+
+<Meta of={Stories} />
+
+### Demo
+
+<Container>
+  <Story of={Stories.Verified} autoplay />
+</Container>
