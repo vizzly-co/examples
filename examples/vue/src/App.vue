@@ -21,7 +21,7 @@ export default {
       if(response.ok) {
         const tokens = await response.json();
 
-        return tokens;
+        return tokens.accessTokens;
       };
 
       return null;
