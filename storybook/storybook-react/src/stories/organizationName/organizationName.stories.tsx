@@ -22,7 +22,7 @@ export const Verified: StoryFn = () => {
         rowLimit: 2,
       }}
       parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
-      organizationName="ABC Company"
+      organizationName="ABC Organization"
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
       identity={getIdentity()}
     />
@@ -39,7 +39,7 @@ Verified.play = async () => {
     await screenUpdate(300);
 
     userEvent.hover(
-      baseCanvas.getByText('Verified by ABC Company')
+      baseCanvas.getByText('Verified by ABC Organization')
     );
     await screenUpdate();
   });
