@@ -1,0 +1,18 @@
+{/* OnViewClick.mdx */}
+
+import { Meta, Story } from '@storybook/blocks';
+import { Container } from '../Components';
+import * as OnViewClickStories from './OnViewClick.stories';
+
+# OnViewClick
+
+The prop OnViewClick returns the attributes of the element in the view as well as attributes associated to that element.
+This will allow you to make use of it outside of the Vizzly component.
+
+<Meta of={OnViewClickStories} />
+
+### Demo
+
+<Container>
+  <Story of={OnViewClickStories.ChangeView} autoplay />
+</Container>
