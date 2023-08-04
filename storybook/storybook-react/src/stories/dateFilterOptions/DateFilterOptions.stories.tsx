@@ -9,7 +9,7 @@ import { getIdentity } from '../factory/getIdentity';
 import { findButtonByText } from '../testing/buttons';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
-  title: 'Dashboard Props/dateTimeFilterOptions',
+  title: 'Dashboard Props/dateFilterOptions',
   component: Vizzly.Dashboard,
 };
 
@@ -23,7 +23,7 @@ export const Filter: StoryFn = () => {
         rowLimit: 2,
       }}
       parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
-      dateTimeFilterOptions={{
+      dateFilterOptions={{
         year_of_2020: {
           description: 'Year - 2020',
           range: {
@@ -61,7 +61,7 @@ Filter.play = async () => {
     await screenUpdate();
     userEvent.click(baseCanvas.getByText('Single select'));
     await screenUpdate();
-    userEvent.click(baseCanvas.getByText('Time filter'));
+    userEvent.click(baseCanvas.getByText('Date picker'));
 
     await screenUpdate();
     userEvent.click(
