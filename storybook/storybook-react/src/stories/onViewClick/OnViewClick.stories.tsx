@@ -9,7 +9,7 @@ import { getIdentity } from '../factory/getIdentity';
 import { Component } from '@vizzly/dashboard/dist/shared-logic/src/Component/types';
 import { highlight } from '../testing/highlighter';
 import Modal from 'react-modal';
-import { Fragment } from 'react';
+import { Fragment, FunctionComponent } from 'react';
 import React from 'react';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
@@ -27,10 +27,40 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    width: "480px"
   },
 };
 
-export const ChangeView: StoryFn = () => {
+export const RawData: StoryFn = () => <DemoComponent />;
+
+RawData.play = async () => {
+  const baseCanvas = within(document.body);
+  waitForElement('.vizzly_dashboard', async () => {
+    const clickableElement = await baseCanvas.findAllByText('HR Manager');
+    userEvent.click(clickableElement[0]);
+
+    await screenUpdate();
+    const modal = document.body.querySelector('[class*="ReactModal__Content"]');
+    highlight(modal as HTMLElement);
+  });
+};
+
+
+export const FormattedData: StoryFn = () => <DemoComponent />;
+
+FormattedData.play = async () => {
+  const baseCanvas = within(document.body);
+  waitForElement('.vizzly_dashboard', async () => {
+    const clickableElement = await baseCanvas.findAllByText('HR Manager');
+    userEvent.click(clickableElement[1]);
+
+    await screenUpdate();
+    const modal = document.body.querySelector('[class*="ReactModal__Content"]');
+    highlight(modal as HTMLElement);
+  });
+};
+
+const DemoComponent:FunctionComponent = () => {
   const [modalAttributes, setModalAttributes] = React.useState<
     Component.OnViewClick | undefined
   >(undefined);
@@ -45,17 +75,37 @@ export const ChangeView: StoryFn = () => {
           contentLabel="Employee"
           style={customStyles}
         >
-
-          <p>
-            View Id: <code>{modalAttributes?.viewId}</code>
-          </p>
-          <p>
-            Clicked Row:{' '}
-            <code>{JSON.stringify(
-              'fields' in modalAttributes && modalAttributes.fields
-            )}</code>
-          </p>
-          <p>Clicked Cell: <code>{JSON.stringify(modalAttributes?.clicked)}</code></p>
+          {'fields' in modalAttributes && modalAttributes.fields && (
+            <Fragment>
+              {modalAttributes.fields['fie_1'] === 1 ? (
+                <Fragment>
+                  <p style={{ marginTop: 0, fontWeight: 'bold' }}>
+                    Visualisation of the data returned for Row 1
+                  </p>
+                  <code>{JSON.stringify(modalAttributes, null, 2)}</code>
+                </Fragment>
+              ) : (
+                <Fragment>
+                  <p>
+                    <strong>Employee Id:</strong>{' '}
+                    {modalAttributes.fields['fie_1']}
+                  </p>
+                  <p>
+                    <strong>Job Title:</strong>{' '}
+                    {modalAttributes.fields['fie_7']}
+                  </p>
+                  <p>
+                    <strong>Salary:</strong> {modalAttributes.fields['fie_8']}
+                  </p>
+                  <div style={{ textAlign: 'right' }}>
+                    <button style={{ padding: '6px 8px', borderRadius: 8 }}>
+                      Go to Employee
+                    </button>
+                  </div>
+                </Fragment>
+              )}
+            </Fragment>
+          )}
         </Modal>
       )}
       <Vizzly.Dashboard
@@ -72,16 +122,4 @@ export const ChangeView: StoryFn = () => {
       />
     </Fragment>
   );
-};
-
-ChangeView.play = async () => {
-  const baseCanvas = within(document.body);
-  waitForElement('.vizzly_dashboard', async () => {
-    const clickableElement = await baseCanvas.findAllByText('HR Manager');
-    userEvent.click(clickableElement[1]);
-
-    await screenUpdate();
-    const modal = document.body.querySelector('[class*="ReactModal__Content"]');
-    highlight(modal as HTMLElement);
-  });
-};
+}
