@@ -27,7 +27,7 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: "480px"
+    width: '480px',
   },
 };
 
@@ -45,7 +45,6 @@ RawData.play = async () => {
   });
 };
 
-
 export const FormattedData: StoryFn = () => <DemoComponent />;
 
 FormattedData.play = async () => {
@@ -60,13 +59,31 @@ FormattedData.play = async () => {
   });
 };
 
-const DemoComponent:FunctionComponent = () => {
+const DemoComponent: FunctionComponent = () => {
   const [modalAttributes, setModalAttributes] = React.useState<
     Component.OnViewClick | undefined
   >(undefined);
 
   return (
     <Fragment>
+      {modalAttributes?.viewId ===
+        'view_b9a0b119-f849-4a24-8c79-a8c726cd1a1f' && (
+        <Modal
+          isOpen={!!modalAttributes}
+          onRequestClose={() => setModalAttributes(undefined)}
+          contentLabel="Roles"
+          style={customStyles}
+        >
+          <Fragment>
+            <Fragment>
+              <p style={{ marginTop: 0, fontWeight: 'bold' }}>
+                Visualisation of the data returned from the Bar Chart
+              </p>
+              <code>{JSON.stringify(modalAttributes, null, 2)}</code>
+            </Fragment>
+          </Fragment>
+        </Modal>
+      )}
       {modalAttributes?.viewId ===
         'view_9b3c0139-4f8e-400c-8f42-8446d19908dd' && (
         <Modal
@@ -114,12 +131,12 @@ const DemoComponent:FunctionComponent = () => {
           rowLimit: 2,
         }}
         parentDashboardId="dsh_9cbe8abaa11b4f839ca1018bd4aabb01"
-        onViewClick={(attributes: Component.OnViewClick) =>
-          setModalAttributes(attributes)
-        }
+        onViewClick={(attributes: Component.OnViewClick) => {
+          setModalAttributes(attributes);
+        }}
         queryEngineEndpoint="https://example.vizzly.co/query-engine"
         identity={getIdentity()}
       />
     </Fragment>
   );
-}
+};
