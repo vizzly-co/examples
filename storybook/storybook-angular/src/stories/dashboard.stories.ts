@@ -3,7 +3,7 @@ import { VizzlyDashboard } from './dashboard.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 export default {
-  title: 'Dashboard',
+  title: 'Getting Started/Dashboard',
   component: VizzlyDashboard,
   decorators: [
     moduleMetadata({

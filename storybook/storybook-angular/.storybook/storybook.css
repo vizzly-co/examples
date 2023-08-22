@@ -1,0 +1,17 @@
+html {
+  line-height: 1.5;
+}
+
+.sb-show-main.sb-main-padded {
+  padding: 0;
+}
+.preview-container {
+  position: relative;
+  overflow: hidden;
+  margin: 25px 0 40px;
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: rgb(0 0 0 / 10%) 0 1px 3px 0;
+  border: 1px solid hsla(203, 50%, 30%, 0.15);
+  padding: 16px;
+}
