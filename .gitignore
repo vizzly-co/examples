@@ -2,3 +2,4 @@
 **/datadir/*
 !**/datadir/vizzly.config.json
 node_modules
+.angular
