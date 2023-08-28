@@ -38,9 +38,7 @@ Verified.play = async () => {
     userEvent.click(selectTemplateButton);
     await screenUpdate(300);
 
-    userEvent.hover(
-      baseCanvas.getByText('Verified by ABC Organization')
-    );
+    userEvent.hover(baseCanvas.getAllByText('Verified by ABC Organization')[0]);
     await screenUpdate();
   });
 };
