@@ -9,14 +9,14 @@
       "fields": [
         {
           "name": "order_id",
-          "dataType": "number",
+          "dataType": "BIGINT",
           "id": "field_id_1",
           "publicName": "Order ID",
           "table": "us_sales"
         },
         {
           "name": "order_date",
-          "dataType": "date_time",
+          "dataType": "DATE",
           "id": "field_id_2",
           "publicName": "Order Date",
           "table": "us_sales"
@@ -24,7 +24,7 @@
         {
           "id": "field_id_3",
           "name": "status",
-          "dataType": "string",
+          "dataType": "TEXT",
           "publicName": "Status",
           "table": "us_sales"
         }
