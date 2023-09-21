@@ -17,7 +17,7 @@
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
     "@vizzly/auth": "0.1.2",
-    "@vizzly/dashboard": "0.3.24",
+    "@vizzly/dashboard": "0.4.22",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.5",
     "next": "13.4.5",
