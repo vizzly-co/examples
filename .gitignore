@@ -3,3 +3,6 @@
 !**/datadir/vizzly.config.json
 node_modules
 .angular
+static-build-outputs/**
+!static-build-outputs/.gitkeep
+dist
