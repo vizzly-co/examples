@@ -62,6 +62,8 @@ function App() {
         }]
       });
 
+      customDashboard.componentLibrary = [{colSpan: 12, attributes: {...barChart, displayTitle: 'I have been added to the view gallery'}, localFilters: [], reports: [], results: []}]
+
       customDashboard = VizzlySDK.Dashboard.setComponentOnDisplay(customDashboard, singleStat, FIRST_ROW, FIRST_CELL);
       customDashboard = VizzlySDK.Dashboard.setComponentOnDisplay(customDashboard, barChart, SECOND_ROW, FIRST_CELL);
 
