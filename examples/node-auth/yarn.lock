@@ -689,10 +689,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@vizzly/auth@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@vizzly/auth/-/auth-0.1.3.tgz#c2ac43c6a1f283e7e4339372ba119f431e0cab3e"
-  integrity sha512-llWg1f+6SzfreJL797y/PQJr/tFZgEvk9+zLUIrx5S2R73mqsJVcPZ5ys4nOrC5fv0/Rq7Q6V5D776Kw+/jSvw==
+"@vizzly/auth@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@vizzly/auth/-/auth-0.2.1.tgz#491c6319c68b4810b05243468c84c09c6c192ccc"
+  integrity sha512-PPkYQ2Wo1eSw9ghrgnC1P2SOv1vFXmL3pNJdstheDKwcG1yfwg1WdKGCml0+oD/VPwClFKt2WtbK6FaoB1MwEA==
   dependencies:
     joi "^17.7.0"
     node-jose "^2.1.1"

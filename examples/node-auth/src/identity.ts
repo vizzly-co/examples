@@ -12,10 +12,9 @@ const generateVizzlyAccessTokens = async (privateKey: string, ttlInMinutes: numb
     // access allowing them to manage the dashboard for ALL your users.
     accessType: 'standard',
 
-    // What is your organisation ID? Find yours by running the CLI command
-    // `vizzly current-profile`
-    // or on the https://app.vizzly.co/dashboards page.
-    organisationId: '<< Your organisation ID >>',
+    // What is the ID of your project?
+    // You can find this on the project details page. It will start with `prj_`
+    projectId: '<< Your project ID >>',
 
     // A unique identifier for the current user, that you are
     // happy for Vizzly to store.
@@ -27,6 +26,10 @@ const generateVizzlyAccessTokens = async (privateKey: string, ttlInMinutes: numb
 
   // Create a token that is used for data access in a multi-tenant environment.
   const dataAccessToken = await vizzlySigner.signDataAccessToken({
+    // What is the ID of your project?
+    // You can find this on the project details page. It will start with `prj_`
+    projectId: '<< Your project ID >>',
+
     // What data sets does this user have access too?
     // If can either be a list of data set IDs, or a "*" to allow
     // access to all data sets.
@@ -50,11 +53,14 @@ const generateVizzlyAccessTokens = async (privateKey: string, ttlInMinutes: numb
     },
   });
 
-  // Generate an access token for the Vizzly Config Manager UI
-  // https://docs.vizzly.co/query-engines/self-hosted/config-manager-ui
+  // Generate an access token for the Vizzly Config Manager
   const queryEngineAccessToken = await vizzlySigner.signQueryEngineAccessToken({
+    // What is the ID of your project?
+    // You can find this on the project details page. It will start with `prj_`
+    projectId: '<< Your project ID >>',
+
     // Allow the user access to the database schema. This is required if you want the
-    // user to access the Vizzly Config Manager UI.
+    // user to access the Vizzly Config Manager.
     allowDatabaseSchemaAccess: true,
 
     // Allow the user to fetch 'preview' data from the database when
