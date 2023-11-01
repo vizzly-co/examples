@@ -8,20 +8,13 @@ const generateVizzlyAccessTokens = async (privateKey: string, ttlInMinutes: numb
 
   // Create a token that is used for dashboard access.
   const dashboardAccessToken = await vizzlySigner.signDashboardAccessToken({
-    // Is the user a standard user, or should they have 'admin'
-    // access allowing them to manage the dashboard for ALL your users.
-    accessType: 'standard',
-
     // What is the ID of your project?
     // You can find this on the project details page. It will start with `prj_`
     projectId: '<< Your project ID >>',
 
     // A unique identifier for the current user, that you are
     // happy for Vizzly to store.
-    userReference: '<< A reference to the current user >>',
-
-    // Either `read` or `read_write`
-    scope: 'read_write'
+    userReference: '<< A reference to the current user >>'
   });
 
   // Create a token that is used for data access in a multi-tenant environment.
