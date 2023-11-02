@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": ". ./secrets.env && jest --colors"
+    "test": ". ./secrets.env && jest --colors",
+    "test:ci": "jest --colors"
   },
   "dependencies": {
     "@vizzly/auth": "0.2.2",
