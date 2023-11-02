@@ -1,10 +1,12 @@
 {
   "scripts": {
     "test": ". ./secrets.env && jest --colors",
-    "test:ci": "jest --colors"
+    "test:ci": "jest --colors",
+    "format": "prettier --write ./**/*.ts"
   },
   "dependencies": {
     "@vizzly/auth": "0.2.2",
+    "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
     "isomorphic-fetch": "^3.0.0",
     "serverless-http": "^3.2.0"
@@ -12,12 +14,14 @@
   "name": "node-smart-proxy",
   "version": "0.0.1",
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.5",
     "@types/express": "^4.17.20",
     "@types/isomorphic-fetch": "^0.0.38",
     "@types/jest": "^29.5.7",
     "@types/node": "^20.8.10",
     "@types/supertest": "^2.0.15",
     "jest": "^29.7.0",
+    "prettier": "^3.0.3",
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
