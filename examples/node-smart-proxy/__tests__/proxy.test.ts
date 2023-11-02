@@ -1,11 +1,11 @@
 import supertest from "supertest";
 import { createSigner } from "@vizzly/auth";
-import * as Config from "../src/Config";
+import * as Settings from "../src/Settings";
 
 const signDataAccessToken = async (): Promise<string> => {
   const signer = createSigner({
     ttlInMinutes: 1,
-    privateKey: Config.getVizzlyPrivateKey(),
+    privateKey: Settings.getVizzlyPrivateKey(),
   });
 
   return await signer.signDataAccessToken({
@@ -85,6 +85,13 @@ describe("Proxy", () => {
                 allowedGranularities: expect.any(Array),
                 allowedOperators: expect.any(Array),
               },
+              {
+                id: "fie_2 - SQL field example",
+                publicName: "Product brand",
+                dataType: "string",
+                allowedGranularities: expect.any(Array),
+                allowedOperators: expect.any(Array),
+              },
             ],
           },
         ],
@@ -129,6 +136,13 @@ describe("Proxy", () => {
                 id: "fie_2",
                 publicName: "Price in $",
                 dataType: "number",
+                allowedGranularities: expect.any(Array),
+                allowedOperators: expect.any(Array),
+              },
+              {
+                id: "fie_3 - SQL field example",
+                publicName: "Product brand",
+                dataType: "string",
                 allowedGranularities: expect.any(Array),
                 allowedOperators: expect.any(Array),
               },

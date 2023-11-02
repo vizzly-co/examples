@@ -2,7 +2,8 @@
   "scripts": {
     "test": ". ./secrets.env && jest --colors",
     "test:ci": "jest --colors",
-    "format": "prettier --write ./**/*.ts"
+    "format": "prettier --write ./**/*.ts",
+    "validate-ts": "tsc --noEmit"
   },
   "dependencies": {
     "@vizzly/auth": "0.2.2",
