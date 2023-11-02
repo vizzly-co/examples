@@ -33,6 +33,7 @@ jobs:
           DATABASE_USER: ${{ secrets.DATABASE_USER }}
           DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
           DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+          VIZZLY_PRIVATE_KEY: ${{ secrets.VIZZLY_PRIVATE_KEY }}
         run: 'cd examples/node-smart-proxy && yarn install && yarn test:ci'
 
       - name: On success
