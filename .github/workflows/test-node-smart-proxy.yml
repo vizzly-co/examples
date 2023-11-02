@@ -1,6 +1,9 @@
 name: Node smart proxy tests
 
 on:
+  push:
+    paths:
+      - examples/node-smart-proxy/**
   workflow_dispatch:
   schedule:
     - cron: '0 9-19/2 * * *'
