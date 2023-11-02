@@ -1,0 +1,50 @@
+name: Node smart proxy tests
+
+on:
+  push:
+    paths:
+      - examples/node-smart-proxy/**
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9-19/2 * * *'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.14.2
+          cache: 'yarn'
+          cache-dependency-path: 'examples/node-smart-proxy/yarn.lock'
+
+      - name: Run tests
+        env:
+          VIZZLY_QUERY_ENGINE_BASE_URL: ${{ secrets.VIZZLY_QUERY_ENGINE_BASE_URL }}
+          VIZZLY_QUERY_ENGINE_API_KEY: ${{ secrets.VIZZLY_QUERY_ENGINE_API_KEY }}
+          VIZZLY_ENCRYPTION_SECRET: ${{ secrets.VIZZLY_ENCRYPTION_SECRET }}
+          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          DATABASE_USER: ${{ secrets.DATABASE_USER }}
+          DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+          DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
+          SLACK_ENDPOINT: ${{ secrets.SLACK_ENDPOINT }}
+        run: 'cd examples/node-smart-proxy && yarn install && yarn test:ci'
+
+      - name: On success
+        if: ${{ success() }}
+        shell: bash
+        run: |
+          message=":white_check_mark: Smart proxy example test passed"
+          curl -X POST --data-urlencode "payload={\"channel\": \"#smoke-tests\", \"username\": \"Smoke tests\", \"text\": \"${message}\", \"icon_emoji\": \":test_tube:\"}" $SLACK_ENDPOINT
+      - name: On failure
+        if: ${{ failure() }}
+        shell: bash
+        run: |
+          message=":x: Smart proxy example test failed"
+          curl -X POST --data-urlencode "payload={\"channel\": \"#smoke-tests\", \"username\": \"Smoke tests\", \"text\": \"${message}\", \"icon_emoji\": \":test_tube:\"}" $SLACK_ENDPOINT
