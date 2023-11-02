@@ -77,7 +77,15 @@ describe("Proxy", () => {
           {
             id: "das_dynamic",
             name: "A dynamic data set for user 1!",
-            fields: [],
+            fields: [
+              {
+                id: "fie_1",
+                publicName: "Home Country",
+                dataType: "string",
+                allowedGranularities: expect.any(Array),
+                allowedOperators: expect.any(Array),
+              },
+            ],
           },
         ],
       });

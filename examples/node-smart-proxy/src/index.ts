@@ -26,6 +26,7 @@ const getConfigForUser = (userId: string) => {
               dataType: "TEXT",
               table: "shop_customers",
               name: "country",
+              publicName: "Home Country",
             },
           ],
           joins: [],
