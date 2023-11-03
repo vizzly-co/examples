@@ -79,7 +79,7 @@ Reordered.play = async () => {
     await screenUpdate();
     userEvent.click(findButtonByText('Format') as Element);
     await screenUpdate();
-    highlight(getFieldsetFromLegend(baseCanvas, 'Axis Labels') as HTMLElement);
+    highlight(getFieldsetFromLegend(baseCanvas, 'Axis Preferences') as HTMLElement);
     await screenUpdate();
   });
 };

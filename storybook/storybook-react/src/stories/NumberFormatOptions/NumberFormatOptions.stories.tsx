@@ -86,7 +86,7 @@ Table.play = async () => {
     userEvent.click(baseCanvas.getByText('Pivot table'));
     await screenUpdate(150);
     userEvent.click(findButtonByText('Salary') as Element);
-    await screenUpdate(100);
+    await screenUpdate(300);
     userEvent.click(baseCanvas.getByText('Select...'));
     const dropdown = document?.querySelector(
       '[data-component="dropdown-options"]'

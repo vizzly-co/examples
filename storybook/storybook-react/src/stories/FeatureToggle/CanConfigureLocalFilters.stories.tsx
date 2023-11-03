@@ -5,9 +5,9 @@ import { userEvent, within } from '@storybook/testing-library';
 import { openEditor, waitForElement } from '../testing/helpers';
 import { screenUpdate } from '../testing/utils';
 import { getFieldsetFromLegend } from '../testing/form';
-import { getAndHighlightItem, highlightAndFocus } from '../testing/highlighter';
+import { getAndHighlightItem, highlight, highlightAndFocus } from '../testing/highlighter';
 import { getIdentity } from '../factory/getIdentity';
-import { findButtonByText } from '../testing/buttons';
+import { findButtonByText, findLIButtonByText } from '../testing/buttons';
 
 const meta: Meta<typeof Vizzly.Dashboard> = {
   title: 'Dashboard Props/featureToggle/canConfigureLocalFilters',
@@ -34,20 +34,18 @@ export const True: StoryFn = () => {
 };
 
 True.play = async () => {
-  const baseCanvas = within(document.body);
-  waitForElement('.vizzly_dashboard', async () => {
-    await openEditor(baseCanvas);
-
-    await screenUpdate(150);
-    userEvent.click(findButtonByText('Add-ons') as Element);
+  waitForElement('.vizzly_dashboard', async (element) => {
     await screenUpdate();
-    userEvent.click(baseCanvas.getByText('+ Add chart filter'));
+    const openMenu = element?.querySelector(
+      '[aria-label="Options: Row 1 Cell 1"]'
+    ) as Element;
+    userEvent.click(openMenu);
 
-    const fieldset = getFieldsetFromLegend(baseCanvas, 'Chart Filter');
-    await screenUpdate();
-    highlightAndFocus(fieldset);
-    getAndHighlightItem(fieldset, '[data-component="dropdown"]');
-    await screenUpdate(150);
+    await screenUpdate(100);
+    const editButton = findLIButtonByText('Add Local Filters');
+    if (editButton) {
+      highlight(editButton);
+    }
   });
 };
 
@@ -70,7 +68,13 @@ export const False: StoryFn = () => {
 
 False.play = async () => {
   const baseCanvas = within(document.body);
-  waitForElement('.vizzly_dashboard', async () => {
-    await openEditor(baseCanvas);
+  waitForElement('.vizzly_dashboard', async (element) => {
+    await screenUpdate();
+    const openMenu = element?.querySelector(
+      '[aria-label="Options: Row 1 Cell 1"]'
+    ) as Element;
+    userEvent.click(openMenu);
+
+    await screenUpdate(100);
   });
 };
