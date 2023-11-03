@@ -88,13 +88,9 @@ Table.play = async () => {
     userEvent.click(findButtonByText('Salary') as Element);
     await screenUpdate(300);
     userEvent.click(baseCanvas.getByText('Select...'));
-    const dropdown = document?.querySelector(
-      '[data-component="dropdown-options"]'
-    ) as HTMLElement;
     await screenUpdate(100);
 
-    highlight(findListOption(dropdown, 'Custom Option') as HTMLElement);
-    await screenUpdate(300);
+    highlight(baseCanvas.getByText('Custom Option'));
   });
 };
 
