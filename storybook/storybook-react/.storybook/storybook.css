@@ -15,3 +15,13 @@ html {
   border: 1px solid hsla(203, 50%, 30%, 0.15);
   padding: 16px;
 }
+
+
+  /* The dashboard will inherit the font on your website. For this example, we set the font to Inter using Google Fonts. */
+* {
+  font-family: 'Roboto', 'Inter', sans-serif;
+}
+
+  .sidebar-subheading {
+    letter-spacing: 0.15em !important;
+  }

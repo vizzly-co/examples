@@ -26,7 +26,7 @@ export const FormatPanel: StoryFn = () => {
       numberFormatOptions={{
         custom: {
           description: 'Custom Option',
-          formatter: (v: number) => `${v}`,
+          formatter: (v) => `${v}`,
         },
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
@@ -67,7 +67,7 @@ export const Table: StoryFn = () => {
       numberFormatOptions={{
         custom: {
           description: 'Custom Option',
-          formatter: (v: number) => `${v}`,
+          formatter: (v) => `${v}`,
         },
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
@@ -86,15 +86,11 @@ Table.play = async () => {
     userEvent.click(baseCanvas.getByText('Pivot table'));
     await screenUpdate(150);
     userEvent.click(findButtonByText('Salary') as Element);
-    await screenUpdate(100);
+    await screenUpdate(300);
     userEvent.click(baseCanvas.getByText('Select...'));
-    const dropdown = document?.querySelector(
-      '[data-component="dropdown-options"]'
-    ) as HTMLElement;
     await screenUpdate(100);
 
-    highlight(findListOption(dropdown, 'Custom Option') as HTMLElement);
-    await screenUpdate(300);
+    highlight(baseCanvas.getByText('Custom Option'));
   });
 };
 
