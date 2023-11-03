@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 16.14.2
           cache: "yarn"
+          cache-dependency-path: 'storybook/storybook-react/yarn.lock'
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
