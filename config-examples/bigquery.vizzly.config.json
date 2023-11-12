@@ -6,29 +6,39 @@
     {
       "id": "das_e400b5180d9f419db9418510383cfb0e",
       "name": "US Sales",
-      "googleProjectId": "vizzly",
-      "googleDataSetName": "us_sales",
       "fields": [
         {
           "id": "field_id_1",
-          "name": "order_id",
           "dataType": "INT64",
           "publicName": "Order ID",
-          "table": "us_sales"
+          "address": [
+            "vizzly",
+            "us_sales",
+            "us_sales",
+            "order_id"
+          ]
         },
         {
           "id": "field_id_2",
-          "name": "order_date",
           "dataType": "TIMESTAMP",
           "publicName": "Order Date",
-          "table": "us_sales"
+          "address": [
+            "vizzly",
+            "us_sales",
+            "us_sales",
+            "order_date"
+          ]
         },
         {
           "id": "field_id_3",
-          "name": "status",
           "dataType": "STRING",
           "publicName": "Status",
-          "table": "us_sales"
+          "address": [
+            "vizzly",
+            "us_sales",
+            "us_sales",
+            "status"
+          ]
         }
       ],
       "joins": []
