@@ -9,10 +9,8 @@
       "fields": [
         {
           "id": "fie_1",
-          "name": "employee_id",
           "publicName": "Employee ID",
           "dataType": "FLOAT",
-          "table": "hr_payroll",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -34,14 +32,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "employee_id"
           ]
         },
         {
           "id": "fie_2",
-          "name": "name",
           "publicName": "Name",
           "dataType": "TEXT",
-          "table": "hr_payroll",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -63,14 +64,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "name"
           ]
         },
         {
           "id": "fie_3",
-          "name": "gender",
           "publicName": "Gender",
           "dataType": "TEXT",
-          "table": "hr_payroll",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -92,14 +96,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "gender"
           ]
         },
         {
           "id": "fie_4",
-          "name": "date_of_birth",
           "publicName": "Date of Birth",
           "dataType": "TIMESTAMP",
-          "table": "hr_payroll",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -121,14 +128,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "date_of_birth"
           ]
         },
         {
           "id": "fie_5",
-          "name": "date_of_hire",
           "publicName": "Date of Hire",
           "dataType": "TIMESTAMP",
-          "table": "hr_payroll",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -150,14 +160,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "date_of_hire"
           ]
         },
         {
           "id": "fie_6",
-          "name": "department",
           "publicName": "Department",
           "dataType": "TEXT",
-          "table": "hr_payroll",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -179,14 +192,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "department"
           ]
         },
         {
           "id": "fie_7",
-          "name": "job_title",
           "publicName": "Job Title",
           "dataType": "TEXT",
-          "table": "hr_payroll",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -208,14 +224,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "job_title"
           ]
         },
         {
           "id": "fie_8",
-          "name": "salary",
           "publicName": "Salary",
           "dataType": "FLOAT",
-          "table": "hr_payroll",
           "canBeDimension": false,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -237,14 +256,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "salary"
           ]
         },
         {
           "id": "fie_9",
-          "name": "employee_satisfaction_score",
           "publicName": "Satisfaction Score",
           "dataType": "FLOAT",
-          "table": "hr_payroll",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -266,14 +288,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "employee_satisfaction_score"
           ]
         },
         {
           "id": "fie_10",
-          "name": "tenure",
           "publicName": "Tenure",
           "dataType": "FLOAT",
-          "table": "hr_payroll",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -295,14 +320,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "tenure"
           ]
         },
         {
           "id": "fie_11",
-          "name": "nationality",
           "publicName": "Nationality",
           "dataType": "TEXT",
-          "table": "hr_payroll",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -324,6 +352,11 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "nationality"
           ]
         }
       ],
@@ -336,10 +369,8 @@
       "fields": [
         {
           "id": "fie_1",
-          "name": "order_id",
           "publicName": "Order ID",
           "dataType": "FLOAT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": false,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -361,14 +392,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "order_id"
           ]
         },
         {
           "id": "fie_2",
-          "name": "order_date",
           "publicName": "Order Date",
           "dataType": "TIMESTAMP",
-          "table": "ecommerce_sales_data",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -390,14 +424,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "order_date"
           ]
         },
         {
           "id": "fie_3",
-          "name": "status",
           "publicName": "Status",
           "dataType": "TEXT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -419,14 +456,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "status"
           ]
         },
         {
           "id": "fie_4",
-          "name": "item_id",
           "publicName": "Item ID",
           "dataType": "FLOAT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -448,14 +488,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "item_id"
           ]
         },
         {
           "id": "fie_5",
-          "name": "quantity_ordered",
           "publicName": "Quantity Ordered",
           "dataType": "FLOAT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -477,14 +520,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "quantity_ordered"
           ]
         },
         {
           "id": "fie_6",
-          "name": "price",
           "publicName": "Price",
           "dataType": "FLOAT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": false,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -506,14 +552,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "price"
           ]
         },
         {
           "id": "fie_7",
-          "name": "value",
           "publicName": "Value",
           "dataType": "FLOAT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": false,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -535,14 +584,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "value"
           ]
         },
         {
           "id": "fie_8",
-          "name": "discount_amount",
           "publicName": "Discount Amount",
           "dataType": "FLOAT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": false,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -564,14 +616,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "discount_amount"
           ]
         },
         {
           "id": "fie_9",
-          "name": "total",
           "publicName": "Total",
           "dataType": "FLOAT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": false,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -593,14 +648,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "total"
           ]
         },
         {
           "id": "fie_10",
-          "name": "category",
           "publicName": "Category",
           "dataType": "TEXT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -622,14 +680,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "category"
           ]
         },
         {
           "id": "fie_11",
-          "name": "payment_method",
           "publicName": "Payment Method",
           "dataType": "TEXT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -651,14 +712,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "payment_method"
           ]
         },
         {
           "id": "fie_12",
-          "name": "customer_id",
           "publicName": "Customer ID",
           "dataType": "FLOAT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -680,14 +744,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "customer_id"
           ]
         },
         {
           "id": "fie_13",
-          "name": "county",
           "publicName": "County",
           "dataType": "TEXT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -709,14 +776,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "county"
           ]
         },
         {
           "id": "fie_14",
-          "name": "city",
           "publicName": "City",
           "dataType": "TEXT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -738,14 +808,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "city"
           ]
         },
         {
           "id": "fie_15",
-          "name": "state",
           "publicName": "State",
           "dataType": "TEXT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -767,14 +840,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "state"
           ]
         },
         {
           "id": "fie_16",
-          "name": "region",
           "publicName": "Region",
           "dataType": "TEXT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": true,
           "canBeMeasure": false,
           "allowedGranularities": [
@@ -796,14 +872,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "region"
           ]
         },
         {
           "id": "fie_17",
-          "name": "discount_percentage",
           "publicName": "Discount Percentage",
           "dataType": "FLOAT",
-          "table": "ecommerce_sales_data",
           "canBeDimension": false,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -825,6 +904,11 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "discount_percentage"
           ]
         }
       ],
@@ -837,10 +921,8 @@
       "fields": [
         {
           "id": "fie_1",
-          "name": "date",
           "publicName": "Date",
           "dataType": "TIMESTAMP",
-          "table": "stocks",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -862,14 +944,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "stocks",
+            "date"
           ]
         },
         {
           "id": "fie_2",
-          "name": "open",
           "publicName": "Open",
           "dataType": "FLOAT",
-          "table": "stocks",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -891,14 +976,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "stocks",
+            "open"
           ]
         },
         {
           "id": "fie_3",
-          "name": "high",
           "publicName": "High",
           "dataType": "FLOAT",
-          "table": "stocks",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -920,14 +1008,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "stocks",
+            "high"
           ]
         },
         {
           "id": "fie_4",
-          "name": "low",
           "publicName": "Low",
           "dataType": "FLOAT",
-          "table": "stocks",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -949,14 +1040,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "stocks",
+            "low"
           ]
         },
         {
           "id": "fie_5",
-          "name": "name",
           "publicName": "Name",
           "dataType": "TEXT",
-          "table": "stocks",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -978,6 +1072,11 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "stocks",
+            "name"
           ]
         }
       ],

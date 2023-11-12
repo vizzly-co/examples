@@ -6,10 +6,8 @@
       "fields": [
         {
           "id": "dGFibGU6c2hvcF9zaGlwcGVycyxmaWVsZDpwaG9uZQ==",
-          "name": "phone",
           "publicName": "Phone",
           "dataType": "TEXT",
-          "table": "shop_shippers",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -31,14 +29,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "_",
+            "shop_shippers",
+            "phone"
           ]
         },
         {
           "id": "dGFibGU6c2hvcF9zaGlwcGVycyxmaWVsZDpzaGlwcGVybmFtZQ==",
-          "name": "shippername",
           "publicName": "Shipper name",
           "dataType": "TEXT",
-          "table": "shop_shippers",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -60,14 +61,17 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "_",
+            "shop_shippers",
+            "shippername"
           ]
         },
         {
           "id": "dGFibGU6c2hvcF9zaGlwcGVycyxmaWVsZDpzaGlwcGVyaWQ=",
-          "name": "shipperid",
           "publicName": "Shipperid",
           "dataType": "BIGINT",
-          "table": "shop_shippers",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -89,6 +93,11 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "_",
+            "shop_shippers",
+            "shipperid"
           ]
         },
         {
@@ -131,10 +140,8 @@
       "fields": [
         {
           "id": "ZDIzNGY5MjQtZmIxZS00ZGZjLWIwNmMtMTQxYzZhYTY4MGM4",
-          "name": "customerid",
           "publicName": "Average customer ID",
           "dataType": "FLOAT",
-          "table": "vizzly_data_set",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -156,14 +163,17 @@
             "<=",
             "is_one_of",
             "is_not_one_of"
+          ],
+          "address": [
+            "_",
+            "vizzly_data_set",
+            "customerid"
           ]
         },
         {
           "id": "NmJkNmFkNjEtNTE4Zi00MGNlLTk5ZTgtNTBiZWU1YTNlM2M2",
-          "name": "country",
           "publicName": "Country",
           "dataType": "TEXT",
-          "table": "vizzly_data_set",
           "canBeDimension": true,
           "canBeMeasure": true,
           "allowedGranularities": [
@@ -185,6 +195,11 @@
             "ends_with",
             "contains_substring",
             "does_not_contain_substring"
+          ],
+          "address": [
+            "_",
+            "vizzly_data_set",
+            "country"
           ]
         }
       ],

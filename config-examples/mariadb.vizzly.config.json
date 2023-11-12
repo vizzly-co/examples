@@ -8,58 +8,79 @@
       "name": "Stock data set",
       "fields": [
         {
-          "name": "date",
           "dataType": "DATETIME",
-          "table": "stocks",
           "publicName": "Date",
-          "id": "Date"
+          "id": "Date",
+          "address": [
+            "my_database",
+            "stocks",
+            "date"
+          ]
         },
         {
-          "name": "open",
           "dataType": "FLOAT",
-          "table": "stocks",
           "publicName": "Open",
           "id": "Open",
-          "canBeDimension": false
+          "canBeDimension": false,
+          "address": [
+            "my_database",
+            "stocks",
+            "open"
+          ]
         },
         {
-          "name": "high",
           "dataType": "FLOAT",
-          "table": "stocks",
           "publicName": "High",
           "id": "High",
-          "canBeDimension": false
+          "canBeDimension": false,
+          "address": [
+            "my_database",
+            "stocks",
+            "high"
+          ]
         },
         {
-          "name": "low",
           "dataType": "FLOAT",
-          "table": "stocks",
           "publicName": "Low",
           "id": "Low",
-          "canBeDimension": false
+          "canBeDimension": false,
+          "address": [
+            "my_database",
+            "stocks",
+            "low"
+          ]
         },
         {
-          "name": "close",
           "dataType": "FLOAT",
-          "table": "stocks",
           "publicName": "Close",
           "id": "Close",
-          "canBeDimension": false
+          "canBeDimension": false,
+          "address": [
+            "my_database",
+            "stocks",
+            "close"
+          ]
         },
         {
-          "name": "volume",
           "dataType": "FLOAT",
-          "table": "stocks",
           "publicName": "Volume",
           "id": "Volume",
-          "canBeDimension": false
+          "canBeDimension": false,
+          "address": [
+            "my_database",
+            "stocks",
+            "volume"
+          ]
         },
         {
-          "name": "name",
           "dataType": "VARCHAR",
-          "table": "stocks",
           "publicName": "Name",
-          "id": "Name"
+          "id": "Name",
+          "address": [
+            "my_database",
+            "stocks",
+            "name"
+          ]
         }
       ],
       "joins": []
@@ -69,31 +90,39 @@
       "name": "People and cities",
       "fields": [
         {
-          "name": "name",
           "dataType": "VARCHAR",
-          "table": "cities_data_people",
           "publicName": "Person name",
-          "id": "Person name"
+          "id": "Person name",
+          "address": [
+            "my_database",
+            "cities_data_people",
+            "name"
+          ]
         },
         {
-          "name": "name",
           "dataType": "VARCHAR",
-          "table": "cities_data_cities",
           "publicName": "City",
-          "id": "City"
+          "id": "City",
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "name"
+          ]
         }
       ],
       "joins": [
         {
           "type": "leftJoin",
-          "left": {
-            "field": "id",
-            "table": "cities_data_cities"
-          },
-          "right": {
-            "field": "city_id",
-            "table": "cities_data_people"
-          }
+          "left": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ],
+          "right": [
+            "my_database",
+            "cities_data_people",
+            "city_id"
+          ]
         }
       ]
     },
@@ -102,51 +131,68 @@
       "name": "Cities and weather",
       "fields": [
         {
-          "name": "id",
           "publicName": "City ID",
           "id": "City ID",
           "dataType": "FLOAT",
-          "table": "cities_data_cities"
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ]
         },
         {
-          "name": "name",
           "publicName": "City Name",
           "id": "City",
           "dataType": "VARCHAR",
-          "table": "cities_data_cities"
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "name"
+          ]
         },
         {
           "publicName": "High Temp",
           "id": "High temp",
-          "name": "high",
           "dataType": "FLOAT",
-          "table": "cities_data_weather"
+          "address": [
+            "my_database",
+            "cities_data_weather",
+            "high"
+          ]
         },
         {
           "publicName": "Low temp",
           "id": "Low temp",
-          "name": "low",
           "dataType": "FLOAT",
-          "table": "cities_data_weather"
+          "address": [
+            "my_database",
+            "cities_data_weather",
+            "low"
+          ]
         },
         {
-          "name": "hidden_field_id",
           "id": "hidden_fie_2",
           "dataType": "FLOAT",
-          "table": "cities_data_cities"
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "hidden_field_id"
+          ]
         }
       ],
       "joins": [
         {
           "type": "leftJoin",
-          "left": {
-            "field": "id",
-            "table": "cities_data_cities"
-          },
-          "right": {
-            "field": "city_id",
-            "table": "cities_data_weather"
-          }
+          "left": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ],
+          "right": [
+            "my_database",
+            "cities_data_weather",
+            "city_id"
+          ]
         }
       ]
     },
@@ -155,38 +201,49 @@
       "name": "People and cities",
       "fields": [
         {
-          "name": "name",
           "dataType": "VARCHAR",
-          "table": "cities_data_people",
           "publicName": "Person name",
-          "id": "Person name"
+          "id": "Person name",
+          "address": [
+            "my_database",
+            "cities_data_people",
+            "name"
+          ]
         },
         {
-          "name": "name",
           "dataType": "VARCHAR",
-          "table": "cities_data_cities",
           "publicName": "City",
-          "id": "City"
+          "id": "City",
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "name"
+          ]
         },
         {
-          "name": "id",
           "dataType": "FLOAT",
-          "table": "cities_data_cities",
           "publicName": "City ID",
-          "id": "City ID"
+          "id": "City ID",
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ]
         }
       ],
       "joins": [
         {
           "type": "leftJoin",
-          "left": {
-            "field": "id",
-            "table": "cities_data_cities"
-          },
-          "right": {
-            "field": "city_id",
-            "table": "cities_data_people"
-          }
+          "left": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ],
+          "right": [
+            "my_database",
+            "cities_data_people",
+            "city_id"
+          ]
         }
       ],
       "secureFilterGuards": [
@@ -201,45 +258,59 @@
       "name": "Cities and weather",
       "fields": [
         {
-          "name": "id",
           "publicName": "City ID",
           "id": "fie_1",
           "dataType": "FLOAT",
-          "table": "cities_data_cities"
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ]
         },
         {
-          "name": "name",
           "publicName": "City",
           "id": "fie_2",
           "dataType": "VARCHAR",
-          "table": "cities_data_cities"
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "name"
+          ]
         },
         {
           "publicName": "High temp",
           "id": "fie_3",
-          "name": "high",
           "dataType": "FLOAT",
-          "table": "cities_data_weather"
+          "address": [
+            "my_database",
+            "cities_data_weather",
+            "high"
+          ]
         },
         {
           "publicName": "Low temp",
           "id": "fie_4",
-          "name": "low",
           "dataType": "FLOAT",
-          "table": "cities_data_weather"
+          "address": [
+            "my_database",
+            "cities_data_weather",
+            "low"
+          ]
         }
       ],
       "joins": [
         {
           "type": "leftJoin",
-          "left": {
-            "field": "id",
-            "table": "cities_data_cities"
-          },
-          "right": {
-            "field": "city_id",
-            "table": "cities_data_weather"
-          }
+          "left": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ],
+          "right": [
+            "my_database",
+            "cities_data_weather",
+            "city_id"
+          ]
         }
       ]
     },
@@ -248,18 +319,24 @@
       "name": "Number only data set",
       "fields": [
         {
-          "name": "price",
           "dataType": "FLOAT",
-          "table": "items",
           "publicName": "Price",
-          "id": "fie_1"
+          "id": "fie_1",
+          "address": [
+            "my_database",
+            "items",
+            "price"
+          ]
         },
         {
-          "name": "cost",
           "dataType": "FLOAT",
-          "table": "items",
           "publicName": "Cost",
-          "id": "fie_2"
+          "id": "fie_2",
+          "address": [
+            "my_database",
+            "items",
+            "cost"
+          ]
         }
       ],
       "joins": []

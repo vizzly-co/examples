@@ -8,18 +8,26 @@
       "name": "Shop customers data set",
       "fields": [
         {
-          "name": "customerid",
           "dataType": "FLOAT",
-          "table": "shop_customers",
           "publicName": "Customer ID",
-          "id": "fie_1"
+          "id": "fie_1",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_customers",
+            "customerid"
+          ]
         },
         {
-          "name": "country",
           "dataType": "STRING",
-          "table": "shop_customers",
           "publicName": "Country",
-          "id": "fie_2"
+          "id": "fie_2",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_customers",
+            "country"
+          ]
         }
       ],
       "joins": []
@@ -29,59 +37,86 @@
       "name": "Stock data set",
       "fields": [
         {
-          "name": "date",
           "dataType": "DATETIME",
-          "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Date",
-          "id": "fie_1"
-          
+          "id": "fie_1",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "date"
+          ]
         },
         {
-          "name": "open",
           "dataType": "FLOAT",
-          "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Open",
           "id": "Open",
-          "canBeDimension": false
+          "canBeDimension": false,
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "open"
+          ]
         },
         {
-          "name": "high",
           "dataType": "FLOAT",
-          "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "High",
           "id": "High",
-          "canBeDimension": false
+          "canBeDimension": false,
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "high"
+          ]
         },
         {
-          "name": "low",
           "dataType": "FLOAT",
-          "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Low",
           "id": "Low",
-          "canBeDimension": false
+          "canBeDimension": false,
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "low"
+          ]
         },
         {
-          "name": "close",
           "dataType": "FLOAT",
-          "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Close",
           "id": "Close",
-          "canBeDimension": false
+          "canBeDimension": false,
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "close"
+          ]
         },
         {
-          "name": "volume",
           "dataType": "FLOAT",
-          "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Volume",
           "id": "Volume",
-          "canBeDimension": false
+          "canBeDimension": false,
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "volume"
+          ]
         },
         {
-          "name": "name",
           "dataType": "STRING",
-          "table": "vizzlytesting.integration_testing.stocks",
           "publicName": "Name",
-          "id": "Name"
+          "id": "Name",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "name"
+          ]
         }
       ],
       "joins": []
@@ -91,38 +126,54 @@
       "name": "Shop customer orders",
       "fields": [
         {
-          "name": "customerid",
           "dataType": "FLOAT",
-          "table": "shop_customers",
           "publicName": "Customer ID",
-          "id": "fie_1"
+          "id": "fie_1",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_customers",
+            "customerid"
+          ]
         },
         {
-          "name": "country",
           "dataType": "STRING",
-          "table": "shop_customers",
           "publicName": "Country",
-          "id": "fie_2"
+          "id": "fie_2",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_customers",
+            "country"
+          ]
         },
         {
-          "name": "orderdate",
           "dataType": "DATETIME",
-          "table": "shop_orders",
           "publicName": "Order Date",
-          "id": "fie_3"
+          "id": "fie_3",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_orders",
+            "orderdate"
+          ]
         }
       ],
       "joins": [
         {
           "type": "leftJoin",
-          "left": {
-            "field": "customerid",
-            "table": "shop_customers"
-          },
-          "right": {
-            "field": "customerid",
-            "table": "shop_orders"
-          }
+          "left": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_customers",
+            "customerid"
+          ],
+          "right": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_orders",
+            "customerid"
+          ]
         }
       ]
     }

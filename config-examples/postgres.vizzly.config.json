@@ -8,25 +8,34 @@
       "name": "US Sales",
       "fields": [
         {
-          "name": "order_id",
           "dataType": "BIGINT",
           "id": "field_id_1",
           "publicName": "Order ID",
-          "table": "us_sales"
+          "address": [
+            "my_database",
+            "us_sales",
+            "order_id"
+          ]
         },
         {
-          "name": "order_date",
           "dataType": "DATE",
           "id": "field_id_2",
           "publicName": "Order Date",
-          "table": "us_sales"
+          "address": [
+            "my_database",
+            "us_sales",
+            "order_date"
+          ]
         },
         {
           "id": "field_id_3",
-          "name": "status",
           "dataType": "TEXT",
           "publicName": "Status",
-          "table": "us_sales"
+          "address": [
+            "my_database",
+            "us_sales",
+            "status"
+          ]
         }
       ],
       "joins": []
