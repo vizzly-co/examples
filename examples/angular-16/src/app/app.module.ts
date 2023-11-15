@@ -13,6 +13,6 @@ import { VizzlyDashboard } from './dashboard/dashboard.component';
     VizzlyDashboard
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

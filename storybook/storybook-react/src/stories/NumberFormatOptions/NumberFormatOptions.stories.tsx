@@ -26,7 +26,7 @@ export const FormatPanel: StoryFn = () => {
       numberFormatOptions={{
         custom: {
           description: 'Custom Option',
-          formatter: (v: number) => `${v}`,
+          formatter: (v) => `${v}`,
         },
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
@@ -67,7 +67,7 @@ export const Table: StoryFn = () => {
       numberFormatOptions={{
         custom: {
           description: 'Custom Option',
-          formatter: (v: number) => `${v}`,
+          formatter: (v) => `${v}`,
         },
       }}
       queryEngineEndpoint="https://example.vizzly.co/query-engine"
