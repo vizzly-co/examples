@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cd ./examples/angular14
+cd ./examples/angular-16
 
 # Install the latest webcomponent package
 npm install @vizzly/dashboard-webcomponent@latest --legacy-peer-deps
