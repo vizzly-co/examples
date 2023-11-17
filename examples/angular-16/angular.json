@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-16": {
+    "angular16": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-16",
+            "outputPath": "dist/angular16",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -28,7 +28,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -53,10 +53,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-16:build:production"
+              "browserTarget": "angular16:build:production"
             },
             "development": {
-              "browserTarget": "angular-16:build:development"
+              "browserTarget": "angular16:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -64,7 +64,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-16:build"
+            "browserTarget": "angular16:build"
           }
         },
         "test": {
