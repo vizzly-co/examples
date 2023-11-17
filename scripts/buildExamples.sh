@@ -9,4 +9,4 @@ npm install @vizzly/dashboard-webcomponent@latest --legacy-peer-deps
 npm run build -- --configuration production
 
 # Copy the output to the static builds folder
-cp -r ./dist/vizzangular14 ../../static-build-outputs
+cp -r ./dist/angular-16 ../../static-build-outputs
