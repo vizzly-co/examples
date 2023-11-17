@@ -2,6 +2,9 @@
 
 cd ./examples/angular16
 
+# Install dependencies
+npm install
+
 # Build the angular example
 npm run build -- --configuration production
 
