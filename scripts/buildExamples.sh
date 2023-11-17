@@ -6,4 +6,4 @@ cd ./examples/angular16
 npm run build -- --configuration production
 
 # Copy the output to the static builds folder
-cp -r ./dist/angular16 ../../static-build-outputs
+cp -r ./dist/vizzlyangular16 ../../static-build-outputs

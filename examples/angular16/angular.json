@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular16": {
+    "vizzlyangular16": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular16",
+            "outputPath": "dist/vizzlyangular16",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -53,10 +53,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular16:build:production"
+              "browserTarget": "vizzlyangular16:build:production"
             },
             "development": {
-              "browserTarget": "angular16:build:development"
+              "browserTarget": "vizzlyangular16:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -64,7 +64,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular16:build"
+            "browserTarget": "vizzlyangular16:build"
           }
         },
         "test": {
