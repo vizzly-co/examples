@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cd ./examples/angular-16
+cd ./examples/angular16
 
 # Build the angular example
 npm run build -- --configuration production
