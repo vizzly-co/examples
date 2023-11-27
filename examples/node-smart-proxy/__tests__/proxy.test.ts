@@ -9,7 +9,7 @@ const signDataAccessToken = async (): Promise<string> => {
   });
 
   return await signer.signDataAccessToken({
-    projectId: "prj_3e37665d7a5b40a9b9e8a8ad7128e738",
+    projectId: "prj_c4e2ddd2f8784217969f340b2c27eff8",
     dataSetIds: "*",
     secureFilters: {},
   });
@@ -46,6 +46,7 @@ describe("Proxy", () => {
       connectionOk: true,
       dataSetsCount: 1,
       message: "Ready to accept queries",
+      projectId: 'prj_c4e2ddd2f8784217969f340b2c27eff8',
       version: expect.any(String),
     });
   });
