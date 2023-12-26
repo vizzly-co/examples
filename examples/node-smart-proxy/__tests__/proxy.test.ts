@@ -48,6 +48,7 @@ describe("Proxy", () => {
       message: "Ready to accept queries",
       projectId: 'prj_c4e2ddd2f8784217969f340b2c27eff8',
       version: expect.any(String),
+      strategy: 'dynamic'
     });
   });
 
