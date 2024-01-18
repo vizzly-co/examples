@@ -4391,10 +4391,10 @@
     "@visx/event" "2.17.0"
     prop-types "^15.6.2"
 
-"@vizzly/dashboard@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.7.1.tgz#8d76cdb169df977a934f3944003e159e3bd30916"
-  integrity sha512-gKFWX6J8VuL7Zm/yICn1S1XxO6i1vb5maG0U414hMOikhiWEbDVjJtt60gGQKCVoxYSTH26HEi6gCHDc4YaIRw==
+"@vizzly/dashboard@0.7.1-dev-625b8c00147a1c17c911fc5442a0a2a4259c30b1":
+  version "0.7.1-dev-625b8c00147a1c17c911fc5442a0a2a4259c30b1"
+  resolved "https://registry.yarnpkg.com/@vizzly/dashboard/-/dashboard-0.7.1-dev-625b8c00147a1c17c911fc5442a0a2a4259c30b1.tgz#aacac948f8c0785b9a005baaabd0380b8fa1a049"
+  integrity sha512-ca0FlCZwchTYSrxCbsZoKWtqK/6XhG6VX0xlr7baOnMxEejeHaBy+v5qAzDD9fypqvCIAu8JPoqSvYEpJ3M6Ng==
   dependencies:
     "@emotion/cache" "^11.11.0"
     "@emotion/css" "^11.10.6"
@@ -4410,7 +4410,7 @@
     file-saver "^2.0.5"
     fuse.js "^6.6.2"
     isomorphic-fetch "^3.0.0"
-    joi-to-json "^4.0.1"
+    joi-to-json "^4.2.1"
     lodash "^4.17.21"
     lodash-es "^4.17.21"
     react-dates-17 "22.0.4"
@@ -9527,7 +9527,7 @@ jiti@^1.18.2:
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.18.2.tgz#80c3ef3d486ebf2450d9335122b32d121f2a83cd"
   integrity sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==
 
-joi-to-json@^4.0.1:
+joi-to-json@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/joi-to-json/-/joi-to-json-4.2.1.tgz#be275866fd617c63f1ae81eea428fa5de6e036a4"
   integrity sha512-HIPyrmT9akm2C4zOZ3qR30GkQs7JBr3LX1/oXXWyC2E1NUnDHjTczqHT0H6l495B99xAyFaJ6LM6KRFTdkKoxQ==
