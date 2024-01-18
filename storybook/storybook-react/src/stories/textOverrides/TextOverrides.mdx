@@ -2,27 +2,27 @@
 
 import { Meta, Story } from '@storybook/blocks';
 import { Container } from '../Components';
-import * as DashboardFiltersStories from './DashboardFilters.stories';
-import * as EditorStories from './Editor.stories';
+import * as TranslationsStories from './Translations.stories';
+import * as KeyHighlightStories from './KeyHighlight.stories';
 
 # textOverrides
 
 <Meta title="Dashboard Props/textOverrides" />
 
-## Dashboard
-
-### Demo
+### In French
 
 <Container>
-  <Story of={DashboardFiltersStories.CallToAction} />
+  <Story of={TranslationsStories.Translations} />
 </Container>
 
-### Example code
+### With the `translationKeys` enabled
 
-## Editor
-
-### Demo
+This will hightlight the key for translation.
 
 <Container>
-  <Story of={EditorStories.Data} />
+  <Story of={KeyHighlightStories.HighlightKeys} />
 </Container>
+
+### Note
+
+We don't translate your content, fields or filters. That should be defined in the Semantic Layer.
