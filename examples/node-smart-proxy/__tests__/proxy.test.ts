@@ -40,7 +40,7 @@ describe("Proxy", () => {
       configSources: {
         connection: "environment",
         dataSets: [],
-        saveLocations: ["file", "vizzlyEncrypted"],
+        saveLocations: ["file"],
       },
       configValid: true,
       connectionOk: true,
