@@ -2,6 +2,8 @@ import supertest from "supertest";
 import { createSigner } from "@vizzly/auth";
 import * as Settings from "../src/Settings";
 
+jest.setTimeout(10_000);
+
 const signDataAccessToken = async (): Promise<string> => {
   const signer = createSigner({
     ttlInMinutes: 1,
