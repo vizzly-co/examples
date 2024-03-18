@@ -80,6 +80,7 @@ describe("Proxy", () => {
         dataSets: [
           {
             id: "das_dynamic",
+            hide: false,
             name: "A dynamic data set for user 1!",
             fields: [
               {
@@ -127,6 +128,7 @@ describe("Proxy", () => {
         dataSets: [
           {
             id: "das_dynamic",
+            hide: false,
             name: "A dynamic data set for user 2!",
             fields: [
               {
