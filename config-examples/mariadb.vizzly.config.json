@@ -92,7 +92,7 @@
         {
           "dataType": "VARCHAR",
           "publicName": "Person name",
-          "id": "Person name",
+          "id": "Person_name",
           "address": [
             "my_database",
             "cities_data_people",
@@ -132,7 +132,7 @@
       "fields": [
         {
           "publicName": "City ID",
-          "id": "City ID",
+          "id": "City_ID",
           "dataType": "FLOAT",
           "address": [
             "my_database",
@@ -152,7 +152,7 @@
         },
         {
           "publicName": "High Temp",
-          "id": "High temp",
+          "id": "High_temp",
           "dataType": "FLOAT",
           "address": [
             "my_database",
@@ -162,7 +162,7 @@
         },
         {
           "publicName": "Low temp",
-          "id": "Low temp",
+          "id": "Low_temp",
           "dataType": "FLOAT",
           "address": [
             "my_database",
@@ -203,7 +203,7 @@
         {
           "dataType": "VARCHAR",
           "publicName": "Person name",
-          "id": "Person name",
+          "id": "Person_name",
           "address": [
             "my_database",
             "cities_data_people",
@@ -223,7 +223,7 @@
         {
           "dataType": "FLOAT",
           "publicName": "City ID",
-          "id": "City ID",
+          "id": "City_ID",
           "address": [
             "my_database",
             "cities_data_cities",
@@ -248,7 +248,7 @@
       ],
       "secureFilterGuards": [
         {
-          "fieldId": "City ID",
+          "fieldId": "City_ID",
           "op": "="
         }
       ]
