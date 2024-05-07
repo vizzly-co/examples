@@ -50,5 +50,5 @@ jobs:
         env:
           SLACK_ENDPOINT: ${{ secrets.SLACK_ENDPOINT }}
         run: |
-          message=":x: Smart proxy example test failed"
+          message=":x: Smart proxy example test failed https://github.com/vizzly-co/examples/actions/runs/${{github.run_id}}"
           curl -X POST --data-urlencode "payload={\"channel\": \"#smoke-tests\", \"username\": \"Smoke tests\", \"text\": \"${message}\", \"icon_emoji\": \":test_tube:\"}" $SLACK_ENDPOINT
