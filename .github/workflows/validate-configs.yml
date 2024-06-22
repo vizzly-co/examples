@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Validate Vizzly configs
-        uses: vizzly-co/validate-config-action@main
+        uses: vizzly-co/validate-config-action@0-4-21
         with:
           config-file-glob: './config-examples/*.config.json'
