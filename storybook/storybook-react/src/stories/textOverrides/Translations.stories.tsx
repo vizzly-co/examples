@@ -154,14 +154,7 @@ export const Translations: StoryFn = () => {
         divide: 'Diviser',
         select_operator: 'Opérateur...',
         operator: 'Opérateur',
-        'percentage.simple_label': 'Simple',
-        'percentage.simple_description':
-          'Métrique en pourcentage sans filtre de numérateur',
-        'percentage.conditional_label': 'Conditionnel',
-        'percentage.conditional_description':
-          'Appliquer des filtres conditionnels au numérateur',
         numerator: 'Numérateur',
-        'percentage.select_type': 'Sélectionner le type de pourcentage',
         metric: 'Métrique',
         denominator: 'Dénominateur',
         select_field_to_transform: 'Sélectionner le champ à transformer',
@@ -204,7 +197,6 @@ export const Translations: StoryFn = () => {
         math_op_is_null: 'Est nul',
         math_op_is_not_null: "N'est pas nul",
         dataset: 'Jeu de données',
-        'pre-aggregated_data_set_title': 'Jeu de données pré-agrégé',
         'pre-aggregated_data_set_description':
           'Ce jeu de données a déjà été agrégé, donc certaines propriétés de données ont déjà été définies.',
         view: 'Vue',
