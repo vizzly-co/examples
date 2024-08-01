@@ -1,0 +1,1099 @@
+{
+  "version": 1,
+  "dataSets": [
+    {
+      "id": "data_set_1",
+      "name": "Employment - sample",
+      "fields": [
+        {
+          "id": "fie_1",
+          "publicName": "Employee ID",
+          "dataType": "FLOAT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "employee_id"
+          ]
+        },
+        {
+          "id": "fie_2",
+          "publicName": "Name",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "name"
+          ]
+        },
+        {
+          "id": "fie_3",
+          "publicName": "Gender",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "gender"
+          ]
+        },
+        {
+          "id": "fie_4",
+          "publicName": "Date of Birth",
+          "dataType": "TIMESTAMP",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "date_of_birth"
+          ]
+        },
+        {
+          "id": "fie_5",
+          "publicName": "Date of Hire",
+          "dataType": "TIMESTAMP",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "date_of_hire"
+          ]
+        },
+        {
+          "id": "fie_6",
+          "publicName": "Department",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "department"
+          ]
+        },
+        {
+          "id": "fie_7",
+          "publicName": "Job Title",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "job_title"
+          ]
+        },
+        {
+          "id": "fie_8",
+          "publicName": "Salary",
+          "dataType": "FLOAT",
+          "canBeDimension": false,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "salary"
+          ]
+        },
+        {
+          "id": "fie_9",
+          "publicName": "Satisfaction Score",
+          "dataType": "FLOAT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "employee_satisfaction_score"
+          ]
+        },
+        {
+          "id": "fie_10",
+          "publicName": "Tenure",
+          "dataType": "FLOAT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "tenure"
+          ]
+        },
+        {
+          "id": "fie_11",
+          "publicName": "Nationality",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "hr_payroll",
+            "nationality"
+          ]
+        }
+      ],
+      "joins": [],
+      "secureFilterGuards": [],
+      "connectionId": "___vizzly_default_conn"
+    },
+    {
+      "id": "data_set_2",
+      "name": "Online retail sales - sample",
+      "fields": [
+        {
+          "id": "fie_1",
+          "publicName": "Order ID",
+          "dataType": "FLOAT",
+          "canBeDimension": false,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "order_id"
+          ]
+        },
+        {
+          "id": "fie_2",
+          "publicName": "Order Date",
+          "dataType": "TIMESTAMP",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "order_date"
+          ]
+        },
+        {
+          "id": "fie_3",
+          "publicName": "Status",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "status"
+          ]
+        },
+        {
+          "id": "fie_4",
+          "publicName": "Item ID",
+          "dataType": "FLOAT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "item_id"
+          ]
+        },
+        {
+          "id": "fie_5",
+          "publicName": "Quantity Ordered",
+          "dataType": "FLOAT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "quantity_ordered"
+          ]
+        },
+        {
+          "id": "fie_6",
+          "publicName": "Price",
+          "dataType": "FLOAT",
+          "canBeDimension": false,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "price"
+          ]
+        },
+        {
+          "id": "fie_7",
+          "publicName": "Value",
+          "dataType": "FLOAT",
+          "canBeDimension": false,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "value"
+          ]
+        },
+        {
+          "id": "fie_8",
+          "publicName": "Discount Amount",
+          "dataType": "FLOAT",
+          "canBeDimension": false,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "discount_amount"
+          ]
+        },
+        {
+          "id": "fie_9",
+          "publicName": "Total",
+          "dataType": "FLOAT",
+          "canBeDimension": false,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "total"
+          ]
+        },
+        {
+          "id": "fie_10",
+          "publicName": "Category",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "category"
+          ]
+        },
+        {
+          "id": "fie_11",
+          "publicName": "Payment Method",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "payment_method"
+          ]
+        },
+        {
+          "id": "fie_12",
+          "publicName": "Customer ID",
+          "dataType": "FLOAT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "customer_id"
+          ]
+        },
+        {
+          "id": "fie_13",
+          "publicName": "County",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "county"
+          ]
+        },
+        {
+          "id": "fie_14",
+          "publicName": "City",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "city"
+          ]
+        },
+        {
+          "id": "fie_15",
+          "publicName": "State",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "state"
+          ]
+        },
+        {
+          "id": "fie_16",
+          "publicName": "Region",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "region"
+          ]
+        },
+        {
+          "id": "fie_17",
+          "publicName": "Discount Percentage",
+          "dataType": "FLOAT",
+          "canBeDimension": false,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "ecommerce_sales_data",
+            "discount_percentage"
+          ]
+        }
+      ],
+      "joins": [],
+      "secureFilterGuards": [],
+      "connectionId": "___vizzly_default_conn"
+    },
+    {
+      "id": "custom-stock-data",
+      "name": "Stock data",
+      "fields": [
+        {
+          "id": "fie_1",
+          "publicName": "Date",
+          "dataType": "TIMESTAMP",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "stocks",
+            "date"
+          ]
+        },
+        {
+          "id": "fie_2",
+          "publicName": "Open",
+          "dataType": "FLOAT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "stocks",
+            "open"
+          ]
+        },
+        {
+          "id": "fie_3",
+          "publicName": "High",
+          "dataType": "FLOAT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "stocks",
+            "high"
+          ]
+        },
+        {
+          "id": "fie_4",
+          "publicName": "Low",
+          "dataType": "FLOAT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "my_database",
+            "stocks",
+            "low"
+          ]
+        },
+        {
+          "id": "fie_5",
+          "publicName": "Name",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "my_database",
+            "stocks",
+            "name"
+          ]
+        }
+      ],
+      "joins": [],
+      "secureFilterGuards": [],
+      "connectionId": "___vizzly_default_conn"
+    }
+  ],
+  "executableDashboardConfigForPDF": null,
+  "publicKeys": [
+    "-----BEGIN PUBLIC KEY-----\r\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpSGuqzScAczaF/SCObpB/UTlgUdL\r\ntQ+izNyl0l5CzetFvH9b0aSh6y+t80st62NsmV5Hzc1CFJXiuTLrjrrB5A==\r\n-----END PUBLIC KEY-----\r\n",
+    "-----BEGIN PUBLIC KEY-----\r\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEx32NYg1giY5kCzwS1ZCLSbs/bsr5\r\nJyoEjhQp2dPLqRy4Xd72+JdCiI0Ftq3rly6zMmiOQ19fjVzZIRNuTKnFXg==\r\n-----END PUBLIC KEY-----\r\n"
+  ],
+  "sqlViews": {},
+  "connections": {
+    "___vizzly_default_conn": {
+      "client": "postgres"
+    }
+  }
+}

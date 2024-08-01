@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "dataSets": [
+    {
+      "id": "NzhkYzk3ZmItOGNhMS00NDVkLTk3YjktYjY3YTE3YTEyOGM3",
+      "name": "Logistics shippers",
+      "fields": [
+        {
+          "id": "dGFibGU6c2hvcF9zaGlwcGVycyxmaWVsZDpwaG9uZQ==",
+          "publicName": "Phone",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "_",
+            "shop_shippers",
+            "phone"
+          ]
+        },
+        {
+          "id": "dGFibGU6c2hvcF9zaGlwcGVycyxmaWVsZDpzaGlwcGVybmFtZQ==",
+          "publicName": "Shipper name",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "_",
+            "shop_shippers",
+            "shippername"
+          ]
+        },
+        {
+          "id": "dGFibGU6c2hvcF9zaGlwcGVycyxmaWVsZDpzaGlwcGVyaWQ=",
+          "publicName": "Shipperid",
+          "dataType": "BIGINT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "_",
+            "shop_shippers",
+            "shipperid"
+          ]
+        },
+        {
+          "id": "Mjg0MTMzZjktMTM1Zi00NWY3LTk4ODUtY2ZmNGMxMGFlMzY1",
+          "publicName": "Text from within a JSONb field",
+          "dataType": "TEXT",
+          "sql": "(some_table_columns-->'someFieldInJsonBlob')",
+          "canBeDimension": true,
+          "canBeMeasure": false,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ]
+        }
+      ],
+      "joins": [],
+      "secureFilterGuards": [],
+      "connectionId": "___vizzly_default_conn"
+    },
+    {
+      "id": "MjQ4M2VjZmQtZWVjNi00ZmVmLWFhYjAtOGNkZTMxNjlmZWU1",
+      "name": "SQL pre-aggregated data set",
+      "sql": "SELECT shop_customers.country, avg(shop_customers.customerid) as customerid FROM shop_customers GROUP BY 1",
+      "preAggregated": true,
+      "fields": [
+        {
+          "id": "ZDIzNGY5MjQtZmIxZS00ZGZjLWIwNmMtMTQxYzZhYTY4MGM4",
+          "publicName": "Average customer ID",
+          "dataType": "FLOAT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            ">",
+            "<",
+            "=",
+            "!=",
+            ">=",
+            "<=",
+            "is_one_of",
+            "is_not_one_of"
+          ],
+          "address": [
+            "_",
+            "vizzly_data_set",
+            "customerid"
+          ]
+        },
+        {
+          "id": "NmJkNmFkNjEtNTE4Zi00MGNlLTk5ZTgtNTBiZWU1YTNlM2M2",
+          "publicName": "Country",
+          "dataType": "TEXT",
+          "canBeDimension": true,
+          "canBeMeasure": true,
+          "allowedGranularities": [
+            "month",
+            "year",
+            "quarter",
+            "week",
+            "day",
+            "hour",
+            "minute",
+            "second"
+          ],
+          "allowedOperators": [
+            "=",
+            "!=",
+            "is_one_of",
+            "is_not_one_of",
+            "starts_with",
+            "ends_with",
+            "contains_substring",
+            "does_not_contain_substring"
+          ],
+          "address": [
+            "_",
+            "vizzly_data_set",
+            "country"
+          ]
+        }
+      ],
+      "joins": [],
+      "secureFilterGuards": [],
+      "connectionId": "___vizzly_default_conn"
+    }
+  ],
+  "executableDashboardConfigForPDF": null,
+  "publicKeys": [
+    "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERbmqmGHbjlNMXjHZMJsoFsDnQDT7\nk4aV5wBdlXIKe0GH+FWSwawtc8XAMURwSA7iAY2QzmzJ4RQ6ZKp1UVkpLA==\n-----END PUBLIC KEY-----"
+  ],
+  "sqlViews": {},
+  "connections": {
+    "___vizzly_default_conn": {
+      "client": "postgres"
+    }
+  }
+}
