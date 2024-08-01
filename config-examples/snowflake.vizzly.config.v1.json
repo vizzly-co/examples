@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "dataSets": [
+    {
+      "id": "shop_customers",
+      "name": "Shop customers data set",
+      "fields": [
+        {
+          "dataType": "FLOAT",
+          "publicName": "Customer ID",
+          "id": "fie_1",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_customers",
+            "customerid"
+          ]
+        },
+        {
+          "dataType": "STRING",
+          "publicName": "Country",
+          "id": "fie_2",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_customers",
+            "country"
+          ]
+        }
+      ],
+      "joins": [],
+      "connectionId": "___vizzly_default_conn"
+    },
+    {
+      "id": "stock-data-set",
+      "name": "Stock data set",
+      "fields": [
+        {
+          "dataType": "DATETIME",
+          "publicName": "Date",
+          "id": "fie_1",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "date"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "Open",
+          "id": "Open",
+          "canBeDimension": false,
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "open"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "High",
+          "id": "High",
+          "canBeDimension": false,
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "high"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "Low",
+          "id": "Low",
+          "canBeDimension": false,
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "low"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "Close",
+          "id": "Close",
+          "canBeDimension": false,
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "close"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "Volume",
+          "id": "Volume",
+          "canBeDimension": false,
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "volume"
+          ]
+        },
+        {
+          "dataType": "STRING",
+          "publicName": "Name",
+          "id": "Name",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "stocks",
+            "name"
+          ]
+        }
+      ],
+      "joins": [],
+      "connectionId": "___vizzly_default_conn"
+    },
+    {
+      "id": "shop_customers_x_orders",
+      "name": "Shop customer orders",
+      "fields": [
+        {
+          "dataType": "FLOAT",
+          "publicName": "Customer ID",
+          "id": "fie_1",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_customers",
+            "customerid"
+          ]
+        },
+        {
+          "dataType": "STRING",
+          "publicName": "Country",
+          "id": "fie_2",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_customers",
+            "country"
+          ]
+        },
+        {
+          "dataType": "DATETIME",
+          "publicName": "Order Date",
+          "id": "fie_3",
+          "address": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_orders",
+            "orderdate"
+          ]
+        }
+      ],
+      "joins": [
+        {
+          "type": "leftJoin",
+          "left": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_customers",
+            "customerid"
+          ],
+          "right": [
+            "vizzlytesting",
+            "integration_testing",
+            "shop_orders",
+            "customerid"
+          ]
+        }
+      ],
+      "connectionId": "___vizzly_default_conn"
+    }
+  ],
+  "executableDashboardConfigForPDF": null,
+  "publicKeys": [
+    "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERbmqmGHbjlNMXjHZMJsoFsDnQDT7\nk4aV5wBdlXIKe0GH+FWSwawtc8XAMURwSA7iAY2QzmzJ4RQ6ZKp1UVkpLA==\n-----END PUBLIC KEY-----",
+    "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHnMR6Kl4zeI+NCNpK+vAyQM9HiTJ\nHegJ+ZcQAsaCf/cKHgT3cwSjfASAmUu/cNrS3bqDFK+Jao1a80d/fH3wpw==\n-----END PUBLIC KEY-----"
+  ],
+  "sqlViews": {},
+  "connections": {
+    "___vizzly_default_conn": {
+      "client": "snowflake"
+    }
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "version": 1,
+  "dataSets": [
+    {
+      "id": "stock-data-set",
+      "name": "Stock data set",
+      "fields": [
+        {
+          "dataType": "DATETIME",
+          "publicName": "Date",
+          "id": "Date",
+          "address": [
+            "my_database",
+            "stocks",
+            "date"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "Open",
+          "id": "Open",
+          "canBeDimension": false,
+          "address": [
+            "my_database",
+            "stocks",
+            "open"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "High",
+          "id": "High",
+          "canBeDimension": false,
+          "address": [
+            "my_database",
+            "stocks",
+            "high"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "Low",
+          "id": "Low",
+          "canBeDimension": false,
+          "address": [
+            "my_database",
+            "stocks",
+            "low"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "Close",
+          "id": "Close",
+          "canBeDimension": false,
+          "address": [
+            "my_database",
+            "stocks",
+            "close"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "Volume",
+          "id": "Volume",
+          "canBeDimension": false,
+          "address": [
+            "my_database",
+            "stocks",
+            "volume"
+          ]
+        },
+        {
+          "dataType": "VARCHAR",
+          "publicName": "Name",
+          "id": "Name",
+          "address": [
+            "my_database",
+            "stocks",
+            "name"
+          ]
+        }
+      ],
+      "joins": [],
+      "connectionId": "___vizzly_default_conn"
+    },
+    {
+      "id": "people-and-cities",
+      "name": "People and cities",
+      "fields": [
+        {
+          "dataType": "VARCHAR",
+          "publicName": "Person name",
+          "id": "Person_name",
+          "address": [
+            "my_database",
+            "cities_data_people",
+            "name"
+          ]
+        },
+        {
+          "dataType": "VARCHAR",
+          "publicName": "City",
+          "id": "City",
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "name"
+          ]
+        }
+      ],
+      "joins": [
+        {
+          "type": "leftJoin",
+          "left": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ],
+          "right": [
+            "my_database",
+            "cities_data_people",
+            "city_id"
+          ]
+        }
+      ],
+      "connectionId": "___vizzly_default_conn"
+    },
+    {
+      "id": "cities-and-weather",
+      "name": "Cities and weather",
+      "fields": [
+        {
+          "publicName": "City ID",
+          "id": "City_ID",
+          "dataType": "FLOAT",
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ]
+        },
+        {
+          "publicName": "City Name",
+          "id": "City",
+          "dataType": "VARCHAR",
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "name"
+          ]
+        },
+        {
+          "publicName": "High Temp",
+          "id": "High_temp",
+          "dataType": "FLOAT",
+          "address": [
+            "my_database",
+            "cities_data_weather",
+            "high"
+          ]
+        },
+        {
+          "publicName": "Low temp",
+          "id": "Low_temp",
+          "dataType": "FLOAT",
+          "address": [
+            "my_database",
+            "cities_data_weather",
+            "low"
+          ]
+        },
+        {
+          "id": "hidden_fie_2",
+          "dataType": "FLOAT",
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "hidden_field_id"
+          ]
+        }
+      ],
+      "joins": [
+        {
+          "type": "leftJoin",
+          "left": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ],
+          "right": [
+            "my_database",
+            "cities_data_weather",
+            "city_id"
+          ]
+        }
+      ],
+      "connectionId": "___vizzly_default_conn"
+    },
+    {
+      "id": "secure-people-and-cities",
+      "name": "People and cities",
+      "fields": [
+        {
+          "dataType": "VARCHAR",
+          "publicName": "Person name",
+          "id": "Person_name",
+          "address": [
+            "my_database",
+            "cities_data_people",
+            "name"
+          ]
+        },
+        {
+          "dataType": "VARCHAR",
+          "publicName": "City",
+          "id": "City",
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "name"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "City ID",
+          "id": "City_ID",
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ]
+        }
+      ],
+      "joins": [
+        {
+          "type": "leftJoin",
+          "left": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ],
+          "right": [
+            "my_database",
+            "cities_data_people",
+            "city_id"
+          ]
+        }
+      ],
+      "secureFilterGuards": [
+        {
+          "fieldId": "City_ID",
+          "op": "="
+        }
+      ],
+      "connectionId": "___vizzly_default_conn"
+    },
+    {
+      "id": "cities-and-weather-id-fields-different-from-public",
+      "name": "Cities and weather",
+      "fields": [
+        {
+          "publicName": "City ID",
+          "id": "fie_1",
+          "dataType": "FLOAT",
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ]
+        },
+        {
+          "publicName": "City",
+          "id": "fie_2",
+          "dataType": "VARCHAR",
+          "address": [
+            "my_database",
+            "cities_data_cities",
+            "name"
+          ]
+        },
+        {
+          "publicName": "High temp",
+          "id": "fie_3",
+          "dataType": "FLOAT",
+          "address": [
+            "my_database",
+            "cities_data_weather",
+            "high"
+          ]
+        },
+        {
+          "publicName": "Low temp",
+          "id": "fie_4",
+          "dataType": "FLOAT",
+          "address": [
+            "my_database",
+            "cities_data_weather",
+            "low"
+          ]
+        }
+      ],
+      "joins": [
+        {
+          "type": "leftJoin",
+          "left": [
+            "my_database",
+            "cities_data_cities",
+            "id"
+          ],
+          "right": [
+            "my_database",
+            "cities_data_weather",
+            "city_id"
+          ]
+        }
+      ],
+      "connectionId": "___vizzly_default_conn"
+    },
+    {
+      "id": "number-only-data-set",
+      "name": "Number only data set",
+      "fields": [
+        {
+          "dataType": "FLOAT",
+          "publicName": "Price",
+          "id": "fie_1",
+          "address": [
+            "my_database",
+            "items",
+            "price"
+          ]
+        },
+        {
+          "dataType": "FLOAT",
+          "publicName": "Cost",
+          "id": "fie_2",
+          "address": [
+            "my_database",
+            "items",
+            "cost"
+          ]
+        }
+      ],
+      "joins": [],
+      "connectionId": "___vizzly_default_conn"
+    }
+  ],
+  "executableDashboardConfigForPDF": null,
+  "publicKeys": [
+    "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERbmqmGHbjlNMXjHZMJsoFsDnQDT7\nk4aV5wBdlXIKe0GH+FWSwawtc8XAMURwSA7iAY2QzmzJ4RQ6ZKp1UVkpLA==\n-----END PUBLIC KEY-----",
+    "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHnMR6Kl4zeI+NCNpK+vAyQM9HiTJ\nHegJ+ZcQAsaCf/cKHgT3cwSjfASAmUu/cNrS3bqDFK+Jao1a80d/fH3wpw==\n-----END PUBLIC KEY-----"
+  ],
+  "sqlViews": {},
+  "connections": {
+    "___vizzly_default_conn": {
+      "client": "mariadb"
+    }
+  }
+}
