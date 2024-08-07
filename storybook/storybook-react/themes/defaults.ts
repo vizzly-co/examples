@@ -231,6 +231,15 @@ export const defaults = {
     threshold: {
       stroke: '#F4F4F4',
     },
+    popoverMenus: {
+      background: 'white',
+      borderRadius: '3px',
+      boxShadow: '0 1px 2px rgba(33,33,33,0.2)',
+      color: '#212529',
+      fontFamily: 'Inter, sans-serif',
+      letterSpacing: '0.02em',
+      padding: '.3rem .5rem',
+    },
   },
   // ----- DASHBOARD -----
   dashboard: {
@@ -851,5 +860,18 @@ export const defaults = {
     // fontSize: 100,
     // fontWeight: 900,
     // margin: "margin",
+  },
+  // ----- TOOLTIPS -----
+  tooltips: {
+    background: '#374151',
+    borderRadius: '4px',
+    boxShadow: 'unset',
+    color: 'white',
+    fontFamily: 'inherit',
+    fontSize: '0.75rem',
+    fontWeight: 500,
+    letterSpacing: '0.1em',
+    lineHeight: '1rem',
+    padding: '6px 8px',
   },
 };
