@@ -699,8 +699,28 @@ export const defaults = {
       color: 'inherit',
       fontSize: 13,
       fontWeight: 600,
-      padding: '0.5rem',
+      // padding: '0.5rem',
       textTransform: 'none',
+      button: {
+        color: 'inherit',
+        background: 'transparent',
+        padding: '8px',
+        borderRadius: '8px',
+        '&:hover': {
+          color: 'inherit',
+          background: '#ebeced',
+        },
+      },
+      sort: {
+        color: 'inherit',
+        background: 'transparent',
+        padding: '8px',
+        borderRadius: '8px',
+        '&:hover': {
+          color: 'inherit',
+          background: '#ebeced',
+        },
+      },
       inner: {
         // borderBottomWidth: 100,
         // borderRight: true,
