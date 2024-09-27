@@ -28,6 +28,18 @@ export const gitHubDarkTheme = {
       last: {
         borderRight: '1px solid transparent',
       },
+      button: {
+        background: '#1e293b',
+        '&:hover': {
+          background: '#293548',
+        },
+      },
+      sort: {
+        background: '#1e293b',
+        '&:hover': {
+          background: '#293548',
+        },
+      },
     },
     body: {
       odd: {
@@ -206,6 +218,18 @@ export const gitHubDarkTheme = {
         '&:hover': {
           border: '1px solid #30363d',
           boxShadow: 'inset 0 0 0 1px transparent',
+        },
+      },
+      calendar: {
+        arrows: {
+          background: 'transparent',
+          border: '1px solid #e4e7e7',
+          borderRadius: '8px',
+          fill: '#fff',
+          '&:hover': {
+            background: 'rgba(173,185,196, 0.25)',
+            border: '1px solid #c4c4c4',
+          },
         },
       },
       date: {

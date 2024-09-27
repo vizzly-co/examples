@@ -24,6 +24,7 @@ export const defaults = {
     title: {
       // color: "inherit",
       // fontFamily: "inherit",
+      display: 'inline',
       fontSize: '13px',
       fontWeight: 400,
       // lineHeight: "initial",
@@ -32,6 +33,7 @@ export const defaults = {
     content: {
       // color: "inherit",
       // fontFamily: "inherit",
+      display: 'inline',
       fontSize: '13px',
       fontWeight: 400,
       // lineHeight: "initial",
