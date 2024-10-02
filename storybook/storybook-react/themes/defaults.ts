@@ -27,6 +27,7 @@ export const defaults = {
       display: 'inline',
       fontSize: '13px',
       fontWeight: 400,
+      width: '100%',
       // lineHeight: "initial",
       // margin: "0",
     },
@@ -36,6 +37,7 @@ export const defaults = {
       display: 'inline',
       fontSize: '13px',
       fontWeight: 400,
+      width: '100%',
       // lineHeight: "initial",
       // margin: "0",
     },
@@ -788,6 +790,11 @@ export const defaults = {
         '&:hover': {
           color: 'initial',
           background: '#f5f6f6',
+        },
+      },
+      drilldown: {
+        arrow: {
+          stroke: 'black',
         },
       },
     },
