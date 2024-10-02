@@ -792,6 +792,11 @@ export const defaults = {
           background: '#f5f6f6',
         },
       },
+      drilldown: {
+        arrow: {
+          stroke: 'black',
+        },
+      },
     },
   },
   // ----- TABS -----
